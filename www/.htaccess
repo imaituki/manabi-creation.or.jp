@@ -1,0 +1,26 @@
+RewriteEngine On
+RewriteBase /
+
+# wwwなしで統一
+#RewriteCond %{HTTP_HOST} ^www\.manabi-creation\or.jp
+#RewriteRule ^(.*)$ https://http://manabi-creation.or.jp//$1 [R=302,L]
+
+#初期ドメイン転送（さくらサーバの場合）
+#RewriteCond %{HTTP_HOST} ^(www\.)?manabi-creation\.sakura\.ne\.jp$ [NC]
+#RewriteRule .* https://manabi-creation.or.jp%{REQUEST_URI} [R=302,L]
+
+# SSL統一（さくらサーバの場合）
+#RewriteCond %{ENV:HTTPS} !^on$
+#RewriteCond %{HTTP:X-SAKURA-FORWARDED-FOR} ^$
+#RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [R=302,L]
+
+
+<Files ~ "^\.(htaccess|htpasswd)$">
+deny from all
+</Files>
+AuthUserFile /home/manabi-creation/www/.htpasswd
+AuthGroupFile /dev/null
+AuthName "Please enter your ID and password"
+AuthType Basic
+require valid-user
+order deny,allow
