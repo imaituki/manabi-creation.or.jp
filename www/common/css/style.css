@@ -171,6 +171,22 @@
 
 
 /*===================================================================
+	#curriculum
+===================================================================*/
+#curriculum  .curriculum_img  h3{       text-shadow: 2px 2px 0 #fff;   margin-left: 30px;    max-width: 500px; color: #8EC31F; font-weight: bold; text-align: center; font-size: 3em; letter-spacing: 5px;}
+#curriculum  .curriculum_img  h3 span{    display: block; color: #9D9D9D; font-size: 0.5em;}
+
+@media (min-width: 576px){
+	#curriculum .curriculum_img .disp_tbl{position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); -webkit-transform: translate(-50%, -50%); -ms-transform: translate(-50%, -50%);}
+	#curriculum .curriculum_img{    border: 2px solid #F2F2F2; border-radius: 5px; overflow: hidden; position: relative;}
+}
+@media (max-width: 767px){
+	#curriculum .curriculum_img h3 {margin-left: 15px; font-size: 2em; max-width: 300px;}
+}
+@media (max-width: 575px){
+	#curriculum .curriculum_img  h3{margin-left: 0; font-size: 1.75em; max-width: 100%;}
+}
+/*===================================================================
 	#news
 ===================================================================*/
 

@@ -149,7 +149,7 @@ body, #base, #body { position:relative; overflow-x:hidden; }
 	}
 	@media (min-width: 992px) and (max-width: 1199px){
 		#head_navi li:not(.head_contact) a { display: block; padding: 0 10px; font-size: 15px; letter-spacing: -2px;}
-		#head li.head_contact .mail_i { margin-bottom: 0;}
+		#head li.head_contact .mail_i { margin-bottom: 0; margin-right: 5px;}
 		#head li.head_contact a.btn_contact { display: flex; justify-content: center; padding: 3px 0px;}
 		#head li.head_contact a.btn_contact .disp_td{display: flex; justify-content: center; align-items: center;}
 		#head_navi li.head_contact .tel_unit{margin-bottom: 5px;}
