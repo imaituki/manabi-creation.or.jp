@@ -29,7 +29,14 @@ if( empty( $arr_post ) ) {
 //----------------------------------------
 // エラーチェック
 if( empty( $message["ng"] ) ) {
-
+	
+	//----------------------------------------
+	//  メールデータ取得
+	//----------------------------------------
+	$objXml    = new FN_xml( $_ARR_MAIL["contact"]["savePath"] );
+	$mail_conf = $objXml->GetDataXml( $objXml->GetArrayXml( null, true, null ) );
+	
+	
 	//----------------------------------------
 	//  データ加工
 	//----------------------------------------
@@ -63,7 +70,8 @@ if( empty( $message["ng"] ) ) {
 
 	// 内容
 	$smarty->assign( array(
-		"arr_post" => $arr_post,
+		"arr_post"  => $arr_post,
+		"mail_conf" => $mail_conf,
 	) );
 
 	// テンプレートの取得
@@ -73,7 +81,8 @@ if( empty( $message["ng"] ) ) {
 	// 改行
 	$mail1 = str_replace( "\r", "\n", str_replace( "\r\n", "\n", $mail1 ) );
 	$mail2 = str_replace( "\r", "\n", str_replace( "\r\n", "\n", $mail2 ) );
-
+	
+	
 	//----------------------------------------
 	//  お客様用
 	//----------------------------------------
@@ -82,12 +91,13 @@ if( empty( $message["ng"] ) ) {
 	$header2 = NULL;
 
 	// ヘッダー
-	$header1 .= "From: " . mb_encode_mimeheader( "" ) . " <" . _ADMIN_MAIL . ">\n";
+	$header1 .= "From: " . mb_encode_mimeheader( _CLIENT_NAME ) . " <" . $mail_conf["info"]["admin_mail"] . ">\n";
+	$header1 .= "Bcc: "  . $mail_conf["info"]["bcc_mail"] . "\n";
 	$header1 .= "Content-Type: text/plain; charset=iso-2022-jp\n";
 	$header1 .= "Content-Transfer-Encoding: 7bit\n";
 
 	// サブジェクト
-	$subject1 = "";
+	$subject1 = $mail_conf["user"]["title"];
 
 	// お客様へ
 	$error_flg1 = mb_send_mail( $arr_post["mail"], $subject1, $mail1, $header1 );
@@ -98,13 +108,15 @@ if( empty( $message["ng"] ) ) {
 	//----------------------------------------
 	// ヘッダー
 	$header2 .= "From: " . mb_encode_mimeheader( $arr_post["name"] ) . " <" . $arr_post["mail"] . ">\n";
+	$header2 .= "Bcc: "  . $mail_conf["info"]["bcc_mail"] . "\n";
 	$header2 .= "Content-Type: text/plain; charset=iso-2022-jp\n";
 	$header2 .= "Content-Transfer-Encoding: 7bit\n";
 
 	// サブジェクト
-	$subject2 = "";
+	$subject2 = $mail_conf["master"]["title"];
 
 	// 管理へ
+//	$error_flg2 = mb_send_mail( $mail_conf["info"]["admin_mail"], $subject2, $mail2, $header2 );
 	$error_flg2 = mb_send_mail( "office@web3.co.jp", $subject2, $mail2, $header2 );
 
 	// 送信チェック
@@ -130,5 +142,4 @@ if( empty( $message["ng"] ) ) {
 	header( "Location: ./index.php" );
 
 }
-
 ?>

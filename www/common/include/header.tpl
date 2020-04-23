@@ -30,7 +30,7 @@
 					<li class="first"><a href="/about/">学びクリエーションとは？</a></li>
 					<li><a href="/news/">お知らせ・イベント</a></li>
 					<li><a href="/curriculum/">カリキュラム</a></li>
-					<li><a href="/school/">学校紹介</a></li>
+					<li><a href="/school/list.php">学校紹介</a></li>
 					<li class="last"><a href="/access/">アクセス</a></li>
 					<li class="head_contact">
 						<div class="tel_unit">

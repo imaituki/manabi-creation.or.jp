@@ -141,14 +141,117 @@
 					</div>
 					<ul>
 						<li class="first"><a href="###"><i class="fas fa-angle-right"></i>開発総責任者</a></li>
-						<li><a href="###"><i class="fas fa-angle-right"></i>開発総責任者</a></li>
+						<li><a href="###"><i class="fas fa-angle-right"></i>担当講師</a></li>
 					</ul>
 				</div>
 			</div>
 			<div class="col-sm-9" id="teacher">
-                <h2 class="hl_2 mb50"><span class="border"><span class="title">お知らせ</span></span></h2>
+                <h2 class="hl_2 mb30"><span class="border"><span class="title">開発総責任者</span></span></h2>
+				<div class="teacher_unit">
+					<div class="row no-gutters">
+						<div class="col-xs-3 height-1 photo">
+							<img src="/common/image/contents/school/teacher/image1.jpg" alt="岩田 拓真">
+						</div>
+						<div class="col-xs-9">
+							<div class="pos_re name_info height-1 disp_tbl2">
+								<div class="disp_td">
+									<div class="left">
+										<h3 class="hl_name"><span class="name">岩田 拓真</span><span class="en">IWATA YAKIMA</span></h3>
+										<p class="tag">開発総責任者</p>
+									</div>
+								</div>
+								<p class="logo"><img src="/common/image/contents/school/teacher/logo.png" alt="講師紹介"></p>
+							</div>
+						</div>
+					</div>
+					<div class="text_unit">
+						<p>a.school代表兼クリエイティブ・ディレクター。読書や音楽・美術鑑賞から自然探索まで、なにをやっても「わくわくする学び」「斬新なきりくち」を探してしまう。父親2年　生として日々試行錯誤中。//　経営コンサルティング会社Boston Consulting Groupに新卒入社後、コンサルタントとして修行を積みつつ、週末起業として教育NPOの運営に携わる。2013年にa.school設立、2014年より本郷校開校。京都大学総合人間学部卒、東京大学大学院工学系研究科修了（工学修士）。東京大学i.schoolの0期生。NPO法人 Motivation Maker理事。NPO法人 放課後NPOアフタースクール アドバイザー。</p>
+					</div>
+				</div>
 
-				<h2 class="hl_2 mb50"><span class="border"><span class="title">担当講師</span></span></h2>
+				<h2 class="hl_2 mb30"><span class="border"><span class="title">担当講師</span></span></h2>
+				<div class="teacher_unit">
+					<div class="row no-gutters">
+						<div class="col-xs-3 height-1 photo">
+							<img src="/common/image/contents/school/teacher/image2.jpg" alt="澤 貴廣">
+						</div>
+						<div class="col-xs-9">
+							<div class="pos_re name_info height-1 disp_tbl2">
+								<div class="disp_td">
+									<div class="left">
+										<h3 class="hl_name"><span class="name">澤 貴廣</span><span class="en">SAWA  TAKAHIRO</span></h3>
+										<p class="tag">担当講師</p>
+									</div>
+								</div>
+								<p class="logo"><img src="/common/image/contents/school/teacher/logo.png" alt="講師紹介"></p>
+							</div>
+						</div>
+					</div>
+					<div class="text_unit">
+						<p>校長をしていた曾祖父の影響もあり、物心ついたころから家族での会話は教育の話題ばかり。自然と強い関心を持ち、日本、世界の教育について探求を続けてきました。Earth8ightは、変化し続ける世界の動きと同様、常に変化し革新を生み出していきます。20年後、今の子どもたちが組織や役職、国境の枠を越えて世界のどこでも活躍していける人に育つのが楽しみです。<br>兵庫教育大学初等教育学部数学科卒　組織育成・人事コンサルティング会社の創業・運営に関わる。その後、オランダやドイツ・アメリカをはじめ国内外126ヶ所以上の教育施設を巡り最先端の教育プログラムを導入したEarth8ight保育園・Earth8ight Universal Schoolを創設。責任者として運営を行う。</p>
+					</div>
+				</div>
+
+				<div class="teacher_unit">
+					<div class="row no-gutters">
+						<div class="col-xs-3 height-1 photo">
+							<img src="/common/image/contents/school/teacher/image3.jpg" alt="高瀬 敦之">
+						</div>
+						<div class="col-xs-9">
+							<div class="pos_re name_info height-1 disp_tbl2">
+								<div class="disp_td">
+									<div class="left">
+										<h3 class="hl_name"><span class="name">高瀬 敦之</span><span class="en">TAKASE ATSUSHI</span></h3>
+										<p class="tag">担当講師 / すまいるキッズ代表</p>
+									</div>
+								</div>
+								<p class="logo"><img src="/common/image/contents/school/teacher/logo.png" alt="講師紹介"></p>
+							</div>
+						</div>
+					</div>
+					<div class="text_unit">
+						<p>保育園巡回教室をはじめ、小学校〜大学生、主婦のすべてのカテゴリーに、スポーツを通じて、社会貢献できる活動に努める。a.schoolに出逢い、学びとは？社会と繋がる学びを自分自身にも取り入れていきたいと想い、講師と新しい地域と教育現場へa.schoolの新規開拓に関わっている。発展途上マンと称して、日本と世界を飛びまわる。。2018年度よりa.school講師に着任。サッカー選手としてファジアーノ岡山FC、ドイツ留学を経て現在は共育(教育)分野で秘密基地・無人島プログラムなど行う。</p>
+					</div>
+				</div>
+				<!-- 紹介文がない場合は ↓ teacher_unit にmb50つける-->
+				<div class="teacher_unit mb50">
+					<div class="row no-gutters">
+						<div class="col-xs-3 height-1 photo">
+							<img src="/common/image/contents/school/teacher/person.jpg" alt="眞田 祐子">
+						</div>
+						<div class="col-xs-9">
+							<div class="pos_re name_info height-1 disp_tbl2">
+								<div class="disp_td">
+									<div class="left">
+										<h3 class="hl_name"><span class="name">眞田 祐子</span><span class="en">SANADA  YUKO</span></h3>
+										<p class="tag">担当講師</p>
+									</div>
+								</div>
+								<p class="logo"><img src="/common/image/contents/school/teacher/logo.png" alt="講師紹介"></p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="teacher_unit">
+					<div class="row no-gutters">
+						<div class="col-xs-3 height-1 photo">
+							<img src="/common/image/contents/school/teacher/person.jpg" alt="高野 友季">
+						</div>
+						<div class="col-xs-9">
+							<div class="pos_re name_info height-1 disp_tbl2">
+								<div class="disp_td">
+									<div class="left">
+										<h3 class="hl_name"><span class="name">高野 友季</span><span class="en">TAKANO YUKI</span></h3>
+										<p class="tag">担当講師</p>
+									</div>
+								</div>
+								<p class="logo"><img src="/common/image/contents/school/teacher/logo.png" alt="講師紹介"></p>
+							</div>
+						</div>
+					</div>
+				</div>
+
 
 			</div>
 		</div>

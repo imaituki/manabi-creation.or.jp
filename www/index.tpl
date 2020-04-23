@@ -8,6 +8,7 @@
 <link rel="stylesheet" href="/common/css/import.css">
 <!-- js -->
 {include file=$template_javascript}
+<script type="text/javascript" src="/common/js/top.js"></script>
 <!-- js -->
 </head>
 <body id="top">
@@ -35,7 +36,7 @@
 			<li class="first"><a href="/about/">学びクリエーションとは？</a></li>
 			<li><a href="/news/">お知らせ・イベント</a></li>
 			<li><a href="/curriculum/">カリキュラム</a></li>
-			<li><a href="/school/">学校紹介</a></li>
+			<li><a href="/school/list.php">学校紹介</a></li>
 			<li><a href="/access/">アクセス</a></li>
 			<li><a href="/contact/">お問い合わせ</a></li>
 			<li class="sns">
@@ -48,7 +49,7 @@
 <div id="body">
 	<section>
 		<div id="top_online_banner" class="center wrapper">
-			<a href="" class="ov">
+			<a href="/contact/" class="ov">
 				<img src="common/image/contents/top/online_banner.jpg" alt="オンライン授業をご利用できます" class="hidden-only">
 				<img src="common/image/contents/top/online_banner_sp.jpg" alt="オンライン授業をご利用できます" class="visible-only">
 			</a>
@@ -120,40 +121,33 @@
 					<span class="sub">お知らせ</span>
 				</h2>
 				<div class="row tab_unit no-gutters mb50">
-					<!-- active -->
 					<div class="col-xs-4 col-4 active">
-						<a href="">
+						<a href="#news-tab0">
 							<div class="tab first">
 								<p class="pos_ac">すべて</p>
 							</div>
 						</a>
 					</div>
-					<!-- active -->
+					{foreach from=$OptionInformationCategory key="key" item="category" name="loopInformationCategory"}
 					<div class="col-xs-4 col-4">
-						<a href="/news/?cat=1">
-							<div class="tab">
-								<p class="pos_ac">お知らせ</p>
+						<a href="#news-tab{$key}">
+							<div class="tab{if $smarty.foreach.loopInformationCategory.last == 1} last{/if}">
+								<p class="pos_ac">{$category}</p>
 							</div>
 						</a>
 					</div>
-					<div class="col-xs-4 col-4">
-						<a href="/news/?cat=1">
-							<div class="tab last">
-								<p class="pos_ac">イベント</p>
-							</div>
-						</a>
-					</div>
+					{/foreach}
 				</div>
 				<div class="row mb30">
 					{foreach from=$t_information item="information" name="loopInformation"}
-					<div class="col-xs-6">
+					<div class="news-tab-{$information.category_id} col-xs-6">
 						<div class="news_unit height-1">
 							<a href="/news/detail.php?id={$information.id_information}" class="ov">
 								<div class="row">
 									<div class="col-md-3 height-2 disp_tbl2">
 										<div class="disp_td">
 											<div class="img_sq">
-												<img src="common/image/contents/null.jpg" alt="{$information.title}">
+												<img src="{if $information.image1 != NULL}/common/photo/information/image1/m_{$information.image1}{else}/common/image/contents/null.jpg{/if}" alt="{$information.title}">
 											</div>
 										</div>
 									</div>

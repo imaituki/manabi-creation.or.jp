@@ -31,7 +31,11 @@ $form = array(
 	"お問い合わせ内容" => "comment",
 );
 // 必須項目
-$need = array( "name", "ruby", "g", "mail", "tel" );
+if( $arr_post["content"] == 1 ) {
+	$need = array( "name", "ruby", "g", "mail", "tel", "content2" );
+} else {
+	$need = array( "name", "ruby", "g", "mail", "tel", "comment" );
+}
 
 $check = array(
 	"content" => array( "CHECK_NUM" ),
@@ -43,9 +47,6 @@ $check = array(
 	"mail" => array( "CHECK_MAIL" ),
 	"tel" => array( "CHECK_TEL" ),
 );
-if( !empty( $arr_post["content"] ) ){
-	array_push( $need, "content2", "comment" );
-}
 $objCheck = new FN_input_check( "UTF-8" );
 foreach( $form as $key => $val ){
 	$arrCheck = is_array( $check[$val] ) ? $check[$val] : array();

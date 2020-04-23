@@ -41,7 +41,7 @@
 							<li class="sub"><a href="###">幼児教室コペル</a></li>
 						</ul>
 						<ul class="second">
-							<li class="main"><a href="/school/" class="ov">学校紹介</a></li>
+							<li class="main"><a href="/school/list.php" class="ov">学校紹介</a></li>
 							<li class="sub"><a href="###">岡山エリア</a></li>
 							<li class="sub"><a href="###">兵庫エリア</a></li>
 							<li class="sub"><a href="###">名古屋エリア</a></li>

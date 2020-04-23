@@ -264,7 +264,7 @@ body, #base, #body { position:relative; overflow-x:hidden; }
 
 
 #foot { position:relative; padding: 15px 0; }
-#foot .address_unit a{color: #444; text-decoration: none;}
+#foot .address_unit a{color: #626262; text-decoration: none;}
 #foot .address_unit h5 img {     max-width: 190px; }
 #foot .address_unit span.parking{color: #DF333E; font-weight: 600;}
 #foot .sns { font-size:1.25em; }

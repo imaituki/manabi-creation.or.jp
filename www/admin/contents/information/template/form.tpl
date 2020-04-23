@@ -30,51 +30,11 @@
 						</div>
 					</div>
 					<div class="hr-line-dashed"></div>
-					<div class="form-group">
-						<label class="col-sm-2 control-label">小見出し</label>
-						<div class="col-sm-6">
-							{if $message.ng.subtitle|default:"" != NULL}<p class="error">{$message.ng.subtitle}</p>{/if}
-							<textarea class="form-control" name="subtitle" id="subtitle">{$arr_post.subtitle|default:""}</textarea>
-						</div>
-					</div>
-					<div class="hr-line-dashed"></div>
 					<div class="form-group required">
 						<label class="col-sm-2 control-label">本文</label>
 						<div class="col-sm-9">
 							{if $message.ng.comment|default:"" != NULL}<p class="error">{$message.ng.comment}</p>{/if}
 							<textarea name="comment" id="comment" rows="7" class="form-control ckeditor">{$arr_post.comment|default:""}</textarea>
-						</div>
-					</div>
-					<div class="hr-line-dashed"></div>
-					<div class="form-group">
-						<label class="col-sm-2 control-label">対象</label>
-						<div class="col-sm-6">
-							{if $message.ng.target|default:"" != NULL}<p class="error">{$message.ng.target}</p>{/if}
-							<input type="text" class="form-control" name="target" id="target" value="{$arr_post.target|default:""}" />
-						</div>
-					</div>
-					<div class="hr-line-dashed"></div>
-					<div class="form-group">
-						<label class="col-sm-2 control-label">定員</label>
-						<div class="col-sm-6">
-							{if $message.ng.capacity|default:"" != NULL}<p class="error">{$message.ng.capacity}</p>{/if}
-							<input type="text" class="form-control" name="capacity" id="capacity" value="{$arr_post.capacity|default:""}" />
-						</div>
-					</div>
-					<div class="hr-line-dashed"></div>
-					<div class="form-group">
-						<label class="col-sm-2 control-label">参加費</label>
-						<div class="col-sm-6">
-							{if $message.ng.entry_fee|default:"" != NULL}<p class="error">{$message.ng.entry_fee}</p>{/if}
-							<input type="text" class="form-control" name="entry_fee" id="entry_fee" value="{$arr_post.entry_fee|default:""}" />
-						</div>
-					</div>
-					<div class="hr-line-dashed"></div>
-					<div class="form-group">
-						<label class="col-sm-2 control-label">会場</label>
-						<div class="col-sm-6">
-							{if $message.ng.venue|default:"" != NULL}<p class="error">{$message.ng.venue}</p>{/if}
-							<textarea class="form-control" name="venue" id="venue">{$arr_post.venue|default:""}</textarea>
 						</div>
 					</div>
 					<div class="hr-line-dashed"></div>

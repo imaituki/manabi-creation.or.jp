@@ -52,7 +52,7 @@
 					<p class="sub">
 						{assign var="OptionCategory" value=["1" => "_news", "2" => "_event"]}
 						<span class="cat {$OptionCategory[$t_information.id_information_category]}">{$t_information.category_name}</span>
-						<span class="date{if $t_information.id_information_category eq 2} {$OptionCategory[$t_information.id_information_category]}{/if}">2019.12.12</span>
+						<span class="date{if $t_information.id_information_category eq 2} {$OptionCategory[$t_information.id_information_category]}{/if}">{$t_information.date|date_format:"%Y.%m.%d"}</span>
 					</p>
 				</span>
 			</h2>

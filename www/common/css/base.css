@@ -11,7 +11,7 @@
 * { box-sizing:border-box; }
 html,body,p,h1,h2,h3,h4,h5,h6,table,th,td,ul,ol,li,dl,dt,dd,img,a { margin:0; padding:0; }
 html { background:#FFF; }
-body { font:15px/1.7 "Noto Sans JP", "Meiryo UI", "メイリオ", Meiryo, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "Yu Gothic", YuGothic , Avenir, "Open Sans", "Helvetica Neue", Arial, Verdana, Roboto, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif; font-weight:normal; font-style:normal; color:#444; -webkit-text-size-adjust:100%; }
+body { font:15px/1.7 "Noto Sans JP", "Meiryo UI", "メイリオ", Meiryo, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "Yu Gothic", YuGothic , Avenir, "Open Sans", "Helvetica Neue", Arial, Verdana, Roboto, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif; font-weight:normal; font-style:normal; color:#626262; -webkit-text-size-adjust:100%; }
 @media screen and (max-width: 767px){
 	body { font-size:14px; }
 }

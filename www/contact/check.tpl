@@ -84,7 +84,7 @@
 								</tr>
 								<tr>
 									<th scope="row">住所</th>
-									<td>〒{$arr_post.zip} {$p[$arr_post.prefecture]} {$arr_post.address1} {$arr_post.address2}</td>
+									<td>〒{$arr_post.zip} {if $arr_post.prefecture > 0}{html_select_ken selected=$arr_post.prefecture pre="1"}{/if} {$arr_post.address1} {$arr_post.address2}</td>
 								</tr>
 								<tr>
 									<th scope="row">メールアドレス</th>
@@ -99,11 +99,11 @@
 									<th scope="row" class="zoom">ZOOMオンラインの<br class="md_br">利用経験</th>
 									<td>{$c2[$arr_post.content2]}</td>
 								</tr>
+								{/if}
 								<tr>
-									<th scope="row">お問い合わせ内容</th>
+									<th scope="row">{if not empty($arr_post.content)}その他お問い合わせ{else}お問い合わせ内容{/if}</th>
 									<td>{$arr_post.comment|nl2br}</td>
 								</tr>
-								{/if}
 							</tbody>
 						</table>
 						<div class="row form_button _check">

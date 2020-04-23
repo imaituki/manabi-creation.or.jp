@@ -53,10 +53,6 @@ $smarty->compile_dir .= "information/";
 // テンプレートに設定
 $smarty->assign( "t_information", $t_information );
 
-$smarty->assign( "OptionInformationCategory" , array(
-	"1" => "お知らせ",
-	"2" => "イベント",
-) );
 // 表示
 $smarty->display("index.tpl");
 ?>
