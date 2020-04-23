@@ -4,12 +4,38 @@ var ua = navigator.userAgent;
 var os, ver ='', browser = '', ie = '', sp = 0;
 var bpx = 768;
 
-$(window).on('load',function(){
+
+//アンカー対応
+$(window).on('load', function () {
 	urlhash = location.hash;
-	if( urlhash != "" ){
-		$('#head').addClass('fixed');
+	if (urlhash != "") {
+		if ($(urlhash).get(0)) {
+			$('#head').addClass('fixed');
+			urlhash_top = $(urlhash).offset().top;
+			if ($(window).innerWidth() >= bpx) {
+				urlhash_top = urlhash_top - 117;
+			} else {
+				urlhash_top = urlhash_top - 99;
+			}
+			$('body,html').animate({ scrollTop: urlhash_top }, 500);
+		}
 	}
 });
+//ページ内アンカー対応
+$(document).on('click', 'a[href^="#"]', function () {
+	urlhash = $(this).attr('href');
+	if (urlhash != "") {
+		$('#head').addClass('fixed');
+		urlhash_top = $(urlhash).offset().top;
+		if ($(window).innerWidth() >= bpx) {
+			urlhash_top = urlhash_top - 117;
+		} else {
+			urlhash_top = urlhash_top - 99;
+		}
+		$('body,html').animate({ scrollTop: urlhash_top }, 500);
+	}
+});
+
 $(function(){
 	//OS、端末判定
 	if (ua.match(/Win(dows )?NT 10\.0/)) {
@@ -166,7 +192,7 @@ $(function(){
 			});
 		}
 	});
-	
+
 	$('#head_navi a').on('click',function(){
 		if( $('#menu_cover').get(0) ){
 			 $('#btn_open a').trigger('click');

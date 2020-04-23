@@ -1,0 +1,19 @@
+―――――――――――――――――――――――――
+■ 準備
+―――――――――――――――――――――――――
+▼ 管理機能メニュー追加
+/admin/common/inc/secondary.tpl
+
+
+―――――――――――――――――――――――――
+■ DBテーブル構成
+―――――――――――――――――――――――――
+CREATE TABLE `mst_recruit_category` (
+  `id_recruit_category` int(11) NOT NULL COMMENT '採用情報カテゴリID',
+  `name` varchar(255) COLLATE utf8_unicode_ci NOT NULL COMMENT 'カテゴリ名',
+  `display_num` int(11) DEFAULT NULL COMMENT '並び順',
+  `display_flg` tinyint(1) NOT NULL DEFAULT '0' COMMENT '掲載フラグ',
+  `delete_flg` tinyint(1) NOT NULL DEFAULT '0' COMMENT '削除フラグ',
+  `entry_date` datetime NOT NULL COMMENT '登録日',
+  `update_date` datetime NOT NULL COMMENT '更新日'
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci COMMENT='採用情報カテゴリ';

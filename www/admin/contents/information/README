@@ -1,0 +1,48 @@
+―――――――――――――――――――――――――
+■ 準備
+―――――――――――――――――――――――――
+▼ 管理機能メニュー追加
+/admin/common/inc/secondary.tpl
+
+
+▼ 画像の保存先フォルダ作成（ パーミッション：0777 ）
+/common/photo/information/image1/
+/common/photo/information/image2/
+/common/photo/information/image3/
+/common/photo/information/image4/
+/common/photo/information/image5/
+
+
+―――――――――――――――――――――――――
+■ DBテーブル構成
+―――――――――――――――――――――――――
+CREATE TABLE `t_information` (
+  `id_information` int(11) NOT NULL COMMENT '新着情報ID',
+  `date` date NOT NULL COMMENT '日付',
+  `title` varchar(255) COLLATE utf8_unicode_ci NOT NULL COMMENT 'タイトル',
+  `comment` text COLLATE utf8_unicode_ci NOT NULL COMMENT '記事',
+  `image1` varchar(32) COLLATE utf8_unicode_ci DEFAULT NULL COMMENT '画像1',
+  `image2` varchar(32) COLLATE utf8_unicode_ci DEFAULT NULL COMMENT '画像2',
+  `image3` varchar(32) COLLATE utf8_unicode_ci DEFAULT NULL COMMENT '画像3',
+  `image4` varchar(32) COLLATE utf8_unicode_ci DEFAULT NULL COMMENT '画像4',
+  `image5` varchar(32) COLLATE utf8_unicode_ci DEFAULT NULL COMMENT '画像5',
+  `caption1` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL COMMENT 'キャプション1',
+  `caption2` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL COMMENT 'キャプション2',
+  `caption3` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL COMMENT 'キャプション3',
+  `caption4` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL COMMENT 'キャプション4',
+  `caption5` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL COMMENT 'キャプション5',
+  `display_flg` tinyint(1) NOT NULL DEFAULT '0' COMMENT '表示フラグ',
+  `display_indefinite` tinyint(1) NOT NULL DEFAULT '0' COMMENT '表示無期限フラグ',
+  `display_start` datetime DEFAULT NULL COMMENT '掲載開始日',
+  `display_end` datetime DEFAULT NULL COMMENT '掲載終了日',
+  `entry_date` datetime NOT NULL COMMENT '登録日',
+  `update_date` datetime DEFAULT NULL COMMENT '更新日'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci COMMENT='新着情報';
+COMMIT;
+
+ALTER TABLE `t_information`
+  ADD PRIMARY KEY (`id_information`);
+
+ALTER TABLE `t_information`
+  MODIFY `id_information` int(11) NOT NULL AUTO_INCREMENT COMMENT '新着情報ID';
+COMMIT;

@@ -25,8 +25,8 @@
 		<div class="head_wrap">
 			<h1 class="site_logo">
 				<a class="ov" href="/">
-					<img src="/common/image/head/logo.png" alt="学びクリエーション" / class="sp_none">
-					<img src="/common/image/head/logo_sp.png" alt="学びクリエーション" / class="pc_none">
+					<img src="/common/image/head/logo.png" alt="学びクリエーション" / class="top_logo">
+					<img src="/common/image/head/logo_sp.png" alt="学びクリエーション" / class="top_none_logo">
 				</a>
 			</h1>
 			<div class="head_contact _head hidden-xs">
@@ -49,19 +49,31 @@
 		<div id="head_navi">
 			<div class="center">
 				<ul>
-					<li><a href="/about/">学びクリエーションとは？</a></li>
-					<li><a href="/information/">お知らせ・イベント</a></li>
+					<li class="first"><a href="/about/">学びクリエーションとは？</a></li>
+					<li><a href="/news/">お知らせ・イベント</a></li>
 					<li><a href="/curriculum/">カリキュラム</a></li>
 					<li><a href="/school/">学校紹介</a></li>
-					<li><a href="/access/">アクセス</a></li>
+					<li class="last"><a href="/access/">アクセス</a></li>
 					<li class="head_contact">
 						<div class="tel_unit">
 							<span class="tel sans" data-tel="086-242-3318"><img src="/common/image/head/phone.png" class="pos_vm" alt="電話番号" /><a href="tel:086-242-3318">086-242-3318</a></span>
 							<span class="time">受付時間 10:00～11：00（日曜定休）</span>
 						</div>
-						<div class="mail_unit"><a href="/contact/" class="btn_contact"><img src="/common/image/head/mail.png" class="pos_vm" alt="お問い合わせ" />お問い合わせ</a></div>
+						<div class="mail_unit">
+							<a href="/contact/" class="btn_contact ov">
+								<div class="disp_td">
+									<p class="mail_i m0auto"><img src="/common/image/head/mail.png" class="pos_vm" alt="お問い合わせ" /></p>
+									<p class="pos_ac sp_none">お問合せ</p>
+									<p class="pos_ac pc_none">お問い合わせ</p>
+								</div>
+							</a>
+						</div>
 					</li>
 				</ul>
+			</div>
+			<div class="sns_icon">
+				<a class="fb ov ga_link" href="###" target="_blank"><i class="fab fa-facebook-f"></i></a>
+				<a href="###" target="_blank" class="twitter ov"><i class="fab fa-twitter"></i></a>
 			</div>
 		</div>
 	</div>
@@ -85,14 +97,14 @@
 	<div class="center">
 		<ul>
 			<li class="first"><a href="/about/">学びクリエーションとは？</a></li>
-			<li><a href="/information/">お知らせ・イベント</a></li>
+			<li><a href="/news/">お知らせ・イベント</a></li>
 			<li><a href="/curriculum/">カリキュラム</a></li>
 			<li><a href="/school/">学校紹介</a></li>
 			<li><a href="/access/">アクセス</a></li>
 			<li><a href="/contact/">お問い合わせ</a></li>
 			<li class="sns">
-				<a href="https://www.facebook.com/tagschool0902" target="_blank" class="facebook ov"><i class="fab fa-facebook-f"></i></a>
-				<a href="https://twitter.com/tagschool28" target="_blank" class="twitter ov"><i class="fab fa-twitter"></i></a>
+				<a href="###" target="_blank" class="facebook ov"><i class="fab fa-facebook-f"></i></a>
+				<a href="###" target="_blank" class="twitter ov"><i class="fab fa-twitter"></i></a>
 			</li>
 		</ul>
 	</div>
@@ -100,7 +112,10 @@
 <div id="body">
 	<section>
 		<div id="top_online_banner" class="center wrapper">
-			<a href="" class="ov"><img src="common/image/contents/top/online_banner.jpg" alt="オンライン授業をご利用できます"></a>
+			<a href="" class="ov">
+				<img src="common/image/contents/top/online_banner.jpg" alt="オンライン授業をご利用できます" class="hidden-only">
+				<img src="common/image/contents/top/online_banner_sp.jpg" alt="オンライン授業をご利用できます" class="visible-only">
+			</a>
 		</div>
 	</section>
 	<section>
@@ -290,7 +305,7 @@
 </main>
 <!-- footer -->
 <footer>
-	<div id="foot_contact" class="wrapper-t center mb50">
+	<div id="foot_contact" class="wrapper center">
 		<div class="contact_area">
 			<div class="row">
 				<div class="col-xs-6">
@@ -315,9 +330,10 @@
 					<div class="address_unit">
 						<div class="disp_td fw_bold">
 							<h5><a class="ov" href="/"><img src="/common/image/foot/logo.png" alt="岡山の学習塾 学びクリエーション" /></a></h5>
-							<p>〒700-0973  岡山県岡山市北区下中野1200-4-4F</p>
-							<p class="mb20">TEL：<span class="tel" data-tel="086-242-3318">086-242-3318</span>
+							<p>〒700-0973  岡山県岡山市北区下中野1200-4 4F</p>
+							<p><span class="tel" data-tel="086-242-3318">TEL：<a href="tel:086-242-3318">086-242-3318</a></span>
 							</p>
+							<p class="mb20">メール：<a href="mailto:info@manabi-creation.or.jp">info@manabi-creation.or.jp</a></p>
 						</div>
 					</div>
 				</div>
