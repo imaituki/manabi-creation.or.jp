@@ -24,10 +24,7 @@ $(window).on('load', function () {
 //ページ内アンカー対応
 $(document).on('click', 'a[href*="#"]', function () {
 	if ($(window).innerWidth() <= bpx) {
-		urlhash = $(this).attr('href');
-		if (urlhash.indexOf("/school/") > -1) {
-			urlhash = urlhash.replace("/school/", "");
-		}
+		urlhash = $(this.hash);
 		if (urlhash != "") {
 			$('#head').addClass('fixed');
 			urlhash_top = $(urlhash).offset().top;

@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.18, created on 2020-04-22 18:18:21
+<?php /* Smarty version Smarty-3.1.18, created on 2020-04-23 18:55:17
          compiled from "/home/manabi-creation/www//common/include/footer.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:15703725365ea00bdd056f44-94808272%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'd71c52f3f9610a1b8a051891840bb36e618f6041' => 
     array (
       0 => '/home/manabi-creation/www//common/include/footer.tpl',
-      1 => 1587525877,
+      1 => 1587635688,
       2 => 'file',
     ),
   ),
@@ -15,9 +15,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
-  'has_nocache_code' => false,
   'version' => 'Smarty-3.1.18',
   'unifunc' => 'content_5ea00bdd058a11_01902044',
+  'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_5ea00bdd058a11_01902044')) {function content_5ea00bdd058a11_01902044($_smarty_tpl) {?><footer>
 	<div id="foot_contact" class="wrapper center">
@@ -62,7 +62,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 							<li class="sub"><a href="###">幼児教室コペル</a></li>
 						</ul>
 						<ul class="second">
-							<li class="main"><a href="/school/" class="ov">学校紹介</a></li>
+							<li class="main"><a href="/school/list.php" class="ov">学校紹介</a></li>
 							<li class="sub"><a href="###">岡山エリア</a></li>
 							<li class="sub"><a href="###">兵庫エリア</a></li>
 							<li class="sub"><a href="###">名古屋エリア</a></li>

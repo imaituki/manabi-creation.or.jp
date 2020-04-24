@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.18, created on 2020-04-22 20:00:09
+<?php /* Smarty version Smarty-3.1.18, created on 2020-04-24 15:37:51
          compiled from "./index.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:12290239125ea023b931fcb8-17411486%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'e8b82e36b14a5b32b9082c90cfde424dcce75e56' => 
     array (
       0 => './index.tpl',
-      1 => 1587553190,
+      1 => 1587710103,
       2 => 'file',
     ),
   ),
@@ -15,18 +15,24 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
+  'version' => 'Smarty-3.1.18',
+  'unifunc' => 'content_5ea023b933e8e6_70783274',
   'variables' => 
   array (
     'template_meta' => 0,
     'template_javascript' => 0,
     'template_header' => 0,
+    'OptionArea' => 0,
+    'key' => 0,
+    'area' => 0,
+    'mst_school' => 0,
+    'school' => 0,
     'template_footer' => 0,
   ),
   'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.18',
-  'unifunc' => 'content_5ea023b933e8e6_70783274',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5ea023b933e8e6_70783274')) {function content_5ea023b933e8e6_70783274($_smarty_tpl) {?><!DOCTYPE html>
+<?php if ($_valid && !is_callable('content_5ea023b933e8e6_70783274')) {function content_5ea023b933e8e6_70783274($_smarty_tpl) {?><?php if (!is_callable('smarty_function_html_select_ken')) include '/home/manabi-creation/cgi-data/smarty/libs/plugins/function.html_select_ken.php';
+?><!DOCTYPE html>
 <html lang="ja">
 <head>
 <meta charset="utf-8">
@@ -111,9 +117,21 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 							<!--スマホ時　ID絞込　開いている時-->
 						</div>
 						<ul>
-							<li class="first"><a href="###"><i class="fas fa-angle-right"></i>a.school</a></li>
-							<li><a href="###"><i class="fas fa-angle-right"></i>英語クラス</a></li>
-							<li><a href="###"><i class="fas fa-angle-right"></i>幼児教室コペル</a></li>
+							<?php  $_smarty_tpl->tpl_vars["area"] = new Smarty_Variable; $_smarty_tpl->tpl_vars["area"]->_loop = false;
+ $_smarty_tpl->tpl_vars["key"] = new Smarty_Variable;
+ $_from = $_smarty_tpl->tpl_vars['OptionArea']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+ $_smarty_tpl->tpl_vars["area"]->index=-1;
+foreach ($_from as $_smarty_tpl->tpl_vars["area"]->key => $_smarty_tpl->tpl_vars["area"]->value) {
+$_smarty_tpl->tpl_vars["area"]->_loop = true;
+ $_smarty_tpl->tpl_vars["key"]->value = $_smarty_tpl->tpl_vars["area"]->key;
+ $_smarty_tpl->tpl_vars["area"]->index++;
+ $_smarty_tpl->tpl_vars["area"]->first = $_smarty_tpl->tpl_vars["area"]->index === 0;
+ $_smarty_tpl->tpl_vars['smarty']->value['foreach']["loopArea"]['first'] = $_smarty_tpl->tpl_vars["area"]->first;
+?>
+							<li<?php if ($_smarty_tpl->getVariable('smarty')->value['foreach']['loopArea']['first']==1) {?> class="first"<?php }?>><a href="#area<?php echo $_smarty_tpl->tpl_vars['key']->value;?>
+"><i class="fas fa-angle-right"></i><?php echo $_smarty_tpl->tpl_vars['area']->value;?>
+</a></li>
+							<?php } ?>
 						</ul>
 					</div>
 				</div>
@@ -121,64 +139,48 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 					<div class="access_logo mb50">
 						<p class="pos_ac"><img src="/common/image/contents/top/aschool.png" alt="aschool"></p>
 					</div>
-
-					<h2 class="hl_2 mb30"><span class="border"><span class="title">岡山エリア</span></span></h2>
-					<div class="access_unit mb50">
-						<h3 class="hl_4 mb20">▼下中野校（アースエイトユニバーサルスクール本校）</h3>
-						<p class="map mb20">
-							<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3282.726299886649!2d133.89921741614413!3d34.63635628045131!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3554077e656f7c35%3A0x36dcad26f89ec9e8!2z44CSNzAwLTA5NzMg5bKh5bGx55yM5bKh5bGx5biC5YyX5Yy65LiL5Lit6YeO77yR77yS77yQ77yQ4oiS77yU!5e0!3m2!1sja!2sjp!4v1587523812379!5m2!1sja!2sjp" width="100%" height="275" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
-						</p>
-						<ul class="access_info">
-							<li><span>住所：岡山県岡山市北区下中野1200-4-4F</span></li>
-							<li><span>電話番号：086-242-3318</span></li>
-							<li><span>ファックス番号：086-242-3319</span></li>
-						</ul>
-					</div>
-					<div class="access_unit mb50">
-						<h3 class="hl_4 mb20">▼学校法人朝日学園　朝日塾小学校（提携校）</h3>
-						<p class="map mb20">
-							<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3282.726299886649!2d133.89921741614413!3d34.63635628045131!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3554077e656f7c35%3A0x36dcad26f89ec9e8!2z44CSNzAwLTA5NzMg5bKh5bGx55yM5bKh5bGx5biC5YyX5Yy65LiL5Lit6YeO77yR77yS77yQ77yQ4oiS77yU!5e0!3m2!1sja!2sjp!4v1587523812379!5m2!1sja!2sjp" width="100%" height="275" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
-						</p>
-						<ul class="access_info">
-							<li><span>住所：岡山市北区吉宗856</span></li>
-						</ul>
-					</div>
-
-
-					<h2 class="hl_2 mb50"><span class="border"><span class="title">兵庫エリア</span></span></h2>
-					<div class="access_unit mb50">
-						<h3 class="hl_4 mb20">▼下中野校（アースエイトユニバーサルスクール本校）</h3>
-						<p class="map mb20">
-							<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3282.726299886649!2d133.89921741614413!3d34.63635628045131!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3554077e656f7c35%3A0x36dcad26f89ec9e8!2z44CSNzAwLTA5NzMg5bKh5bGx55yM5bKh5bGx5biC5YyX5Yy65LiL5Lit6YeO77yR77yS77yQ77yQ4oiS77yU!5e0!3m2!1sja!2sjp!4v1587523812379!5m2!1sja!2sjp" width="100%" height="275" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
-						</p>
-						<ul class="access_info">
-							<li><span>住所：岡山県岡山市北区下中野1200-4-4F</span></li>
-							<li><span>電話番号：086-242-3318</span></li>
-							<li><span>ファックス番号：086-242-3319</span></li>
-						</ul>
-					</div>
-
-					<h2 class="hl_2 mb50"><span class="border"><span class="title">名古屋エリア</span></span></h2>
-					<div class="access_unit mb50">
-						<h3 class="hl_4 mb20">▼下中野校（アースエイトユニバーサルスクール本校）</h3>
-						<p class="map mb20">
-							<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3282.726299886649!2d133.89921741614413!3d34.63635628045131!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3554077e656f7c35%3A0x36dcad26f89ec9e8!2z44CSNzAwLTA5NzMg5bKh5bGx55yM5bKh5bGx5biC5YyX5Yy65LiL5Lit6YeO77yR77yS77yQ77yQ4oiS77yU!5e0!3m2!1sja!2sjp!4v1587523812379!5m2!1sja!2sjp" width="100%" height="275" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
-						</p>
-						<ul class="access_info">
-							<li><span>住所：岡山県岡山市北区下中野1200-4-4F</span></li>
-							<li><span>電話番号：086-242-3318</span></li>
-							<li><span>ファックス番号：086-242-3319</span></li>
-						</ul>
-					</div>
-					<div class="access_unit mb50">
-						<h3 class="hl_4 mb20">▼学校法人朝日学園　朝日塾小学校（提携校）</h3>
-						<p class="map mb20">
-							<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3282.726299886649!2d133.89921741614413!3d34.63635628045131!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3554077e656f7c35%3A0x36dcad26f89ec9e8!2z44CSNzAwLTA5NzMg5bKh5bGx55yM5bKh5bGx5biC5YyX5Yy65LiL5Lit6YeO77yR77yS77yQ77yQ4oiS77yU!5e0!3m2!1sja!2sjp!4v1587523812379!5m2!1sja!2sjp" width="100%" height="275" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
-						</p>
-						<ul class="access_info">
-							<li><span>住所：岡山市北区吉宗856</span></li>
-						</ul>
-					</div>
+					<?php  $_smarty_tpl->tpl_vars["area"] = new Smarty_Variable; $_smarty_tpl->tpl_vars["area"]->_loop = false;
+ $_smarty_tpl->tpl_vars["key"] = new Smarty_Variable;
+ $_from = $_smarty_tpl->tpl_vars['OptionArea']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+ $_smarty_tpl->tpl_vars["area"]->index=-1;
+foreach ($_from as $_smarty_tpl->tpl_vars["area"]->key => $_smarty_tpl->tpl_vars["area"]->value) {
+$_smarty_tpl->tpl_vars["area"]->_loop = true;
+ $_smarty_tpl->tpl_vars["key"]->value = $_smarty_tpl->tpl_vars["area"]->key;
+ $_smarty_tpl->tpl_vars["area"]->index++;
+ $_smarty_tpl->tpl_vars["area"]->first = $_smarty_tpl->tpl_vars["area"]->index === 0;
+ $_smarty_tpl->tpl_vars['smarty']->value['foreach']["loopArea"]['first'] = $_smarty_tpl->tpl_vars["area"]->first;
+?>
+						<?php if ($_smarty_tpl->tpl_vars['mst_school']->value[$_smarty_tpl->tpl_vars['key']->value]!=null) {?>
+							<h2 class="hl_2 mb30" id="area<?php echo $_smarty_tpl->tpl_vars['key']->value;?>
+"><span class="border"><span class="title"><?php echo $_smarty_tpl->tpl_vars['area']->value;?>
+</span></span></h2>
+							<?php  $_smarty_tpl->tpl_vars["school"] = new Smarty_Variable; $_smarty_tpl->tpl_vars["school"]->_loop = false;
+ $_smarty_tpl->tpl_vars["key2"] = new Smarty_Variable;
+ $_from = $_smarty_tpl->tpl_vars['mst_school']->value[$_smarty_tpl->tpl_vars['key']->value]; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+foreach ($_from as $_smarty_tpl->tpl_vars["school"]->key => $_smarty_tpl->tpl_vars["school"]->value) {
+$_smarty_tpl->tpl_vars["school"]->_loop = true;
+ $_smarty_tpl->tpl_vars["key2"]->value = $_smarty_tpl->tpl_vars["school"]->key;
+?>
+							<div class="access_unit mb50">
+								<h3 class="hl_4 mb20">▼<?php echo $_smarty_tpl->tpl_vars['school']->value['name'];?>
+</h3>
+								<p class="map mb20">
+									<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3282.726299886649!2d133.89921741614413!3d34.63635628045131!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3554077e656f7c35%3A0x36dcad26f89ec9e8!2z44CSNzAwLTA5NzMg5bKh5bGx55yM5bKh5bGx5biC5YyX5Yy65LiL5Lit6YeO77yR77yS77yQ77yQ4oiS77yU!5e0!3m2!1sja!2sjp!4v1587523812379!5m2!1sja!2sjp" width="100%" height="275" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+								</p>
+								<ul class="access_info">
+									<li><span>住所：<?php if ($_smarty_tpl->tpl_vars['school']->value['prefecture']>0) {?><?php echo smarty_function_html_select_ken(array('selected'=>$_smarty_tpl->tpl_vars['school']->value['prefecture'],'pre'=>"1"),$_smarty_tpl);?>
+<?php }?><?php echo $_smarty_tpl->tpl_vars['school']->value['address1'];?>
+<?php echo $_smarty_tpl->tpl_vars['school']->value['address2'];?>
+</span></li>
+									<li><span>電話番号：<?php echo $_smarty_tpl->tpl_vars['school']->value['tel'];?>
+</span></li>
+									<li><span>ファックス番号：<?php echo $_smarty_tpl->tpl_vars['school']->value['fax'];?>
+</span></li>
+								</ul>
+							</div>
+							<?php } ?>
+						<?php }?>
+					<?php } ?>
 				</div>
 			</div>
 		</div>

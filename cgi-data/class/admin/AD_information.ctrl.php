@@ -109,9 +109,6 @@ class AD_information {
 		$objInputCheck->entryData( "カテゴリ", "id_information_category", $arrVal["id_information_category"], array( "CHECK_EMPTY" ), null, null );
 		$objInputCheck->entryData( "タイトル", "title"                  , $arrVal["title"]                  , array( "CHECK_EMPTY", "CHECK_MIN_MAX_LEN" ), 0, 255 );
 		$objInputCheck->entryData( "本文"    , "comment"                , $arrVal["comment"]                  , array( "CHECK_EMPTY" ), null, null );
-		$objInputCheck->entryData( "対象"    , "target"                 , $arrVal["target"]                 , array( "CHECK_MIN_MAX_LEN" ), 0, 255 );
-		$objInputCheck->entryData( "定員"    , "capacity"               , $arrVal["capacity"]               , array( "CHECK_MIN_MAX_LEN" ), 0, 255 );
-		$objInputCheck->entryData( "参加費"  , "entry_fee"              , $arrVal["entry_fee"]              , array( "CHECK_MIN_MAX_LEN" ), 0, 255 );
 		if( $arrVal["display_indefinite_flg"] == 0 ) {
 			$objInputCheck->entryData( "掲載開始", "display_start", $arrVal["display_start"], array( "CHECK_DATE" ), null, null );
 			$objInputCheck->entryData( "掲載終了", "display_end", $arrVal["display_end"], array( "CHECK_DATE" ), null, null );

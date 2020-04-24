@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.18, created on 2020-04-22 18:00:49
+<?php /* Smarty version Smarty-3.1.18, created on 2020-04-23 11:12:05
          compiled from "./check.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:9822973345ea007c109ceb7-23515440%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '5b4b2052636ec9f26a16ab03f9e8ef7a8dc00733' => 
     array (
       0 => './check.tpl',
-      1 => 1587544416,
+      1 => 1587607910,
       2 => 'file',
     ),
   ),
@@ -15,6 +15,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
+  'version' => 'Smarty-3.1.18',
+  'unifunc' => 'content_5ea007c115d602_09082491',
   'variables' => 
   array (
     'message' => 0,
@@ -24,17 +26,15 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'arr_post' => 0,
     'c1' => 0,
     'g' => 0,
-    'p' => 0,
     'c2' => 0,
     'name' => 0,
     'value' => 0,
     'template_footer' => 0,
   ),
   'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.18',
-  'unifunc' => 'content_5ea007c115d602_09082491',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5ea007c115d602_09082491')) {function content_5ea007c115d602_09082491($_smarty_tpl) {?><?php if (empty($_smarty_tpl->tpl_vars['message']->value['ng'])) {?>
+<?php if ($_valid && !is_callable('content_5ea007c115d602_09082491')) {function content_5ea007c115d602_09082491($_smarty_tpl) {?><?php if (!is_callable('smarty_function_html_select_ken')) include '/home/manabi-creation/cgi-data/smarty/libs/plugins/function.html_select_ken.php';
+?><?php if (empty($_smarty_tpl->tpl_vars['message']->value['ng'])) {?>
 <?php echo $_smarty_tpl->getSubTemplate ("array.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
 
 <!DOCTYPE html>
@@ -131,8 +131,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 								<tr>
 									<th scope="row">住所</th>
 									<td>〒<?php echo $_smarty_tpl->tpl_vars['arr_post']->value['zip'];?>
- <?php echo $_smarty_tpl->tpl_vars['p']->value[$_smarty_tpl->tpl_vars['arr_post']->value['prefecture']];?>
- <?php echo $_smarty_tpl->tpl_vars['arr_post']->value['address1'];?>
+ <?php if ($_smarty_tpl->tpl_vars['arr_post']->value['prefecture']>0) {?><?php echo smarty_function_html_select_ken(array('selected'=>$_smarty_tpl->tpl_vars['arr_post']->value['prefecture'],'pre'=>"1"),$_smarty_tpl);?>
+<?php }?> <?php echo $_smarty_tpl->tpl_vars['arr_post']->value['address1'];?>
  <?php echo $_smarty_tpl->tpl_vars['arr_post']->value['address2'];?>
 </td>
 								</tr>
@@ -152,12 +152,12 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 									<td><?php echo $_smarty_tpl->tpl_vars['c2']->value[$_smarty_tpl->tpl_vars['arr_post']->value['content2']];?>
 </td>
 								</tr>
+								<?php }?>
 								<tr>
-									<th scope="row">お問い合わせ内容</th>
+									<th scope="row"><?php if (!empty($_smarty_tpl->tpl_vars['arr_post']->value['content'])) {?>その他お問い合わせ<?php } else { ?>お問い合わせ内容<?php }?></th>
 									<td><?php echo nl2br($_smarty_tpl->tpl_vars['arr_post']->value['comment']);?>
 </td>
 								</tr>
-								<?php }?>
 							</tbody>
 						</table>
 						<div class="row form_button _check">
