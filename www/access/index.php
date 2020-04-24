@@ -24,6 +24,7 @@ $tmp_school = $objSchool->GetSearchList( $arr_get, array( "fetch" => _DB_FETCH_A
 // エリア別に振り分け
 if( is_array( $tmp_school ) ) {
 	foreach( $tmp_school as $key => $val ) {
+		$val["map"] = html_entity_decode( $val["map"] );
 		$mst_school[$val["id_area"]][] = $val;
 	}
 }

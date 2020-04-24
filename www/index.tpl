@@ -36,13 +36,15 @@
 			<li class="first"><a href="/about/">学びクリエーションとは？</a></li>
 			<li><a href="/news/">お知らせ・イベント</a></li>
 			<li><a href="/curriculum/">カリキュラム</a></li>
-			<li><a href="/school/list.php">学校紹介</a></li>
+{*			<li><a href="/school/list.php">学校紹介</a></li>*}
 			<li><a href="/access/">アクセス</a></li>
 			<li><a href="/contact/">お問い合わせ</a></li>
+{*
 			<li class="sns">
 				<a href="###" target="_blank" class="facebook ov"><i class="fab fa-facebook-f"></i></a>
 				<a href="###" target="_blank" class="twitter ov"><i class="fab fa-twitter"></i></a>
 			</li>
+*}
 		</ul>
 	</div>
 </div>
@@ -170,6 +172,8 @@
 							</a>
 						</div>
 					</div>
+					{foreachelse}
+						<div class="col-xs-12">現在、お知らせ・イベント情報を準備中です。</div>
 					{/foreach}
 				</div>
 				<div class="button m0auto"><a href="/news/" class="_type1 ov">一覧を見る<i class="fas fa-caret-right"></i></a></div>

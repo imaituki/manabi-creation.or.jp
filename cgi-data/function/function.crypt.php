@@ -81,7 +81,6 @@ function getInitialVector() {
 //----------------------------------------------------------------------------
 function pkcs5_padding( $text ) {
 	$block_size = openssl_cipher_block_length( _MCRYPT_TYPE );
-	disp_arr($block_size);
 	$pad = $block_size - (strlen($text) % $block_size);
 	return $text . str_repeat(chr($pad), $pad);
 }

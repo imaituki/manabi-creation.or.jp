@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.18, created on 2020-04-23 11:45:27
+<?php /* Smarty version Smarty-3.1.18, created on 2020-04-24 17:11:29
          compiled from "./mail1.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:14260151465ea0f1f622ad01-61729682%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '2bf13224bb01d726fa1258b5fb13b4ddb3b5359c' => 
     array (
       0 => './mail1.tpl',
-      1 => 1587609918,
+      1 => 1587715876,
       2 => 'file',
     ),
   ),
@@ -43,6 +43,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 保護者氏名(フリガナ)    ：<?php echo $_smarty_tpl->tpl_vars['arr_post']->value['ruby'];?>
 
 受講するお子様の学年    ：<?php echo $_smarty_tpl->tpl_vars['g']->value[$_smarty_tpl->tpl_vars['arr_post']->value['g']];?>
+
+受講者氏名(フリガナ)    ：<?php echo $_smarty_tpl->tpl_vars['arr_post']->value['name2'];?>
 
 受講者氏名              ：<?php echo $_smarty_tpl->tpl_vars['arr_post']->value['ruby2'];?>
 

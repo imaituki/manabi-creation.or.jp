@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.18, created on 2020-04-23 18:51:19
+<?php /* Smarty version Smarty-3.1.18, created on 2020-04-24 17:18:26
          compiled from "/home/manabi-creation/www//common/include/header.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:18534123325ea023b9392264-83649055%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'e7fc021756cb70060da37b3b31f06bf91d18e67a' => 
     array (
       0 => '/home/manabi-creation/www//common/include/header.tpl',
-      1 => 1587635431,
+      1 => 1587716164,
       2 => 'file',
     ),
   ),
@@ -51,7 +51,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 					<li class="first"><a href="/about/">学びクリエーションとは？</a></li>
 					<li><a href="/news/">お知らせ・イベント</a></li>
 					<li><a href="/curriculum/">カリキュラム</a></li>
-					<li><a href="/school/list.php">学校紹介</a></li>
+
 					<li class="last"><a href="/access/">アクセス</a></li>
 					<li class="head_contact">
 						<div class="tel_unit">
@@ -70,10 +70,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 					</li>
 				</ul>
 			</div>
-			<div class="sns_icon">
-				<a class="fb ov ga_link" href="###" target="_blank"><i class="fab fa-facebook-f"></i></a>
-				<a href="###" target="_blank" class="twitter ov"><i class="fab fa-twitter"></i></a>
-			</div>
+
 		</div>
 	</div>
 </header>

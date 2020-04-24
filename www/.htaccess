@@ -13,14 +13,3 @@ RewriteRule .* https://manabi-creation.or.jp%{REQUEST_URI} [R=302,L]
 RewriteCond %{ENV:HTTPS} !^on$
 RewriteCond %{HTTP:X-SAKURA-FORWARDED-FOR} ^$
 RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [R=302,L]
-
-
-<Files ~ "^\.(htaccess|htpasswd)$">
-deny from all
-</Files>
-AuthUserFile /home/manabi-creation/www/.htpasswd
-AuthGroupFile /dev/null
-AuthName "Please enter your ID and password"
-AuthType Basic
-require valid-user
-order deny,allow

@@ -116,8 +116,8 @@ if( empty( $message["ng"] ) ) {
 	$subject2 = $mail_conf["master"]["title"];
 
 	// 管理へ
-//	$error_flg2 = mb_send_mail( $mail_conf["info"]["admin_mail"], $subject2, $mail2, $header2 );
-	$error_flg2 = mb_send_mail( "office@web3.co.jp", $subject2, $mail2, $header2 );
+	$error_flg2 = mb_send_mail( $mail_conf["info"]["admin_mail"], $subject2, $mail2, $header2 );
+//	$error_flg2 = mb_send_mail( "office@web3.co.jp", $subject2, $mail2, $header2 );
 
 	// 送信チェック
 	if( empty( $error_flg1 ) ) {

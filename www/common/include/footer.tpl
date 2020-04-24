@@ -36,16 +36,18 @@
 						<ul>
 							<li class="main"><a href="/about/" class="ov">学びクリエーションとは？</a></li>
 							<li class="main"><a href="/curriculum/" class="ov">カリキュラム</a></li>
-							<li class="sub"><a href="###">アースエイトイングリッシュ</a></li>
-							<li class="sub"><a href="###">aschool</a></li>
-							<li class="sub"><a href="###">幼児教室コペル</a></li>
+							{foreach from=$OptionCurriculum item="curriculum" key="key" name="loopCurriculum"}
+							<li class="sub"><a href="/curriculum/#curriculum{$key}">{$curriculum}</a></li>
+							{/foreach}
 						</ul>
+{*
 						<ul class="second">
 							<li class="main"><a href="/school/list.php" class="ov">学校紹介</a></li>
 							<li class="sub"><a href="###">岡山エリア</a></li>
 							<li class="sub"><a href="###">兵庫エリア</a></li>
 							<li class="sub"><a href="###">名古屋エリア</a></li>
 						</ul>
+*}
 						<ul>
 							<li class="main"><a href="/access/" class="ov">アクセス</a></li>
 							<li class="main"><a href="/news/" class="ov">お知らせ・イベント</a></li>

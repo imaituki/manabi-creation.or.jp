@@ -8,6 +8,7 @@
 保護者氏名              ：{$arr_post.name}
 保護者氏名(フリガナ)    ：{$arr_post.ruby}
 受講するお子様の学年    ：{$g[$arr_post.g]}
+受講者氏名(フリガナ)    ：{$arr_post.name2}
 受講者氏名              ：{$arr_post.ruby2}
 住所                    ：〒{$arr_post.zip} {if $arr_post.prefecture > 0}{html_select_ken selected=$arr_post.prefecture pre="1"}{/if} {$arr_post.address1} {$arr_post.address2}
 メールアドレス          ：{$arr_post.mail}

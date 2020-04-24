@@ -2,8 +2,8 @@
 <root>
   <info cap="基本設定">
     <update_date comment="" name="最終更新日" type="string">2015-10-01 17:16:08</update_date>
-    <admin_mail comment="自動応答メールのメールアドレスです。" name="管理アドレス" check_empty="1" check_max_len="255" type="text">office@web3.co.jp</admin_mail>
-    <bcc_mail comment="BCC設定を行うことが出来ます。" name="BCC" check_max_len="8000" type="text">backup@web3.co.jp</bcc_mail>
+    <admin_mail comment="自動応答メールのメールアドレスです。" name="管理アドレス" check_empty="1" check_max_len="255" type="text">info@manabi-creation.or.jp</admin_mail>
+    <bcc_mail comment="BCC設定を行うことが出来ます。" name="BCC" check_max_len="8000" type="text"></bcc_mail>
   </info>
   <user cap="お客様自動応答メール設定">
     <title comment="自動返信メールのタイトルです。" name="自動返信タイトル" check_empty="1" check_max_len="255" type="text">【学びクリエイション】お問い合わせありがとうございます。</title>

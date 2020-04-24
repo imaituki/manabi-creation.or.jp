@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.18, created on 2020-04-23 18:54:50
+<?php /* Smarty version Smarty-3.1.18, created on 2020-04-24 17:16:34
          compiled from "/home/manabi-creation/www//common/include/footer.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:11549050055ea0e0a0239657-80888705%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'd71c52f3f9610a1b8a051891840bb36e618f6041' => 
     array (
       0 => '/home/manabi-creation/www//common/include/footer.tpl',
-      1 => 1587635688,
+      1 => 1587715682,
       2 => 'file',
     ),
   ),
@@ -17,6 +17,12 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'version' => 'Smarty-3.1.18',
   'unifunc' => 'content_5ea0e0a023b148_02851858',
+  'variables' => 
+  array (
+    'OptionCurriculum' => 0,
+    'key' => 0,
+    'curriculum' => 0,
+  ),
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_5ea0e0a023b148_02851858')) {function content_5ea0e0a023b148_02851858($_smarty_tpl) {?><footer>
@@ -57,16 +63,19 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 						<ul>
 							<li class="main"><a href="/about/" class="ov">学びクリエーションとは？</a></li>
 							<li class="main"><a href="/curriculum/" class="ov">カリキュラム</a></li>
-							<li class="sub"><a href="###">アースエイトイングリッシュ</a></li>
-							<li class="sub"><a href="###">aschool</a></li>
-							<li class="sub"><a href="###">幼児教室コペル</a></li>
+							<?php  $_smarty_tpl->tpl_vars["curriculum"] = new Smarty_Variable; $_smarty_tpl->tpl_vars["curriculum"]->_loop = false;
+ $_smarty_tpl->tpl_vars["key"] = new Smarty_Variable;
+ $_from = $_smarty_tpl->tpl_vars['OptionCurriculum']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+foreach ($_from as $_smarty_tpl->tpl_vars["curriculum"]->key => $_smarty_tpl->tpl_vars["curriculum"]->value) {
+$_smarty_tpl->tpl_vars["curriculum"]->_loop = true;
+ $_smarty_tpl->tpl_vars["key"]->value = $_smarty_tpl->tpl_vars["curriculum"]->key;
+?>
+							<li class="sub"><a href="/curriculum/#curriculum<?php echo $_smarty_tpl->tpl_vars['key']->value;?>
+"><?php echo $_smarty_tpl->tpl_vars['curriculum']->value;?>
+</a></li>
+							<?php } ?>
 						</ul>
-						<ul class="second">
-							<li class="main"><a href="/school/list.php" class="ov">学校紹介</a></li>
-							<li class="sub"><a href="###">岡山エリア</a></li>
-							<li class="sub"><a href="###">兵庫エリア</a></li>
-							<li class="sub"><a href="###">名古屋エリア</a></li>
-						</ul>
+
 						<ul>
 							<li class="main"><a href="/access/" class="ov">アクセス</a></li>
 							<li class="main"><a href="/news/" class="ov">お知らせ・イベント</a></li>

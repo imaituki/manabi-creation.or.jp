@@ -111,7 +111,7 @@ class AD_school {
 		$objInputCheck->entryData( "都道府県"          , "prefecture" , $arrVal["prefecture"] , array( "CHECK_EMPTY_ZERO", "CHECK_NUM" ), null, null );
 		$objInputCheck->entryData( "市区町村・番地"    , "address1"   , $arrVal["address1"]   , array( "CHECK_EMPTY", "CHECK_MIN_MAX_LEN" ), 0, 255 );
 		$objInputCheck->entryData( "建物・マンション名", "address2"   , $arrVal["address2"]   , array( "CHECK_MIN_MAX_LEN" ), 0, 255 );
-		$objInputCheck->entryData( "電話番号"          , "tel"        , $arrVal["tel"]        , array( "CHECK_EMPTY", "CHECK_TEL" ), null, null );
+		$objInputCheck->entryData( "電話番号"          , "tel"        , $arrVal["tel"]        , array( /*"CHECK_EMPTY",*/ "CHECK_TEL" ), null, null );
 		$objInputCheck->entryData( "FAX番号"           , "fax"        , $arrVal["fax"]        , array( "CHECK_TEL" ), null, null );
 		$objInputCheck->entryData( "公開／非公開"      , "display_flg", $arrVal["display_flg"], array( "CHECK_EMPTY", "CHECK_MIN_MAX_NUM" ), 0, 1 );
 		

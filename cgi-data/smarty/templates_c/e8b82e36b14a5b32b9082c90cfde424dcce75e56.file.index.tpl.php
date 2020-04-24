@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.18, created on 2020-04-23 18:51:05
+<?php /* Smarty version Smarty-3.1.18, created on 2020-04-24 17:24:08
          compiled from "./index.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:9911712245ea0e0a019fbe9-82658045%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'e8b82e36b14a5b32b9082c90cfde424dcce75e56' => 
     array (
       0 => './index.tpl',
-      1 => 1587635464,
+      1 => 1587716634,
       2 => 'file',
     ),
   ),
@@ -73,13 +73,10 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 			<li class="first"><a href="/about/">学びクリエーションとは？</a></li>
 			<li><a href="/news/">お知らせ・イベント</a></li>
 			<li><a href="/curriculum/">カリキュラム</a></li>
-			<li><a href="/school/list.php">学校紹介</a></li>
+
 			<li><a href="/access/">アクセス</a></li>
 			<li><a href="/contact/">お問い合わせ</a></li>
-			<li class="sns">
-				<a href="###" target="_blank" class="facebook ov"><i class="fab fa-facebook-f"></i></a>
-				<a href="###" target="_blank" class="twitter ov"><i class="fab fa-twitter"></i></a>
-			</li>
+
 		</ul>
 	</div>
 </div>
@@ -231,6 +228,10 @@ $_smarty_tpl->tpl_vars["information"]->_loop = true;
 							</a>
 						</div>
 					</div>
+					<?php }
+if (!$_smarty_tpl->tpl_vars["information"]->_loop) {
+?>
+						<div class="col-xs-12">現在、お知らせ・イベント情報を準備中です。</div>
 					<?php } ?>
 				</div>
 				<div class="button m0auto"><a href="/news/" class="_type1 ov">一覧を見る<i class="fas fa-caret-right"></i></a></div>
