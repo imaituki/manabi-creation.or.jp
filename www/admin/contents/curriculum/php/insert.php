@@ -24,6 +24,11 @@ $message = NULL;
 $objManage     = new DB_manage( _DNS );
 $objCurriculum = new AD_curriculum( $objManage, $_ARR_IMAGE );
 
+// 色情報の#を取る
+if ( preg_match("/#/", $arr_post["color"]) ) {
+	$arr_post["color"] = preg_replace("/#/", "", $arr_post["color"]);
+}
+
 // データ変換
 $arr_post = $objCurriculum->convert( $arr_post );
 
@@ -67,6 +72,13 @@ if( empty( $message["ng"] ) ) {
 	header( "Location: ./index.php" );
 	
 } else {
+	
+	// 写真
+	if( !empty($_ARR_IMAGE) && is_array($_ARR_IMAGE) ){
+		foreach( $_ARR_IMAGE as $key => $val ) {
+			$arr_post[$val["name"]] = $arr_post["_" . $val["name"]."_now"];
+		}
+	}
 	
 	// smarty設定
 	$smarty = new MySmarty("admin");

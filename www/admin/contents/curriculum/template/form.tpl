@@ -27,6 +27,14 @@
 						</div>
 					</div>
 					<div class="hr-line-dashed"></div>
+					<div class="form-group required">
+						<label class="col-sm-3 col-md-2 control-label">カラー</label>
+						<div class="col-sm-4 col-md-2">
+							{if $message.ng.color|default:"" != NULL}<p class="error">{$message.ng.color}</p>{/if}
+							<input type="color" name="color" class="form-control" value="#{$arr_post.color|default:""}">
+						</div>
+					</div>
+					<div class="hr-line-dashed"></div>
 					<div class="form-group">
 						<label class="col-sm-2 control-label">公開／非公開</label>
 						<div class="col-sm-6">

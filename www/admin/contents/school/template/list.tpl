@@ -9,11 +9,12 @@
 					<tr>
 						<th></th>
 						<th>エリア</th>
-						<th>名称</th>
+						<th>契約名称</th>
 						<th>住所</th>
 						<th>TEL／FAX</th>
 						<th>写真</th>
-						<th class="showhide">表示</th>
+						<th class="showhide">表示(ｱｸｾｽ)</th>
+						<th class="showhide">表示(HP)</th>
 						<th class="delete">削除</th>
 					</tr>
 				</thead>
@@ -53,6 +54,17 @@
 							</div>
 						</td>
 						<td class="pos_ac">
+							<div class="switch">
+								<div class="onoffswitch">
+									<input type="checkbox" value="1" class="onoffswitch-checkbox btn_display_hp" id="display_hp{$school.id_school}" data-id="{$school.id_school}"{if $school.display_hp_flg == 1} checked{/if}>
+									<label class="onoffswitch-label" for="display_hp{$school.id_school}">
+										<span class="onoffswitch-inner"></span>
+										<span class="onoffswitch-switch"></span>
+									</label>
+								</div>
+							</div>
+						</td>
+						<td class="pos_ac">
 							<a href="javascript:void(0)" class="btn btn-danger btn_delete" data-id="{$school.id_school}">削除</a>
 						</td>
 					</tr>
@@ -64,3 +76,12 @@
 				</tbody>
 			</table>
 			{include file=$template_pagenavi}
+			<div id="blueimp-gallery" class="blueimp-gallery">
+				<div class="slides"></div>
+				<h3 class="title"></h3>
+				<a class="prev">‹</a>
+				<a class="next">›</a>
+				<a class="close">×</a>
+				<a class="play-pause"></a>
+				<ol class="indicator"></ol>
+			</div>

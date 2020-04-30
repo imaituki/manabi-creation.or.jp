@@ -2,7 +2,7 @@
 //-------------------------------------------------------------------
 // 作成日：2020/04/23
 // 作成者：鈴木
-// 内  容：学校（契約） 編集
+// 内  容：お問い合わせ 編集
 //-------------------------------------------------------------------
 
 //----------------------------------------
@@ -15,37 +15,33 @@ require "./config.ini";
 //  編集データ取得
 //----------------------------------------
 // 操作クラス
-$objManage = new DB_manage( _DNS );
-$objSchool = new AD_school( $objManage, $_ARR_IMAGE );
+$objManage  = new DB_manage( _DNS );
+$objContact = new AD_contact( $objManage );
 
 // データ取得
-$_POST = $objSchool->GetIdRow( $arr_get["id"] );
-
-// マスタアカウント・取り扱いカリキュラム取得
-if( !empty( $_POST["id_school"] ) ) {
-	$_POST["staff"]            = $objSchool->GetMasterSchoolStaff( $_POST["id_school"] );
-	$_POST["curriculum"]["id"] = $objSchool->GetRelCurriculumIds( $_POST["id_school"] );
-}
+$_POST = $objContact->GetIdRow( $arr_get["id"] );
 
 // クラス削除
-unset( $objManage );
-unset( $objSchool );
+unset( $objManage  );
+unset( $objContact );
 
 
 //----------------------------------------
 //  表示
 //----------------------------------------
-if( !empty( $_POST["id_school"] ) ) {
+if( !empty( $_POST["id_contact"] ) ) {
 	
 	// smarty設定
 	$smarty = new MySmarty("admin");
-	$smarty->compile_dir .= "school/";
+	$smarty->compile_dir .= "contact/";
 	
-	// テンプレートに設定
-	$smarty->assign( "_ARR_IMAGE", $_ARR_IMAGE );
+	// オプション配列
+	$smarty->assign( "OptionContactType"      , $OptionContactType       );
+	$smarty->assign( "OptionContactSchoolYear", $OptionContactSchoolYear );
+	$smarty->assign( "OptionContactZoom"      , $OptionContactZoom       );
 	
 	// 表示
-	$smarty->display( "edit.tpl" );
+	$smarty->display( "detail.tpl" );
 	
 } else {
 	

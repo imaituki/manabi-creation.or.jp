@@ -9,27 +9,15 @@
 <link href="/admin/common/css/animate.css" rel="stylesheet">
 <link href="/admin/common/css/plugins/codemirror/codemirror.css" rel="stylesheet">
 <link href="/admin/common/css/plugins/codemirror/ambiance.css" rel="stylesheet">
-<link href="/school/admin/common/css/plugins/iCheck/custom.css" rel="stylesheet">
 <link href="/admin/common/css/plugins/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.css" rel="stylesheet">
 <link href="/admin/common/css/style.css" rel="stylesheet">
 {include file=$template_javascript}
 <script type="text/javascript" src="/admin/common/js/input.js"></script>
 <script type="text/javascript" src="../js/input.js"></script>
-<script src="https://ajaxzip3.github.io/ajaxzip3.js" charset="UTF-8"></script>
-<!-- iCheck -->
-<script type="text/javascript" src="/admin/common/js/plugins/iCheck/icheck.min.js"></script>
-{literal}<script type="text/javascript">
-	$(document).ready(function () {
-		$('.i-checks').iCheck({
-			checkboxClass: 'icheckbox_square-green',
-			radioClass: 'iradio_square-green',
-		});
-	});
-</script>{/literal}
 </head>
 <body class="fixed-sidebar no-skin-config">
 <div id="wrapper">
-	{include file=$template_secondary action="public" manage="school"}
+	{include file=$template_secondary action="public" manage="staff"}
 	<div id="page-wrapper" class="gray-bg">
 		{include file=$template_header}
 		<div class="row wrapper border-bottom white-bg page-heading">

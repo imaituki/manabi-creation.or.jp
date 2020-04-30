@@ -36,13 +36,36 @@ if( empty( $message["ng"] ) ) {
 	// トランザクション
 	$objSchool->_DBconn->StartTrans();
 	
+	// 登録用データ
+	$insSchool      = $arr_post;
+	$insSchoolStaff = $insSchool["staff"];
+	$insCurriculum  = $insSchool["curriculum"];
+	unset( $insSchool["staff"], $insSchool["curriculum"] );
+	
 	// 登録処理
-	$res = $objSchool->insert( $arr_post );
+	$res = $objSchool->insert( $insSchool );
 	
 	// ロールバック
 	if( $res == false ) {
 		$objSchool->_DBconn->RollbackTrans();
 		$message["ng"]["all"] = _ERRHEAD . "登録処理に失敗しました。（ブラウザの再起動を行って改善されない場合は、システム管理者へご連絡ください。）<br />";
+	} else {
+		
+		// 取り扱いカリキュラム登録
+		$res = $objSchool->relCurriculum( $arr_post["id_school"], $insCurriculum["id"] );
+		
+		// 学校ID取得
+		$insSchoolStaff["id_school"] = $objSchool->GetInsertId();
+		$insSchoolStaff["name"]      = $insSchool["name"];
+		
+		// 学校別 総合アカウント登録処理
+		$res = $objSchool->school_staff_insert( $insSchoolStaff );
+		
+		// ロールバック
+		if( $res == false ) {
+			$objSchool->_DBconn->RollbackTrans();
+			$message["ng"]["all"] = _ERRHEAD . "登録処理に失敗しました。（ブラウザの再起動を行って改善されない場合は、システム管理者へご連絡ください。）<br />";
+		}
 	}
 	
 	// コミット
@@ -67,6 +90,13 @@ if( empty( $message["ng"] ) ) {
 	header( "Location: ./index.php" );
 	
 } else {
+	
+	// 写真
+	if( !empty($_ARR_IMAGE) && is_array($_ARR_IMAGE) ){
+		foreach( $_ARR_IMAGE as $key => $val ) {
+			$arr_post[$val["name"]] = $arr_post["_" . $val["name"]."_now"];
+		}
+	}
 	
 	// smarty設定
 	$smarty = new MySmarty("admin");

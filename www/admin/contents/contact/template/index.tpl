@@ -13,14 +13,10 @@
 {include file=$template_javascript}
 <script src="/admin/common/js/plugins/jquery-ui/jquery-ui.min.js"></script>
 <script src="/admin/common/js/list.js"></script>
-<script type="text/javascript" src="../js/list.js"></script>
-<!-- blueimp gallery -->
-<link href="/admin/common/css/plugins/blueimp/css/blueimp-gallery.min.css" rel="stylesheet">
-<script src="/admin/common/js/plugins/blueimp/jquery.blueimp-gallery.min.js"></script>
 </head>
 <body class="fixed-sidebar no-skin-config">
 <div id="wrapper">
-	{include file=$template_secondary action="public" manage="curriculum"}
+	{include file=$template_secondary action="public" manage="contact"}
 	<div id="page-wrapper" class="gray-bg">
 		{include file=$template_header}
 		<div class="row wrapper border-bottom white-bg page-heading">
@@ -42,7 +38,7 @@
 						<div class="col-sm-4">
 							<label class="control-label" for="search_keyword">キーワード</label>
 							<div class="input-group">
-								<input type="text" id="search_keyword" name="search_keyword" value="{$_SESSION.admin.curriculum.search.POST.search_keyword|default:""}" placeholder="キーワード" class="form-control">
+								<input type="text" id="search_keyword" name="search_keyword" value="{$_SESSION.admin.contact.search.POST.search_keyword|default:""}" placeholder="キーワード" class="form-control">
 								<span class="input-group-btn">
 									<label class="control-label" for="search_keyword">&nbsp;</label>
 									<button type="button" class="btn btn-m btn-primary btn_search"> 検索</button>
