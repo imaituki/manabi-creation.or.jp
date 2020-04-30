@@ -10,14 +10,13 @@
 <link href="/admin/common/css/plugins/codemirror/codemirror.css" rel="stylesheet">
 <link href="/admin/common/css/plugins/codemirror/ambiance.css" rel="stylesheet">
 <link href="/admin/common/css/style.css" rel="stylesheet">
-<!-- FooTable -->
-<link href="/admin/common/css/plugins/footable/footable.core.css" rel="stylesheet">
-<link href="/admin/common/css/plugins/blueimp/css/blueimp-gallery.min.css" rel="stylesheet">
 {include file=$template_javascript}
 <script src="/admin/common/js/plugins/jquery-ui/jquery-ui.min.js"></script>
-<script src="/admin/common/js/plugins/blueimp/jquery.blueimp-gallery.min.js"></script>
 <script src="/admin/common/js/plugins/datapicker/bootstrap-datepicker-import.js"></script>
 <script src="/admin/common/js/list.js"></script>
+<!-- blueimp gallery -->
+<link href="/admin/common/css/plugins/blueimp/css/blueimp-gallery.min.css" rel="stylesheet">
+<script src="/admin/common/js/plugins/blueimp/jquery.blueimp-gallery.min.js"></script>
 </head>
 <body class="fixed-sidebar no-skin-config">
 <div id="wrapper">

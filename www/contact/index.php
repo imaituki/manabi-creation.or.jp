@@ -18,6 +18,11 @@ $smarty = new MySmarty("front");
 $smarty->template_dir = "./";
 $smarty->compile_dir .= "contact/";
 
+// オプション配列
+$smarty->assign( "OptionContactType"      , $OptionContactType       );
+$smarty->assign( "OptionContactSchoolYear", $OptionContactSchoolYear );
+$smarty->assign( "OptionContactZoom"      , $OptionContactZoom       );
+
 // 表示
 $smarty->display("index.tpl");
 ?>

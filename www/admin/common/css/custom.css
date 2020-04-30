@@ -71,7 +71,7 @@ input.form-control.datepicker { background:#FFF; }
 .error { background:#FFE9E9; color:#D12225; }
 
 /**/
-.required label.control-label:before { content:"必須"; display:inline-block; margin-right:10px; padding:2px 5px; background:#1AB394; color:#FFF; font-weight:normal; font-size:11px; }
+.required label.control-label:after { content:"必須"; display:inline-block; margin-left:10px; padding:2px 5px; background:#1AB394; color:#FFF; font-weight:normal; font-size:11px; }
 
 /**/
 td.pos_al > div,lightBoxGallery { text-align:left; }

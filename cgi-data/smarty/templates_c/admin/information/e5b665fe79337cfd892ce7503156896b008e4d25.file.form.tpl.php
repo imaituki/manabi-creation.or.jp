@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.18, created on 2020-04-23 09:32:27
+<?php /* Smarty version Smarty-3.1.18, created on 2020-04-25 16:42:06
          compiled from "/home/manabi-creation/www/admin/contents/information/template/form.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:11667167045ea0e0b9b50131-38878852%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'e5b665fe79337cfd892ce7503156896b008e4d25' => 
     array (
       0 => '/home/manabi-creation/www/admin/contents/information/template/form.tpl',
-      1 => 1587601942,
+      1 => 1587791625,
       2 => 'file',
     ),
   ),

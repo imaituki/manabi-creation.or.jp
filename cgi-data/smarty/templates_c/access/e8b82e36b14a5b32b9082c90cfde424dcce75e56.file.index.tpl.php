@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.18, created on 2020-04-24 17:28:27
+<?php /* Smarty version Smarty-3.1.18, created on 2020-04-30 13:46:51
          compiled from "./index.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:12290239125ea023b931fcb8-17411486%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'e8b82e36b14a5b32b9082c90cfde424dcce75e56' => 
     array (
       0 => './index.tpl',
-      1 => 1587716903,
+      1 => 1588222007,
       2 => 'file',
     ),
   ),
@@ -162,7 +162,7 @@ $_smarty_tpl->tpl_vars["school"]->_loop = true;
  $_smarty_tpl->tpl_vars["key2"]->value = $_smarty_tpl->tpl_vars["school"]->key;
 ?>
 							<div class="access_unit mb50">
-								<h3 class="hl_4 mb20">▼<?php echo $_smarty_tpl->tpl_vars['school']->value['name'];?>
+								<h3 class="hl_4 mb20">▼<?php echo (($tmp = @$_smarty_tpl->tpl_vars['school']->value['short_name'])===null||$tmp==='' ? $_smarty_tpl->tpl_vars['school']->value['name'] : $tmp);?>
 </h3>
 								<p class="map mb20">
 									<?php echo $_smarty_tpl->tpl_vars['school']->value['map'];?>

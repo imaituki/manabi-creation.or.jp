@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.18, created on 2020-04-23 11:12:09
+<?php /* Smarty version Smarty-3.1.18, created on 2020-04-30 14:30:46
          compiled from "./index.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:17917484395ea007c11645f0-22289950%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'e8b82e36b14a5b32b9082c90cfde424dcce75e56' => 
     array (
       0 => './index.tpl',
-      1 => 1587607911,
+      1 => 1588224559,
       2 => 'file',
     ),
   ),
@@ -32,12 +32,17 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'template_header' => 0,
     'msg' => 0,
     'message' => 0,
+    'OptionContactType' => 0,
     'arr_post' => 0,
+    'OptionContactSchoolYear' => 0,
+    'OptionContactZoom' => 0,
     'template_footer' => 0,
   ),
   'has_nocache_code' => 0,
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5ea007c12928b9_82643821')) {function content_5ea007c12928b9_82643821($_smarty_tpl) {?><?php if (!is_callable('smarty_function_html_select_ken')) include '/home/manabi-creation/cgi-data/smarty/libs/plugins/function.html_select_ken.php';
+<?php if ($_valid && !is_callable('content_5ea007c12928b9_82643821')) {function content_5ea007c12928b9_82643821($_smarty_tpl) {?><?php if (!is_callable('smarty_function_html_radios')) include '/home/manabi-creation/cgi-data/smarty/libs/plugins/function.html_radios.php';
+if (!is_callable('smarty_function_html_options')) include '/home/manabi-creation/cgi-data/smarty/libs/plugins/function.html_options.php';
+if (!is_callable('smarty_function_html_select_ken')) include '/home/manabi-creation/cgi-data/smarty/libs/plugins/function.html_select_ken.php';
 ?><!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -98,7 +103,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 					</p>
 					<p class="mb50 top_text">下記項目にご入力ください。「必須」印は入力必須項目です。<br>入力後、一番下の「 入力内容を確認する」ボタンをクリックしてください。</p>
 					<form action="./check.php#form" method="post">
-<?php if (!function_exists('smarty_template_function_ng')) {
+						<?php if (!function_exists('smarty_template_function_ng')) {
     function smarty_template_function_ng($_smarty_tpl,$params) {
     $saved_tpl_vars = $_smarty_tpl->tpl_vars;
     foreach ($_smarty_tpl->smarty->template_functions['ng']['parameter'] as $key => $value) {$_smarty_tpl->tpl_vars[$key] = new Smarty_variable($value);};
@@ -111,10 +116,10 @@ foreach (Smarty::$global_tpl_vars as $key => $value) if(!isset($_smarty_tpl->tpl
 								<tr>
 									<th scope="row">ご用件</th>
 									<td>
-										<?php smarty_template_function_ng($_smarty_tpl,array('msg'=>"content"));?>
+										<?php smarty_template_function_ng($_smarty_tpl,array('msg'=>"type"));?>
 
-										<input type="radio" name="content" value="0" id="content_0"<?php if ((($tmp = @$_smarty_tpl->tpl_vars['arr_post']->value['content'])===null||$tmp==='' ? 0 : $tmp)==0) {?> checked="checked"<?php }?>><label for="content_0" class="sp_mb10">お問い合わせ</label>
-										<input type="radio" name="content" value="1" id="content_1"<?php if ($_smarty_tpl->tpl_vars['arr_post']->value['content']==1) {?> checked="checked"<?php }?>><label for="content_1">オンライン授業申し込み</label>
+										<?php echo smarty_function_html_radios(array('options'=>$_smarty_tpl->tpl_vars['OptionContactType']->value,'selected'=>(($tmp = @$_smarty_tpl->tpl_vars['arr_post']->value['type'])===null||$tmp==='' ? "0" : $tmp),'name'=>"type"),$_smarty_tpl);?>
+
 									</td>
 								</tr>
 								<tr>
@@ -123,7 +128,7 @@ foreach (Smarty::$global_tpl_vars as $key => $value) if(!isset($_smarty_tpl->tpl
 										<?php smarty_template_function_ng($_smarty_tpl,array('msg'=>"name"));?>
 
 										<input type="text" name="name" value="<?php echo (($tmp = @$_smarty_tpl->tpl_vars['arr_post']->value['name'])===null||$tmp==='' ? '' : $tmp);?>
-">
+" maxlength="255">
 									</td>
 								</tr>
 								<tr>
@@ -132,47 +137,37 @@ foreach (Smarty::$global_tpl_vars as $key => $value) if(!isset($_smarty_tpl->tpl
 										<?php smarty_template_function_ng($_smarty_tpl,array('msg'=>"ruby"));?>
 
 										<input type="text" name="ruby" value="<?php echo (($tmp = @$_smarty_tpl->tpl_vars['arr_post']->value['ruby'])===null||$tmp==='' ? '' : $tmp);?>
-">
+" maxlength="255">
 									</td>
 								</tr>
 								<tr>
 									<th scope="row">受講するお子様の学年<span class="need">必須</span></th>
 									<td>
-										<?php smarty_template_function_ng($_smarty_tpl,array('msg'=>"g"));?>
+										<?php smarty_template_function_ng($_smarty_tpl,array('msg'=>"school_year"));?>
 
-										<select name="g" id="" class="mb10">
+										<select name="school_year" id="" class="mb10">
 											<option value="">選択してください</option>
-											<option value="1"<?php if ($_smarty_tpl->tpl_vars['arr_post']->value['g']==1) {?> selected="selected"<?php }?>>小学校1年生</option>
-											<option value="2"<?php if ($_smarty_tpl->tpl_vars['arr_post']->value['g']==2) {?> selected="selected"<?php }?>>小学校2年生</option>
-											<option value="3"<?php if ($_smarty_tpl->tpl_vars['arr_post']->value['g']==3) {?> selected="selected"<?php }?>>小学校3年生</option>
-											<option value="4"<?php if ($_smarty_tpl->tpl_vars['arr_post']->value['g']==4) {?> selected="selected"<?php }?>>小学校4年生</option>
-											<option value="5"<?php if ($_smarty_tpl->tpl_vars['arr_post']->value['g']==5) {?> selected="selected"<?php }?>>小学校5年生</option>
-											<option value="6"<?php if ($_smarty_tpl->tpl_vars['arr_post']->value['g']==6) {?> selected="selected"<?php }?>>小学校6年生</option>
-											<option value="7"<?php if ($_smarty_tpl->tpl_vars['arr_post']->value['g']==7) {?> selected="selected"<?php }?>>中学校1年生</option>
-											<option value="8"<?php if ($_smarty_tpl->tpl_vars['arr_post']->value['g']==8) {?> selected="selected"<?php }?>>中学校2年生</option>
-											<option value="9"<?php if ($_smarty_tpl->tpl_vars['arr_post']->value['g']==9) {?> selected="selected"<?php }?>>中学校3年生</option>
-											<option value="10"<?php if ($_smarty_tpl->tpl_vars['arr_post']->value['g']==10) {?> selected="selected"<?php }?>>高等学校1年生</option>
-											<option value="11"<?php if ($_smarty_tpl->tpl_vars['arr_post']->value['g']==11) {?> selected="selected"<?php }?>>高等学校2年生</option>
-											<option value="12"<?php if ($_smarty_tpl->tpl_vars['arr_post']->value['g']==12) {?> selected="selected"<?php }?>>高等学校3年生</option>
+											<?php echo smarty_function_html_options(array('options'=>$_smarty_tpl->tpl_vars['OptionContactSchoolYear']->value,'selected'=>$_smarty_tpl->tpl_vars['arr_post']->value['school_year']),$_smarty_tpl);?>
+
 										</select>
 									</td>
 								</tr>
 								<tr>
 									<th scope="row">受講者氏名</th>
 									<td>
-										<?php smarty_template_function_ng($_smarty_tpl,array('msg'=>"name2"));?>
+										<?php smarty_template_function_ng($_smarty_tpl,array('msg'=>"student_name"));?>
 
-										<input type="text" name="name2" value="<?php echo (($tmp = @$_smarty_tpl->tpl_vars['arr_post']->value['name2'])===null||$tmp==='' ? '' : $tmp);?>
-">
+										<input type="text" name="student_name" value="<?php echo (($tmp = @$_smarty_tpl->tpl_vars['arr_post']->value['student_name'])===null||$tmp==='' ? '' : $tmp);?>
+" maxlength="255">
 									</td>
 								</tr>
 								<tr>
 									<th scope="row">受講者氏名(フリガナ)</th>
 									<td>
-										<?php smarty_template_function_ng($_smarty_tpl,array('msg'=>"ruby2"));?>
+										<?php smarty_template_function_ng($_smarty_tpl,array('msg'=>"student_ruby"));?>
 
-										<input type="text" name="ruby2" value="<?php echo (($tmp = @$_smarty_tpl->tpl_vars['arr_post']->value['ruby2'])===null||$tmp==='' ? '' : $tmp);?>
-">
+										<input type="text" name="student_ruby" value="<?php echo (($tmp = @$_smarty_tpl->tpl_vars['arr_post']->value['student_ruby'])===null||$tmp==='' ? '' : $tmp);?>
+" maxlength="255">
 									</td>
 								</tr>
 								<tr>
@@ -190,7 +185,7 @@ foreach (Smarty::$global_tpl_vars as $key => $value) if(!isset($_smarty_tpl->tpl
 										<dt>郵便番号</dt>
 										<dd class="mb20">
 											<input name="zip" value="<?php echo (($tmp = @$_smarty_tpl->tpl_vars['arr_post']->value['zip'])===null||$tmp==='' ? '' : $tmp);?>
-" type="text" class="zip w150" placeholder="000-000">
+" type="text" class="zip w150" placeholder="000-0000" maxlength="8">
 											<a href="javascript:AjaxZip3.zip2addr('zip','','prefecture','address1');" class="bTn wp100 w_sm_A dis_b dis_sm_ib zip_block ov">郵便番号から検索する</a>
 										</dd>
 									</dl>
@@ -207,14 +202,14 @@ foreach (Smarty::$global_tpl_vars as $key => $value) if(!isset($_smarty_tpl->tpl
 										<dt>市区町村・番地</dt>
 										<dd class="mb20">
 											<input name="address1" value="<?php echo (($tmp = @$_smarty_tpl->tpl_vars['arr_post']->value['address1'])===null||$tmp==='' ? '' : $tmp);?>
-" type="text" placeholder="市区町村・番地を入力してください">
+" type="text" placeholder="市区町村・番地を入力してください" maxlength="255">
 										</dd>
 									</dl>
 									<dl>
 										<dt>建物・マンション名</dt>
 										<dd class="mb20">
 											<input name="address2" value="<?php echo (($tmp = @$_smarty_tpl->tpl_vars['arr_post']->value['address2'])===null||$tmp==='' ? '' : $tmp);?>
-" type="text" placeholder="建物・マンション名を入力してください">
+" type="text" placeholder="建物・マンション名を入力してください" maxlength="255">
 										</dd>
 									</dl>
 								</td>
@@ -234,23 +229,23 @@ foreach (Smarty::$global_tpl_vars as $key => $value) if(!isset($_smarty_tpl->tpl
 										<?php smarty_template_function_ng($_smarty_tpl,array('msg'=>"tel"));?>
 
 										<input type="text" name="tel" value="<?php echo (($tmp = @$_smarty_tpl->tpl_vars['arr_post']->value['tel'])===null||$tmp==='' ? '' : $tmp);?>
-" maxlength="13" class="w150" placeholder="090-000-000">
+" maxlength="13" class="w150" placeholder="090-000-000" maxlength="14">
 									</td>
 								</tr>
 								<!--オンライン授業申し込み選択時のみ表示-->
-								<tr id="th_content2"<?php if ((($tmp = @$_smarty_tpl->tpl_vars['arr_post']->value['content'])===null||$tmp==='' ? 0 : $tmp)==0) {?> style="display:none;"<?php }?>>
+								<tr id="th_content2"<?php if ((($tmp = @$_smarty_tpl->tpl_vars['arr_post']->value['type'])===null||$tmp==='' ? 0 : $tmp)==0) {?> style="display:none;"<?php }?>>
 									<th scope="row" class="zoom">ZOOMオンラインの<br class="md_br">利用経験<span class="need">必須</span></th>
 									<td>
-										<?php smarty_template_function_ng($_smarty_tpl,array('msg'=>"content2"));?>
+										<?php smarty_template_function_ng($_smarty_tpl,array('msg'=>"zoom"));?>
 
-										<input type="radio" name="content2" value="0" id="content20"<?php if ((($tmp = @$_smarty_tpl->tpl_vars['arr_post']->value['content2'])===null||$tmp==='' ? 0 : $tmp)==0) {?> checked="checked"<?php }?>><label for="content20" class="sp_mb10">ある</label>
-										<input type="radio" name="content2" value="1" id="content21"<?php if ($_smarty_tpl->tpl_vars['arr_post']->value['content2']==1) {?> checked="checked"<?php }?>><label for="content21">ない</label>
+										<?php echo smarty_function_html_radios(array('options'=>$_smarty_tpl->tpl_vars['OptionContactZoom']->value,'selected'=>(($tmp = @$_smarty_tpl->tpl_vars['arr_post']->value['zoom'])===null||$tmp==='' ? "0" : $tmp),'name'=>"zoom"),$_smarty_tpl);?>
+
 									</td>
 								</tr>
 								<!--オンライン授業申し込み選択時のみ表示-->
 								<tr class="last">
 									<th scope="row" id="th_comment">
-										<?php if ((($tmp = @$_smarty_tpl->tpl_vars['arr_post']->value['content'])===null||$tmp==='' ? 0 : $tmp)==0) {?>
+										<?php if ((($tmp = @$_smarty_tpl->tpl_vars['arr_post']->value['type'])===null||$tmp==='' ? 0 : $tmp)==0) {?>
 											お問い合わせ内容<span class="need">必須</span>
 										<?php } else { ?>
 											その他お問い合わせ
@@ -259,7 +254,7 @@ foreach (Smarty::$global_tpl_vars as $key => $value) if(!isset($_smarty_tpl->tpl
 									<td>
 										<?php smarty_template_function_ng($_smarty_tpl,array('msg'=>"comment"));?>
 
-										<textarea rows="5" name="comment"><?php echo $_smarty_tpl->tpl_vars['arr_post']->value['comment'];?>
+										<textarea rows="5" name="comment"><?php echo (($tmp = @$_smarty_tpl->tpl_vars['arr_post']->value['comment'])===null||$tmp==='' ? '' : $tmp);?>
 </textarea>
 									</td>
 								</tr>

@@ -19,8 +19,8 @@
 <main>
 <div id="top_main">
 	<div class="image">
-		<div class="visible-xs"><img src="common/image/contents/top/main-sp.jpg" alt="一般社団法人 学びクリエーション"></div>
-		<div class="hidden-xs"><img src="common/image/contents/top/main.jpg" alt="一般社団法人 学びクリエーション"></div>
+		<div class="visible-xs"><img src="common/image/contents/top/main-sp.jpg" alt="一般社団法人 日本学びクリエーション"></div>
+		<div class="hidden-xs"><img src="common/image/contents/top/main.jpg" alt="一般社団法人 日本学びクリエーション"></div>
 	</div>
 	<div id="main_text" class="text">
 		<div class="center">
@@ -33,7 +33,7 @@
 <div id="top_head_navi">
 	<div class="center">
 		<ul>
-			<li class="first"><a href="/about/">学びクリエーションとは？</a></li>
+			<li class="first"><a href="/about/">日本学びクリエーションとは？</a></li>
 			<li><a href="/news/">お知らせ・イベント</a></li>
 			<li><a href="/curriculum/">カリキュラム</a></li>
 {*			<li><a href="/school/list.php">学校紹介</a></li>*}
@@ -59,11 +59,11 @@
 	</section>
 	<section>
 		<div id="top_about">
-			<div class="photo img_back"><img src="common/image/contents/top/image1.jpg" alt="学びクリエーションとは"></div>
+			<div class="photo img_back"><img src="common/image/contents/top/image1.jpg" alt="日本学びクリエーションとは"></div>
 			<div class="text">
 				<div class="center">
 					<div class="text_in">
-						<h2 class="c_lgreen">学びクリエーションとは？</h2>
+						<h2 class="c_lgreen">日本学びクリエーションとは？</h2>
 						<p class="mb20">ひとり一人の子どもたちと家族が豊かに育ちあう学びとして、世界中の最先端の教育プログラムを研究し、一人ひとりにあったカスタマイズド教育を行っています。</p>
 						<div class="button"><a href="/about/" class="_type1 ov">詳しく見る<i class="fas fa-caret-right"></i></a></div>
 					</div>

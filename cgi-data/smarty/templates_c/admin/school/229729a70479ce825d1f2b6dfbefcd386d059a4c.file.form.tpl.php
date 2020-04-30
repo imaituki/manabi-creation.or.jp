@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.18, created on 2020-04-24 16:43:46
+<?php /* Smarty version Smarty-3.1.18, created on 2020-04-30 15:24:52
          compiled from "/home/manabi-creation/www/admin/contents/school/template/form.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:14265189975ea28b1a281745-85950839%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '229729a70479ce825d1f2b6dfbefcd386d059a4c' => 
     array (
       0 => '/home/manabi-creation/www/admin/contents/school/template/form.tpl',
-      1 => 1587714220,
+      1 => 1588227783,
       2 => 'file',
     ),
   ),
@@ -22,22 +22,26 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'mode' => 0,
     'message' => 0,
     'arr_post' => 0,
+    'OptionArea' => 0,
+    'OptionCurriculum' => 0,
+    'curriculum' => 0,
+    'key' => 0,
     '_ARR_IMAGE' => 0,
     'template_image' => 0,
     '_IMAGEFULLPATH' => 0,
     '_CONTENTS_DIR' => 0,
-    'OptionArea' => 0,
     '_CONTENTS_CONF_PATH' => 0,
   ),
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_5ea28b1a341a44_27656021')) {function content_5ea28b1a341a44_27656021($_smarty_tpl) {?><?php if (!is_callable('smarty_function_html_options')) include '/home/manabi-creation/cgi-data/smarty/libs/plugins/function.html_options.php';
 if (!is_callable('smarty_function_html_select_ken')) include '/home/manabi-creation/cgi-data/smarty/libs/plugins/function.html_select_ken.php';
+if (!is_callable('smarty_function_html_checkboxes')) include '/home/manabi-creation/cgi-data/smarty/libs/plugins/function.html_checkboxes.php';
 if (!is_callable('smarty_function_html_radios')) include '/home/manabi-creation/cgi-data/smarty/libs/plugins/function.html_radios.php';
 ?>			<form class="form-horizontal" action="./<?php if ($_smarty_tpl->tpl_vars['mode']->value=='edit') {?>update<?php } else { ?>insert<?php }?>.php" method="post" enctype="multipart/form-data">
 				<div class="ibox-content">
 					<div class="form-group required">
-						<label class="col-sm-2 control-label">名称</label>
+						<label class="col-sm-2 control-label">契約名称</label>
 						<div class="col-sm-6">
 							<?php if ((($tmp = @$_smarty_tpl->tpl_vars['message']->value['ng']['name'])===null||$tmp==='' ? '' : $tmp)!=null) {?><p class="error"><?php echo $_smarty_tpl->tpl_vars['message']->value['ng']['name'];?>
 </p><?php }?>
@@ -46,10 +50,16 @@ if (!is_callable('smarty_function_html_radios')) include '/home/manabi-creation/
 						</div>
 					</div>
 					<div class="hr-line-dashed"></div>
-					<?php if ($_smarty_tpl->tpl_vars['_ARR_IMAGE']->value!=null) {?>
-						<?php echo $_smarty_tpl->getSubTemplate ($_smarty_tpl->tpl_vars['template_image']->value, $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array('path'=>$_smarty_tpl->tpl_vars['_IMAGEFULLPATH']->value,'dir'=>$_smarty_tpl->tpl_vars['_CONTENTS_DIR']->value,'prefix'=>"s_"), 0);?>
-
-					<?php }?>
+					<div class="form-group required">
+						<label class="col-sm-2 control-label">公開名称</label>
+						<div class="col-sm-6">
+							<?php if ((($tmp = @$_smarty_tpl->tpl_vars['message']->value['ng']['short_name'])===null||$tmp==='' ? '' : $tmp)!=null) {?><p class="error"><?php echo $_smarty_tpl->tpl_vars['message']->value['ng']['short_name'];?>
+</p><?php }?>
+							<input type="text" class="form-control" name="short_name" id="short_name" value="<?php echo (($tmp = @$_smarty_tpl->tpl_vars['arr_post']->value['short_name'])===null||$tmp==='' ? '' : $tmp);?>
+" />
+						</div>
+					</div>
+					<div class="hr-line-dashed"></div>
 					<div class="form-group required">
 						<label class="col-sm-2 control-label">エリア</label>
 						<div class="col-sm-6">
@@ -78,23 +88,35 @@ if (!is_callable('smarty_function_html_radios')) include '/home/manabi-creation/
 
 								</p>
 							<?php }?>
-							<input type="text" class="form-control" name="zip" id="zip" value="<?php echo (($tmp = @$_smarty_tpl->tpl_vars['arr_post']->value['zip'])===null||$tmp==='' ? '' : $tmp);?>
+							<div class="row mb10">
+								<div class="col-sm-7">
+									<div class="input-group">
+										<input type="text" class="form-control" name="zip" id="zip" value="<?php echo (($tmp = @$_smarty_tpl->tpl_vars['arr_post']->value['zip'])===null||$tmp==='' ? '' : $tmp);?>
 " placeholder="000-0000" maxlength="8" />
-							<a href="javascript:AjaxZip3.zip2addr('zip','','prefecture','address1');">郵便番号から検索する</a>
-							<select name="prefecture" class="form-control">
-								<?php echo smarty_function_html_select_ken(array('selected'=>$_smarty_tpl->tpl_vars['arr_post']->value['prefecture']),$_smarty_tpl);?>
+										<span class="input-group-addon">
+											<a href="javascript:AjaxZip3.zip2addr('zip','','prefecture','address1');">郵便番号から検索する</a>
+										</span>
+									</div>
+								</div>
+							</div>
+							<div class="row mb10">
+								<div class="col-sm-5">
+									<select name="prefecture" class="form-control">
+										<?php echo smarty_function_html_select_ken(array('selected'=>$_smarty_tpl->tpl_vars['arr_post']->value['prefecture']),$_smarty_tpl);?>
 
-							</select>
-							<input type="text" class="form-control" name="address1" id="address1" value="<?php echo (($tmp = @$_smarty_tpl->tpl_vars['arr_post']->value['address1'])===null||$tmp==='' ? '' : $tmp);?>
-" />
-							<input type="text" class="form-control" name="address2" id="address1" value="<?php echo (($tmp = @$_smarty_tpl->tpl_vars['arr_post']->value['address2'])===null||$tmp==='' ? '' : $tmp);?>
-" />
+									</select>
+								</div>
+							</div>
+							<input type="text" class="form-control mb10" name="address1" id="address1" value="<?php echo (($tmp = @$_smarty_tpl->tpl_vars['arr_post']->value['address1'])===null||$tmp==='' ? '' : $tmp);?>
+" placeholder="市区町村・番地" />
+							<input type="text" class="form-control" name="address2" id="address2" value="<?php echo (($tmp = @$_smarty_tpl->tpl_vars['arr_post']->value['address2'])===null||$tmp==='' ? '' : $tmp);?>
+" placeholder="建物・マンション名" />
 						</div>
 					</div>
 					<div class="hr-line-dashed"></div>
 					<div class="form-group">
 						<label class="col-sm-2 control-label">電話番号</label>
-						<div class="col-sm-6">
+						<div class="col-sm-4">
 							<?php if ((($tmp = @$_smarty_tpl->tpl_vars['message']->value['ng']['tel'])===null||$tmp==='' ? '' : $tmp)!=null) {?><p class="error"><?php echo $_smarty_tpl->tpl_vars['message']->value['ng']['tel'];?>
 </p><?php }?>
 							<input type="text" class="form-control" name="tel" id="tel" value="<?php echo (($tmp = @$_smarty_tpl->tpl_vars['arr_post']->value['tel'])===null||$tmp==='' ? '' : $tmp);?>
@@ -104,11 +126,81 @@ if (!is_callable('smarty_function_html_radios')) include '/home/manabi-creation/
 					<div class="hr-line-dashed"></div>
 					<div class="form-group">
 						<label class="col-sm-2 control-label">FAX番号</label>
-						<div class="col-sm-6">
+						<div class="col-sm-4">
 							<?php if ((($tmp = @$_smarty_tpl->tpl_vars['message']->value['ng']['fax'])===null||$tmp==='' ? '' : $tmp)!=null) {?><p class="error"><?php echo $_smarty_tpl->tpl_vars['message']->value['ng']['fax'];?>
 </p><?php }?>
 							<input type="text" class="form-control" name="fax" id="fax" value="<?php echo (($tmp = @$_smarty_tpl->tpl_vars['arr_post']->value['fax'])===null||$tmp==='' ? '' : $tmp);?>
 " maxlength="14" />
+						</div>
+					</div>
+					<div class="hr-line-dashed"></div>
+					<div class="form-group required">
+						<label class="col-sm-2 control-label">メールアドレス</label>
+						<div class="col-sm-6">
+							<?php if ((($tmp = @$_smarty_tpl->tpl_vars['message']->value['ng']['mail'])===null||$tmp==='' ? '' : $tmp)!=null) {?><p class="error"><?php echo $_smarty_tpl->tpl_vars['message']->value['ng']['mail'];?>
+</p><?php }?>
+							<p>※ お問い合わせ先のメールアドレスになります。</p>
+							<input type="text" class="form-control" name="mail" id="mail" value="<?php echo (($tmp = @$_smarty_tpl->tpl_vars['arr_post']->value['mail'])===null||$tmp==='' ? '' : $tmp);?>
+" />
+						</div>
+					</div>
+					<div class="hr-line-dashed"></div>
+					<div class="form-group">
+						<label class="col-sm-2 control-label">受付時間</label>
+						<div class="col-sm-4">
+							<?php if ((($tmp = @$_smarty_tpl->tpl_vars['message']->value['ng']['reception_time'])===null||$tmp==='' ? '' : $tmp)!=null) {?><p class="error"><?php echo $_smarty_tpl->tpl_vars['message']->value['ng']['reception_time'];?>
+</p><?php }?>
+							<input type="text" class="form-control" name="reception_time" id="reception_time" value="<?php echo (($tmp = @$_smarty_tpl->tpl_vars['arr_post']->value['reception_time'])===null||$tmp==='' ? '' : $tmp);?>
+" maxlength="32" placeholder="例）9:00～18：00（日曜定休）" />
+						</div>
+					</div>
+					<div class="hr-line-dashed"></div>
+					<div class="form-group">
+						<label class="col-sm-2 control-label">学校紹介</label>
+						<div class="col-sm-6">
+							<?php if ((($tmp = @$_smarty_tpl->tpl_vars['message']->value['ng']['comment'])===null||$tmp==='' ? '' : $tmp)!=null) {?><p class="error"><?php echo $_smarty_tpl->tpl_vars['message']->value['ng']['comment'];?>
+</p><?php }?>
+							<textarea class="form-control" name="comment" id="comment" rows="5"><?php echo (($tmp = @$_smarty_tpl->tpl_vars['arr_post']->value['comment'])===null||$tmp==='' ? '' : $tmp);?>
+</textarea>
+						</div>
+					</div>
+					<div class="hr-line-dashed"></div>
+					<div class="form-group">
+						<label class="col-sm-2 control-label">取り扱いカリキュラム</label>
+						<div class="col-sm-6">
+							<?php if ((($tmp = @$_smarty_tpl->tpl_vars['message']->value['ng']['curriculum_id'])===null||$tmp==='' ? '' : $tmp)!=null) {?><p class="error"><?php echo $_smarty_tpl->tpl_vars['message']->value['ng']['curriculum_id'];?>
+</p><?php }?>
+							<?php  $_smarty_tpl->tpl_vars["curriculum"] = new Smarty_Variable; $_smarty_tpl->tpl_vars["curriculum"]->_loop = false;
+ $_smarty_tpl->tpl_vars["key"] = new Smarty_Variable;
+ $_from = $_smarty_tpl->tpl_vars['OptionCurriculum']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+foreach ($_from as $_smarty_tpl->tpl_vars["curriculum"]->key => $_smarty_tpl->tpl_vars["curriculum"]->value) {
+$_smarty_tpl->tpl_vars["curriculum"]->_loop = true;
+ $_smarty_tpl->tpl_vars["key"]->value = $_smarty_tpl->tpl_vars["curriculum"]->key;
+?>
+								<div class="i-checks"><?php echo smarty_function_html_checkboxes(array('name'=>"curriculum[id]",'output'=>$_smarty_tpl->tpl_vars['curriculum']->value,'values'=>$_smarty_tpl->tpl_vars['key']->value,'selected'=>(($tmp = @$_smarty_tpl->tpl_vars['arr_post']->value['curriculum']['id'])===null||$tmp==='' ? '' : $tmp)),$_smarty_tpl);?>
+</div>
+							<?php } ?>
+						</div>
+					</div>
+					
+					<div class="hr-line-dashed"></div>
+					<div class="form-group">
+						<label class="col-sm-2 control-label">Facebook</label>
+						<div class="col-sm-6">
+							<?php if ((($tmp = @$_smarty_tpl->tpl_vars['message']->value['ng']['facebook'])===null||$tmp==='' ? '' : $tmp)!=null) {?><p class="error"><?php echo $_smarty_tpl->tpl_vars['message']->value['ng']['facebook'];?>
+</p><?php }?>
+							<input type="text" class="form-control" name="facebook" id="facebook" value="<?php echo (($tmp = @$_smarty_tpl->tpl_vars['arr_post']->value['facebook'])===null||$tmp==='' ? '' : $tmp);?>
+" maxlength="255" placeholder="URLをご記入ください" />
+						</div>
+					</div>
+					<div class="hr-line-dashed"></div>
+					<div class="form-group">
+						<label class="col-sm-2 control-label">Twitter</label>
+						<div class="col-sm-6">
+							<?php if ((($tmp = @$_smarty_tpl->tpl_vars['message']->value['ng']['twitter'])===null||$tmp==='' ? '' : $tmp)!=null) {?><p class="error"><?php echo $_smarty_tpl->tpl_vars['message']->value['ng']['twitter'];?>
+</p><?php }?>
+							<input type="text" class="form-control" name="twitter" id="twitter" value="<?php echo (($tmp = @$_smarty_tpl->tpl_vars['arr_post']->value['twitter'])===null||$tmp==='' ? '' : $tmp);?>
+" maxlength="255" placeholder="URLをご記入ください" />
 						</div>
 					</div>
 					<div class="hr-line-dashed"></div>
@@ -128,8 +220,32 @@ if (!is_callable('smarty_function_html_radios')) include '/home/manabi-creation/
 						</div>
 					</div>
 					<div class="hr-line-dashed"></div>
+					<?php if ($_smarty_tpl->tpl_vars['_ARR_IMAGE']->value!=null) {?>
+						<?php echo $_smarty_tpl->getSubTemplate ($_smarty_tpl->tpl_vars['template_image']->value, $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array('path'=>$_smarty_tpl->tpl_vars['_IMAGEFULLPATH']->value,'dir'=>$_smarty_tpl->tpl_vars['_CONTENTS_DIR']->value,'prefix'=>"s_"), 0);?>
+
+					<?php }?>
 					<div class="form-group">
-						<label class="col-sm-2 control-label">公開／非公開</label>
+						<label class="col-sm-2 control-label">SEO</label>
+						<div class="col-sm-6">
+							<?php if ((($tmp = @$_smarty_tpl->tpl_vars['message']->value['ng']['keyword'])===null||$tmp==='' ? '' : $tmp)!=null||(($tmp = @$_smarty_tpl->tpl_vars['message']->value['ng']['description'])===null||$tmp==='' ? '' : $tmp)!=null) {?>
+								<p class="error">
+									<?php echo $_smarty_tpl->tpl_vars['message']->value['ng']['keyword'];?>
+
+									<?php echo $_smarty_tpl->tpl_vars['message']->value['ng']['description'];?>
+
+								</p>
+							<?php }?>
+							<p>キーワード</p>
+							<input type="text" class="form-control mb10" name="keyword" id="keyword" value="<?php echo (($tmp = @$_smarty_tpl->tpl_vars['arr_post']->value['keyword'])===null||$tmp==='' ? '' : $tmp);?>
+" placeholder="キーワード" />
+							<p>ディスクリプション</p>
+							<input type="text" class="form-control" name="description" id="description" value="<?php echo (($tmp = @$_smarty_tpl->tpl_vars['arr_post']->value['description'])===null||$tmp==='' ? '' : $tmp);?>
+" placeholder="ディスクリプション" />
+						</div>
+					</div>
+					<div class="hr-line-dashed"></div>
+					<div class="form-group">
+						<label class="col-sm-2 control-label">公開／非公開（アクセス）</label>
 						<div class="col-sm-6">
 							<?php if ((($tmp = @$_smarty_tpl->tpl_vars['message']->value['ng']['display_flg'])===null||$tmp==='' ? '' : $tmp)!=null) {?><p class="error"><?php echo $_smarty_tpl->tpl_vars['message']->value['ng']['display_flg'];?>
 </p><?php }?>
@@ -137,6 +253,59 @@ if (!is_callable('smarty_function_html_radios')) include '/home/manabi-creation/
 								<?php echo smarty_function_html_radios(array('name'=>"display_flg",'values'=>1,'selected'=>(($tmp = @$_smarty_tpl->tpl_vars['arr_post']->value['display_flg'])===null||$tmp==='' ? "1" : $tmp),'output'=>"する"),$_smarty_tpl);?>
 &nbsp;&nbsp;
 								<?php echo smarty_function_html_radios(array('name'=>"display_flg",'values'=>0,'selected'=>(($tmp = @$_smarty_tpl->tpl_vars['arr_post']->value['display_flg'])===null||$tmp==='' ? "1" : $tmp),'output'=>"しない"),$_smarty_tpl);?>
+
+							</div>
+						</div>
+					</div>
+					<div class="hr-line-dashed"></div>
+					<div class="form-group">
+						<label class="col-sm-2 control-label">公開／非公開（HP）</label>
+						<div class="col-sm-6">
+							<?php if ((($tmp = @$_smarty_tpl->tpl_vars['message']->value['ng']['display_hp_flg'])===null||$tmp==='' ? '' : $tmp)!=null) {?><p class="error"><?php echo $_smarty_tpl->tpl_vars['message']->value['ng']['display_hp_flg'];?>
+</p><?php }?>
+							<div class="radio m-r-xs inline">
+								<?php echo smarty_function_html_radios(array('name'=>"display_hp_flg",'values'=>1,'selected'=>(($tmp = @$_smarty_tpl->tpl_vars['arr_post']->value['display_hp_flg'])===null||$tmp==='' ? "1" : $tmp),'output'=>"する"),$_smarty_tpl);?>
+&nbsp;&nbsp;
+								<?php echo smarty_function_html_radios(array('name'=>"display_hp_flg",'values'=>0,'selected'=>(($tmp = @$_smarty_tpl->tpl_vars['arr_post']->value['display_hp_flg'])===null||$tmp==='' ? "1" : $tmp),'output'=>"しない"),$_smarty_tpl);?>
+
+							</div>
+						</div>
+					</div>
+					
+					
+					<div class="ibox-title">
+						<h5>アカウント情報</h5>
+					</div>
+					<div class="form-group">
+						<label class="col-sm-2 control-label">アカウント</label>
+						<div class="col-sm-6">
+							<?php if ((($tmp = @$_smarty_tpl->tpl_vars['message']->value['ng']['staff_account'])===null||$tmp==='' ? '' : $tmp)!=null) {?><p class="error"><?php echo $_smarty_tpl->tpl_vars['message']->value['ng']['staff_account'];?>
+</p><?php }?>
+							<input type="text" class="form-control" name="staff[account]" id="staff_account" value="<?php echo (($tmp = @$_smarty_tpl->tpl_vars['arr_post']->value['staff']['account'])===null||$tmp==='' ? '' : $tmp);?>
+" />
+						</div>
+					</div>
+					<div class="hr-line-dashed"></div>
+					<div class="form-group">
+						<label class="col-sm-2 control-label">パスワード</label>
+						<div class="col-sm-6">
+							<?php if ((($tmp = @$_smarty_tpl->tpl_vars['message']->value['ng']['staff_password'])===null||$tmp==='' ? '' : $tmp)!=null) {?><p class="error"><?php echo $_smarty_tpl->tpl_vars['message']->value['ng']['staff_password'];?>
+</p><?php }?>
+							<input type="password" class="form-control" name="staff[password]" id="staff_password" value="<?php echo (($tmp = @$_smarty_tpl->tpl_vars['arr_post']->value['staff']['password'])===null||$tmp==='' ? '' : $tmp);?>
+" placeholder="4～32文字" maxlength="32" />
+							<label><input type="checkbox" id="displaypass"> パスワードを表示する</label>
+						</div>
+					</div>
+					<div class="hr-line-dashed"></div>
+					<div class="form-group required">
+						<label class="col-sm-2 control-label">有効／無効</label>
+						<div class="col-sm-6">
+							<?php if ((($tmp = @$_smarty_tpl->tpl_vars['message']->value['ng']['staff_valid_flg'])===null||$tmp==='' ? '' : $tmp)!=null) {?><p class="error"><?php echo $_smarty_tpl->tpl_vars['message']->value['ng']['staff_valid_flg'];?>
+</p><?php }?>
+							<div class="radio m-r-xs inline">
+								<?php echo smarty_function_html_radios(array('name'=>"staff[valid_flg]",'values'=>0,'selected'=>(($tmp = @$_smarty_tpl->tpl_vars['arr_post']->value['staff']['valid_flg'])===null||$tmp==='' ? "0" : $tmp),'output'=>"無効"),$_smarty_tpl);?>
+&nbsp;&nbsp;
+								<?php echo smarty_function_html_radios(array('name'=>"staff[valid_flg]",'values'=>1,'selected'=>(($tmp = @$_smarty_tpl->tpl_vars['arr_post']->value['staff']['valid_flg'])===null||$tmp==='' ? "0" : $tmp),'output'=>"有効"),$_smarty_tpl);?>
 
 							</div>
 						</div>

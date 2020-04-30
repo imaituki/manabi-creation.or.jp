@@ -420,8 +420,13 @@ class FN_file {
 		// コピー先のイメージを作成（拡大）
 		if( function_exists("ImageCreateTrueColor") ) {
 			$Option["newImage"]["imageDst"] = imagecreatetruecolor( $Option["newImage"]["width"], $Option["newImage"]["height"] ) or die("errDst!\n");
-			imagealphablending( $Option["newImage"]["imageDst"], false);
-			imagesavealpha( $Option["newImage"]["imageDst"], true);
+			
+			//ブレンドモードを無効にする
+			imagealphablending( $Option["newImage"]["imageDst"], false );
+			
+			//完全なアルファチャネル情報を保存するフラグをonにする
+			imagesavealpha( $Option["newImage"]["imageDst"], true );
+			
 		} else {
 			$Option["newImage"]["imageDst"] = ImageCreate( $Option["newImage"]["width"], $Option["newImage"]["height"] ) or die("errDst!\n");
 		}
@@ -509,8 +514,13 @@ class FN_file {
 		// コピー先のイメージを作成（拡大）
 		if( function_exists("ImageCreateTrueColor") ) {
 			$Option["newImage"]["imageDst"] = imagecreatetruecolor( $Option["newImage"]["width"], $Option["newImage"]["height"] ) or die("errDst!\n");
-			imagealphablending( $Option["newImage"]["imageDst"], false);
-			imagesavealpha( $Option["newImage"]["imageDst"], true);
+			
+			//ブレンドモードを無効にする
+			imagealphablending( $Option["newImage"]["imageDst"], false );
+			
+			//完全なアルファチャネル情報を保存するフラグをonにする
+			imagesavealpha( $Option["newImage"]["imageDst"], true );
+			
 		} else {
 			$Option["newImage"]["imageDst"] = ImageCreate( $Option["newImage"]["width"], $Option["newImage"]["height"] ) or die("errDst!\n");
 		}

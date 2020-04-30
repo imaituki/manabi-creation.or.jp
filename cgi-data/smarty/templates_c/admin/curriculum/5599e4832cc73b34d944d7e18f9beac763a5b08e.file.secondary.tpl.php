@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.18, created on 2020-04-24 15:39:37
+<?php /* Smarty version Smarty-3.1.18, created on 2020-04-30 14:25:34
          compiled from "/home/manabi-creation/www//admin/common/inc/secondary.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:6302498735ea289a9da9421-34629233%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '5599e4832cc73b34d944d7e18f9beac763a5b08e' => 
     array (
       0 => '/home/manabi-creation/www//admin/common/inc/secondary.tpl',
-      1 => 1587710358,
+      1 => 1588222411,
       2 => 'file',
     ),
   ),
@@ -15,9 +15,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
-  'has_nocache_code' => false,
   'version' => 'Smarty-3.1.18',
   'unifunc' => 'content_5ea289a9dbc1e9_62207909',
+  'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_5ea289a9dbc1e9_62207909')) {function content_5ea289a9dbc1e9_62207909($_smarty_tpl) {?>	<nav class="navbar-default navbar-static-side" role="navigation">
 		<div class="sidebar-collapse">
@@ -43,10 +43,10 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 				<li><a href="/admin/"><i class="fa fa-home"></i><span class="nav-label">HOME</span></a></li>
 				<li><a href="/admin/contents/information/"><i class="fa fa-newspaper-o"></i><span class="nav-label">お知らせ管理</span></a></li>
 
-
+				<li><a href="/admin/contents/contact/"><i class="fa fa-newspaper-o"></i><span class="nav-label">お問い合わせ管理</span></a></li>
 				<li><a href="/admin/contents/curriculum/"><i class="fa fa-newspaper-o"></i><span class="nav-label">カリキュラム管理</span></a></li>
-				<li><a href="/admin/contents/school/"><i class="fa fa-newspaper-o"></i><span class="nav-label">学校管理</span></a></li>
-
+				<li><a href="/admin/contents/school/"><i class="fa fa-newspaper-o"></i><span class="nav-label">契約学校管理</span></a></li>
+				<li><a href="/admin/contents/staff/"><i class="fa fa-newspaper-o"></i><span class="nav-label">総合アカウント管理</span></a></li>
 			</ul>
 		</div>
 	</nav>

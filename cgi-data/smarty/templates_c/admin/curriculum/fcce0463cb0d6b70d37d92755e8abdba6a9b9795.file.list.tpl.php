@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.18, created on 2020-04-24 15:39:37
+<?php /* Smarty version Smarty-3.1.18, created on 2020-04-30 13:52:16
          compiled from "/home/manabi-creation/www/admin/contents/curriculum/template/list.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:21192776765ea289a9dc7d11-43741210%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'fcce0463cb0d6b70d37d92755e8abdba6a9b9795' => 
     array (
       0 => '/home/manabi-creation/www/admin/contents/curriculum/template/list.tpl',
-      1 => 1587710085,
+      1 => 1588222236,
       2 => 'file',
     ),
   ),
@@ -15,6 +15,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
+  'version' => 'Smarty-3.1.18',
+  'unifunc' => 'content_5ea289a9e24230_88360077',
   'variables' => 
   array (
     'template_pagenavi' => 0,
@@ -28,8 +30,6 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '_CONTENTS_NAME' => 0,
   ),
   'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.18',
-  'unifunc' => 'content_5ea289a9e24230_88360077',
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_5ea289a9e24230_88360077')) {function content_5ea289a9e24230_88360077($_smarty_tpl) {?>			
 			<script type="text/javascript">
@@ -119,4 +119,13 @@ if (!$_smarty_tpl->tpl_vars["curriculum"]->_loop) {
 			</table>
 			<?php echo $_smarty_tpl->getSubTemplate ($_smarty_tpl->tpl_vars['template_pagenavi']->value, $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
 
+			<div id="blueimp-gallery" class="blueimp-gallery">
+				<div class="slides"></div>
+				<h3 class="title"></h3>
+				<a class="prev">‹</a>
+				<a class="next">›</a>
+				<a class="close">×</a>
+				<a class="play-pause"></a>
+				<ol class="indicator"></ol>
+			</div>
 <?php }} ?>

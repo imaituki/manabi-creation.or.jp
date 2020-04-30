@@ -1,5 +1,3 @@
-{if empty($message.ng)}
-{include file="array.tpl"}
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -60,7 +58,7 @@
 							<tbody>
 								<tr class="first">
 									<th scope="row">ご用件</th>
-									<td>{$c1[$arr_post.content]}</td>
+									<td>{$OptionContactType[$arr_post.type]}</td>
 								</tr>
 								<tr>
 									<th scope="row">保護者氏名</th>
@@ -72,15 +70,15 @@
 								</tr>
 								<tr>
 									<th scope="row">受講するお子様の学年</th>
-									<td>{$g[$arr_post.g]}</td>
+									<td>{$OptionContactSchoolYear[$arr_post.school_year]}</td>
 								</tr>
 								<tr>
 									<th scope="row">受講者氏名</th>
-									<td>{$arr_post.name2}</td>
+									<td>{$arr_post.student_name}</td>
 								</tr>
 								<tr>
 									<th scope="row">受講者氏名(フリガナ)</th>
-									<td>{$arr_post.ruby2}</td>
+									<td>{$arr_post.student_ruby}</td>
 								</tr>
 								<tr>
 									<th scope="row">住所</th>
@@ -94,14 +92,14 @@
 									<th scope="row">電話番号</th>
 									<td>{$arr_post.tel}</td>
 								</tr>
-								{if not empty($arr_post.content)}
+								{if not empty($arr_post.type)}
 								<tr>
 									<th scope="row" class="zoom">ZOOMオンラインの<br class="md_br">利用経験</th>
-									<td>{$c2[$arr_post.content2]}</td>
+									<td>{$OptionContactZoom[$arr_post.zoom]}</td>
 								</tr>
 								{/if}
 								<tr>
-									<th scope="row">{if not empty($arr_post.content)}その他お問い合わせ{else}お問い合わせ内容{/if}</th>
+									<th scope="row">{if not empty($arr_post.type)}その他お問い合わせ{else}お問い合わせ内容{/if}</th>
 									<td>{$arr_post.comment|nl2br}</td>
 								</tr>
 							</tbody>
@@ -132,6 +130,3 @@
 </div>
 </body>
 </html>
-{else}
-{include file="index.tpl"}
-{/if}

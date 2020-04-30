@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.18, created on 2020-04-24 15:39:42
+<?php /* Smarty version Smarty-3.1.18, created on 2020-04-28 12:38:17
          compiled from "/home/manabi-creation/www//admin/common/inc/image.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:19268756615ea289aeb37174-58536064%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '46999b4cc2408fd37cd308cdab374e15ad875bb6' => 
     array (
       0 => '/home/manabi-creation/www//admin/common/inc/image.tpl',
-      1 => 1587536657,
+      1 => 1587791587,
       2 => 'file',
     ),
   ),
@@ -15,6 +15,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
+  'version' => 'Smarty-3.1.18',
+  'unifunc' => 'content_5ea289aebe1483_47784170',
   'variables' => 
   array (
     '_ARR_IMAGE' => 0,
@@ -31,8 +33,6 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'type' => 0,
   ),
   'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.18',
-  'unifunc' => 'content_5ea289aebe1483_47784170',
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_5ea289aebe1483_47784170')) {function content_5ea289aebe1483_47784170($_smarty_tpl) {?>					<?php  $_smarty_tpl->tpl_vars["file"] = new Smarty_Variable; $_smarty_tpl->tpl_vars["file"]->_loop = false;
  $_smarty_tpl->tpl_vars["key"] = new Smarty_Variable;

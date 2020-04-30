@@ -201,10 +201,20 @@ function smarty_function_html_checkboxes_output($name, $value, $output, $selecte
         $output = smarty_function_escape_special_chars($output);
     }
 
+    if ($labels && $label_ids) {
+        $_id = smarty_function_escape_special_chars(preg_replace('![^\w\-\.]!' . Smarty::$_UTF8_MODIFIER, '_', $name . '_' . $value));
+    }
+    if ($labels) {
+        if ($label_ids) {
+            $_output .= '<label for="' . $_id . '">';
+        } else {
+            $_output .= '<label>';
+        }
+    }
+    
     $_output .= '<input type="checkbox" name="' . $name . '[]" value="' . $value . '"';
 
     if ($labels && $label_ids) {
-        $_id = smarty_function_escape_special_chars(preg_replace('![^\w\-\.]!' . Smarty::$_UTF8_MODIFIER, '_', $name . '_' . $value));
         $_output .= ' id="' . $_id . '"';
     }
 
@@ -216,14 +226,7 @@ function smarty_function_html_checkboxes_output($name, $value, $output, $selecte
         $_output .= ' checked="checked"';
     }
 
-    $_output .= $extra . ' />';
-    if ($labels) {
-        if ($label_ids) {
-            $_output .= '<label for="' . $_id . '">';
-        } else {
-            $_output .= '<label>';
-        }
-    }
+    $_output .= $extra . ' /> ';
     $_output .= $output;
     if ($labels) {
         $_output .= '</label>';

@@ -11,13 +11,8 @@
 <link href="/admin/common/css/plugins/codemirror/ambiance.css" rel="stylesheet">
 <link href="/admin/common/css/plugins/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.css" rel="stylesheet">
 <link href="/admin/common/css/style.css" rel="stylesheet">
-<!-- FooTable -->
-<link href="/admin/common/css/plugins/footable/footable.core.css" rel="stylesheet">
 {include file=$template_javascript}
 <script type="text/javascript" src="/admin/common/js/input.js"></script>
-<script src="/admin/common/js/plugins/jquery-ui/jquery-ui.min.js"></script>
-<script src="/admin/common/js/plugins/datapicker/bootstrap-datepicker-import.js"></script>
-<script type="text/javascript" src="/admin/common/js/ckeditor/ckeditor.js"></script>
 </head>
 <body class="fixed-sidebar no-skin-config">
 <div id="wrapper">

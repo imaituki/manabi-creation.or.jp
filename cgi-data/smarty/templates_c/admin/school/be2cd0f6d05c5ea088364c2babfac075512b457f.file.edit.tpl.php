@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.18, created on 2020-04-24 15:47:22
+<?php /* Smarty version Smarty-3.1.18, created on 2020-04-30 13:50:56
          compiled from "../template/edit.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:19550228235ea28b7aa1b831-16693193%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'be2cd0f6d05c5ea088364c2babfac075512b457f' => 
     array (
       0 => '../template/edit.tpl',
-      1 => 1587710086,
+      1 => 1588222239,
       2 => 'file',
     ),
   ),
@@ -15,6 +15,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
+  'version' => 'Smarty-3.1.18',
+  'unifunc' => 'content_5ea28b7aa47e75_07474933',
   'variables' => 
   array (
     'template_javascript' => 0,
@@ -23,8 +25,6 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '_CONTENTS_NAME' => 0,
   ),
   'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.18',
-  'unifunc' => 'content_5ea28b7aa47e75_07474933',
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_5ea28b7aa47e75_07474933')) {function content_5ea28b7aa47e75_07474933($_smarty_tpl) {?><!DOCTYPE html>
 <html>
@@ -37,12 +37,24 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 <link href="/admin/common/css/animate.css" rel="stylesheet">
 <link href="/admin/common/css/plugins/codemirror/codemirror.css" rel="stylesheet">
 <link href="/admin/common/css/plugins/codemirror/ambiance.css" rel="stylesheet">
+<link href="/school/admin/common/css/plugins/iCheck/custom.css" rel="stylesheet">
 <link href="/admin/common/css/plugins/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.css" rel="stylesheet">
 <link href="/admin/common/css/style.css" rel="stylesheet">
 <?php echo $_smarty_tpl->getSubTemplate ($_smarty_tpl->tpl_vars['template_javascript']->value, $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
 
 <script type="text/javascript" src="/admin/common/js/input.js"></script>
+<script type="text/javascript" src="../js/input.js"></script>
 <script src="https://ajaxzip3.github.io/ajaxzip3.js" charset="UTF-8"></script>
+<!-- iCheck -->
+<script type="text/javascript" src="/admin/common/js/plugins/iCheck/icheck.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function () {
+		$('.i-checks').iCheck({
+			checkboxClass: 'icheckbox_square-green',
+			radioClass: 'iradio_square-green',
+		});
+	});
+</script>
 </head>
 <body class="fixed-sidebar no-skin-config">
 <div id="wrapper">

@@ -60,7 +60,7 @@
 					</div>
 					<div class="hr-line-dashed"></div>
 					<div class="form-group">
-						<label class="col-sm-2 control-label">表示／非表示</label>
+						<label class="col-sm-2 control-label">公開／非公開</label>
 						<div class="col-sm-6">
 							{if $message.ng.display_flg|default:"" != NULL}<p class="error">{$message.ng.display_flg}</p>{/if}
 							<div class="radio m-r-xs inline">

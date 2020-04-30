@@ -20,9 +20,17 @@ $message = NULL;
 //----------------------------------------
 //  データチェック
 //----------------------------------------
+// 操作クラス
+$objManage   = new DB_manage( _DNS );
+$objContact  = new FT_contact( $objManage );
+
+// データチェック
 if( empty( $arr_post ) ) {
 	$message["ng"] = "送信に失敗しました。<br />恐れ入りますが、再度最初から行ってください。";
+} else {
+	$message = $objContact->check( $arr_post );
 }
+
 
 //----------------------------------------
 //  メール送信
@@ -42,14 +50,14 @@ if( empty( $message["ng"] ) ) {
 	//----------------------------------------
 	// メールアドレス
 	$arr_post["mail"] = mb_convert_kana( $arr_post["mail"], "a" );
-
+	
 	// 半角カナ
 	$arr_post = mb_convert_kana_array( $arr_post, "KV" );
-
+	
 	// HTMLデコード
 	$arr_post = html_entity_decode_array( $arr_post );
-
-
+	
+	
 	//----------------------------------------
 	//  文字コード設定
 	//----------------------------------------
@@ -73,7 +81,12 @@ if( empty( $message["ng"] ) ) {
 		"arr_post"  => $arr_post,
 		"mail_conf" => $mail_conf,
 	) );
-
+	
+	// オプション配列
+	$smarty->assign( "OptionContactType"      , $OptionContactType       );
+	$smarty->assign( "OptionContactSchoolYear", $OptionContactSchoolYear );
+	$smarty->assign( "OptionContactZoom"      , $OptionContactZoom       );
+	
 	// テンプレートの取得
 	$mail1 = $smarty->fetch( "mail1.tpl" );
 	$mail2 = $smarty->fetch( "mail2.tpl" );
@@ -117,14 +130,24 @@ if( empty( $message["ng"] ) ) {
 
 	// 管理へ
 	$error_flg2 = mb_send_mail( $mail_conf["info"]["admin_mail"], $subject2, $mail2, $header2 );
-//	$error_flg2 = mb_send_mail( "office@web3.co.jp", $subject2, $mail2, $header2 );
 
 	// 送信チェック
 	if( empty( $error_flg1 ) ) {
 		$message["ng"] = "メール送信に失敗しました。";
+	} else {
+		
+		// データ登録
+		$objContact->_DBconn->StartTrans();
+		$objContact->insert( $arr_post );
+		$objContact->_DBconn->CompleteTrans();
+		
 	}
 
 }
+
+// DB切断
+unset( $objManage  );
+unset( $objContact );
 
 
 //----------------------------------------

@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.18, created on 2020-04-24 15:39:35
+<?php /* Smarty version Smarty-3.1.18, created on 2020-04-30 15:24:49
          compiled from "/home/manabi-creation/www/admin/contents/school/template/list.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:12805993235ea289a7d73b82-82779032%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '0de6f750b3a0f8b370d26fa96dfc125b64ea865b' => 
     array (
       0 => '/home/manabi-creation/www/admin/contents/school/template/list.tpl',
-      1 => 1587710086,
+      1 => 1588227868,
       2 => 'file',
     ),
   ),
@@ -15,6 +15,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
+  'version' => 'Smarty-3.1.18',
+  'unifunc' => 'content_5ea289a7de9498_66206083',
   'variables' => 
   array (
     'template_pagenavi' => 0,
@@ -29,8 +31,6 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '_CONTENTS_NAME' => 0,
   ),
   'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.18',
-  'unifunc' => 'content_5ea289a7de9498_66206083',
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_5ea289a7de9498_66206083')) {function content_5ea289a7de9498_66206083($_smarty_tpl) {?><?php if (!is_callable('smarty_function_html_select_ken')) include '/home/manabi-creation/cgi-data/smarty/libs/plugins/function.html_select_ken.php';
 ?>			
@@ -45,11 +45,12 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 					<tr>
 						<th></th>
 						<th>エリア</th>
-						<th>名称</th>
+						<th>契約名称</th>
 						<th>住所</th>
 						<th>TEL／FAX</th>
 						<th>写真</th>
-						<th class="showhide">表示</th>
+						<th class="showhide">表示(ｱｸｾｽ)</th>
+						<th class="showhide">表示(HP)</th>
 						<th class="delete">削除</th>
 					</tr>
 				</thead>
@@ -121,6 +122,20 @@ $_smarty_tpl->tpl_vars["file"]->_loop = true;
 							</div>
 						</td>
 						<td class="pos_ac">
+							<div class="switch">
+								<div class="onoffswitch">
+									<input type="checkbox" value="1" class="onoffswitch-checkbox btn_display_hp" id="display_hp<?php echo $_smarty_tpl->tpl_vars['school']->value['id_school'];?>
+" data-id="<?php echo $_smarty_tpl->tpl_vars['school']->value['id_school'];?>
+"<?php if ($_smarty_tpl->tpl_vars['school']->value['display_hp_flg']==1) {?> checked<?php }?>>
+									<label class="onoffswitch-label" for="display_hp<?php echo $_smarty_tpl->tpl_vars['school']->value['id_school'];?>
+">
+										<span class="onoffswitch-inner"></span>
+										<span class="onoffswitch-switch"></span>
+									</label>
+								</div>
+							</div>
+						</td>
+						<td class="pos_ac">
 							<a href="javascript:void(0)" class="btn btn-danger btn_delete" data-id="<?php echo $_smarty_tpl->tpl_vars['school']->value['id_school'];?>
 ">削除</a>
 						</td>
@@ -137,4 +152,13 @@ if (!$_smarty_tpl->tpl_vars["school"]->_loop) {
 			</table>
 			<?php echo $_smarty_tpl->getSubTemplate ($_smarty_tpl->tpl_vars['template_pagenavi']->value, $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
 
+			<div id="blueimp-gallery" class="blueimp-gallery">
+				<div class="slides"></div>
+				<h3 class="title"></h3>
+				<a class="prev">‹</a>
+				<a class="next">›</a>
+				<a class="close">×</a>
+				<a class="play-pause"></a>
+				<ol class="indicator"></ol>
+			</div>
 <?php }} ?>

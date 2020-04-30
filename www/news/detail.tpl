@@ -60,18 +60,18 @@
 			<p class="mb30">{$t_information.comment}</p>
 			<div class="row mb50">
 				<div class="col-xs-4 height-1 mb20">
-					<a class="ov" href="{if empty($t_information.image2)}/common/image/contents/null2.jpg{else}/common/photo/information/image1/l_{$t_information.image2}{/if}" rel="lightbox">
-						<div class="img_rect"><img src="{if empty($t_information.image1)}/common/image/contents/null2.jpg{else}/common/photo/information/image2/l_{$t_information.image2}{/if}" alt="{$t_information.caption2}"></div>
+					<a class="ov" href="{if empty($t_information.image2)}/common/image/contents/null2.jpg{else}/common/photo/information/image2/l_{$t_information.image2}{/if}" rel="lightbox">
+						<div class="img_rect"><img src="{if empty($t_information.image2)}/common/image/contents/null2.jpg{else}/common/photo/information/image2/l_{$t_information.image2}{/if}" alt="{$t_information.caption2}"></div>
 					</a>
 				</div>
 				<div class="col-xs-4 height-1 mb20">
-					<a class="ov" href="{if empty($t_information.image3)}/common/image/contents/null2.jpg{else}/common/photo/information/image1/l_{$t_information.image3}{/if}" rel="lightbox">
-						<div class="img_rect"><img src="{if empty($t_information.image1)}/common/image/contents/null2.jpg{else}/common/photo/information/image3/l_{$t_information.image3}{/if}" alt="{$t_information.caption3}"></div>
+					<a class="ov" href="{if empty($t_information.image3)}/common/image/contents/null2.jpg{else}/common/photo/information/image3/l_{$t_information.image3}{/if}" rel="lightbox">
+						<div class="img_rect"><img src="{if empty($t_information.image3)}/common/image/contents/null2.jpg{else}/common/photo/information/image3/l_{$t_information.image3}{/if}" alt="{$t_information.caption3}"></div>
 					</a>
 				</div>
 				<div class="col-xs-4 height-1 mb20">
-					<a class="ov" href="{if empty($t_information.image4)}/common/image/contents/null2.jpg{else}/common/photo/information/image1/l_{$t_information.image4}{/if}" rel="lightbox">
-						<div class="img_rect"><img src="{if empty($t_information.image1)}/common/image/contents/null2.jpg{else}/common/photo/information/image4/l_{$t_information.image4}{/if}" alt="{$t_information.caption4}"></div>
+					<a class="ov" href="{if empty($t_information.image4)}/common/image/contents/null2.jpg{else}/common/photo/information/image4/l_{$t_information.image4}{/if}" rel="lightbox">
+						<div class="img_rect"><img src="{if empty($t_information.image4)}/common/image/contents/null2.jpg{else}/common/photo/information/image4/l_{$t_information.image4}{/if}" alt="{$t_information.caption4}"></div>
 					</a>
 				</div>
 			</div>

@@ -38,7 +38,7 @@ if( !empty( $t_information["id_information"] ) ) {
 	// Smarty設定
 	$smarty = new MySmarty("front");
 	$smarty->template_dir = "./";
-	$smarty->compile_dir .= "information/";
+	$smarty->compile_dir .= "news/";
 	
 	// テンプレートに設定
 	$smarty->assign( "t_information", $t_information );

@@ -75,7 +75,7 @@
 #top_about .text { position:absolute; top:0; left:0; width:100%; height:100%; }
 #top_about .text .center { display:table; height:100%; }
 #top_about .text .text_in { display:table-cell; vertical-align:middle; }
-#top_about .text h2 {    text-align: center; font-family: 'Kosugi Maru', sans-serif; font-size: 2.5em; font-weight: bold; letter-spacing: 5px; margin-bottom: 20px; }
+#top_about .text h2 {    text-align: center; font-family: 'Kosugi Maru', sans-serif; font-size: 2.25em; font-weight: bold; letter-spacing: 5px; margin-bottom: 20px; }
 #top_about .text p { line-height:200%; }
 @media  (max-width:1599px){
 	#top_about .text .button a{ margin-bottom: 50px;}

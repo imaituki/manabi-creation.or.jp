@@ -29,10 +29,10 @@
 {* 固定のため機能非表示
 				<li><a href="/admin/contents/information_category/"><i class="fa fa-newspaper-o"></i><span class="nav-label">カテゴリ管理</span></a></li>
 *}
-{*				<li><a href="/admin/contents/contact/"><i class="fa fa-newspaper-o"></i><span class="nav-label">お問い合わせ管理</span></a></li>*}
+				<li><a href="/admin/contents/contact/"><i class="fa fa-newspaper-o"></i><span class="nav-label">お問い合わせ管理</span></a></li>
 				<li><a href="/admin/contents/curriculum/"><i class="fa fa-newspaper-o"></i><span class="nav-label">カリキュラム管理</span></a></li>
-				<li><a href="/admin/contents/school/"><i class="fa fa-newspaper-o"></i><span class="nav-label">学校管理</span></a></li>
-{*				<li><a href="/admin/contents/staff/"><i class="fa fa-newspaper-o"></i><span class="nav-label">総合アカウント管理</span></a></li>*}
+				<li><a href="/admin/contents/school/"><i class="fa fa-newspaper-o"></i><span class="nav-label">契約学校管理</span></a></li>
+				<li><a href="/admin/contents/staff/"><i class="fa fa-newspaper-o"></i><span class="nav-label">総合アカウント管理</span></a></li>
 			</ul>
 		</div>
 	</nav>

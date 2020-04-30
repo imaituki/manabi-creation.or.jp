@@ -1,6 +1,6 @@
 <?php
 //----------------------------------------------------------------------------
-// 作成日：2020/03/31
+// 作成日：2020/04/23
 // 作成者：鈴木
 // 内  容：お知らせ操作クラス
 //----------------------------------------------------------------------------
@@ -108,13 +108,13 @@ class AD_information {
 		$objInputCheck->entryData( "日付"    , "date"                   , $arrVal["date"]                   , array( "CHECK_EMPTY", "CHECK_DATE" ), null, null );
 		$objInputCheck->entryData( "カテゴリ", "id_information_category", $arrVal["id_information_category"], array( "CHECK_EMPTY" ), null, null );
 		$objInputCheck->entryData( "タイトル", "title"                  , $arrVal["title"]                  , array( "CHECK_EMPTY", "CHECK_MIN_MAX_LEN" ), 0, 255 );
-		$objInputCheck->entryData( "本文"    , "comment"                , $arrVal["comment"]                  , array( "CHECK_EMPTY" ), null, null );
+		$objInputCheck->entryData( "本文"    , "comment"                , $arrVal["comment"]                , array( "CHECK_EMPTY" ), null, null );
 		if( $arrVal["display_indefinite_flg"] == 0 ) {
 			$objInputCheck->entryData( "掲載開始", "display_start", $arrVal["display_start"], array( "CHECK_DATE" ), null, null );
 			$objInputCheck->entryData( "掲載終了", "display_end", $arrVal["display_end"], array( "CHECK_DATE" ), null, null );
 			$objInputCheck->entryData( "掲載終了", "display_end", $arrVal["display_end"], array( "CHECK_DATE_START_TERM" ), $arrVal["display_start"], null );
 		}
-		$objInputCheck->entryData( "表示／非表示", "display_flg", $arrVal["display_flg"], array( "CHECK_EMPTY", "CHECK_MIN_MAX_NUM" ), 0, 1 );
+		$objInputCheck->entryData( "公開／非公開", "display_flg", $arrVal["display_flg"], array( "CHECK_EMPTY", "CHECK_MIN_MAX_NUM" ), 0, 1 );
 
 		// チェックエントリー（UPDATE時）
 		if( ( strcmp( $mode, "update" ) == 0 ) ) {
@@ -278,7 +278,7 @@ class AD_information {
 
 		// 検索条件
 		if( !empty( $search["search_keyword"] ) ) {
-			$creation_kit["where"] .= "AND ( " . $this->_DBconn->createWhereSql( $search["search_keyword"], "title", "LIKE", "OR", "%string%", array( "　", " " ), $creation_kit["bind"] ) . " ) ";
+			$creation_kit["where"] .= "AND ( " . $this->_DBconn->createWhereSql( $search["search_keyword"], $this->_CtrTable . ".title", "LIKE", "OR", "%string%", array( "　", " " ), $creation_kit["bind"] ) . " ) ";
 		}
 
 		if( !empty( $search["search_date_start"] ) ) {

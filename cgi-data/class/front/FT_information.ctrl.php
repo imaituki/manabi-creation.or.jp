@@ -84,7 +84,7 @@ class FT_information {
 			
 		// 検索
 		if( !empty( $search["cat"] ) ){
-			$creation_kit["where"] .= " AND {$this->_CtrTable}.id_information_category=? ";
+			$creation_kit["where"] .= " AND id_information_category=? ";
 			$creation_kit["bind"][] = $search["cat"] ;
 		}
 			
@@ -96,8 +96,8 @@ class FT_information {
 								 "PageShowLimit"   => _PAGESHOWLIMIT,
 								 "PageNaviLimit"   => _PAGENAVILIMIT,
 								 "LinkSeparator"   => " ",
-								 "LinkBackText"    => "&lt; 前へ",
-								 "LinkNextText"    => "次へ &gt;",
+								 "LinkBackText"    => "<i class=\"fas fa-chevron-left\"></i>",
+								 "LinkNextText"    => "<i class=\"fas fa-chevron-right\"></i>",
 								 "LinkBackClass"   => "next",
 								 "LinkNextClass"   => "back",
 								 "LinkSpanPref"    => "<li>",
@@ -108,14 +108,14 @@ class FT_information {
 			// オプション
 			$option = array( "fetch" => _DB_FETCH_ALL,
 							 "page"  => $_PAGE_INFO );
-
+			
 		} else {
-
+			
 			// 取得件数制限
 			if( !empty( $limit ) ) {
 				$creation_kit["limit"] = $limit;
 			}
-
+			
 		}
 
 		// データ取得
@@ -185,7 +185,7 @@ class FT_information {
 		// SQL配列
 		$creation_kit = array(  "select" => $this->_CtrTable . "." . $this->_CtrTablePk,
 								"from"   => $this->_CtrTable,
-								"join"   => "INNER JOIN " . $this->_CtrSubTable . " ON " . $this->_CtrTable . ".id_information = " . $this->_CtrSubTable . ".id_information ", 
+								"join"   => "INNER JOIN " . $this->_CtrSubTable . " ON " . $this->_CtrTable . ".id_information_category = " . $this->_CtrSubTable . ".id_information_category ", 
 								"where"  => $this->_CtrTable . ".date <= NOW() AND " . 
 											$this->_CtrTable . ".display_flg = 1 AND " . 
 											" ( " . $this->_CtrTable . ".display_indefinite = 1 OR 

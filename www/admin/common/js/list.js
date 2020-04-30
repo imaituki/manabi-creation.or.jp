@@ -31,6 +31,16 @@ $(function() {
 		updateDisplay(this);
 	});
 
+	// 表示切替（サイト）
+	$(document).on('change', '.btn_display_hp', function(){
+		updateDisplayHp(this);
+	});
+
+	// 有効切替
+	$(document).on('change', '.btn_valid', function(){
+		updateValid(this);
+	});
+
 	// 削除
 	$(document).on('click', '.btn_delete', function(){
 		updateDelete( $(this).attr('data-id') );
@@ -264,6 +274,43 @@ function updateDisplay( my ) {
 }
 
 //-------------------------------------------
+//  サイト表示更新処理
+//-------------------------------------------
+function updateDisplayHp( my ) {
+
+	// 確認
+	if( !confirm("サイト表示更新を行ってよろしいですか？") ) {
+		( $(my).prop('checked') == true ) ? $(my).prop('checked', false) : $(my).prop('checked', true);
+	}
+
+	// 初期化
+	var checked = ( $(my).prop('checked') == true ) ? 1 : 0;
+	var id      = $(my).attr('data-id');
+
+	// 表示更新処理
+	$.ajax({
+		type: "POST",
+		url:  "./display_hp.php",
+		data: { "id":id, "display_hp_flg":checked },
+		success: function(e){
+
+			// データ取得
+			var parseData = JSON.parse(e);
+
+			// メッセージ表示
+			if( parseData.result == "true" ) {
+				dispMessage( "<i class=\"icon-check\"></i>&nbsp;" + parseData.message, "ok mb20" );
+			} else {
+				dispMessage( "<i class=\"icon-attention\"></i>&nbsp;" + parseData.message, "error mb20" );
+				( $(my).prop('checked') == true ) ? $(my).prop('checked', false) : $(my).prop('checked', true);
+			}
+
+		}
+	});
+
+}
+
+//-------------------------------------------
 //  表示順更新処理
 //-------------------------------------------
 function updateDisplayNum() {
@@ -299,6 +346,44 @@ function updateDisplayNum() {
 			// リストの再読み込み
 			var data = $("#formSearch").serialize() + "&";
 			getList(data);
+
+		}
+	});
+
+}
+
+
+//-------------------------------------------
+//  有効／無効更新処理
+//-------------------------------------------
+function updateValid( my ) {
+
+	// 確認
+	if( !confirm("有効／無効の切り替えを行ってよろしいですか？") ) {
+		( $(my).prop('checked') == true ) ? $(my).prop('checked', false) : $(my).prop('checked', true);
+	}
+
+	// 初期化
+	var checked = ( $(my).prop('checked') == true ) ? 1 : 0;
+	var id      = $(my).attr('data-id');
+
+	// 表示更新処理
+	$.ajax({
+		type: "POST",
+		url:  "./valid.php",
+		data: { "id":id, "valid_flg":checked },
+		success: function(e){
+
+			// データ取得
+			var parseData = JSON.parse(e);
+
+			// メッセージ表示
+			if( parseData.result == "true" ) {
+				dispMessage( "<i class=\"icon-check\"></i>&nbsp;" + parseData.message, "ok mb20" );
+			} else {
+				dispMessage( "<i class=\"icon-attention\"></i>&nbsp;" + parseData.message, "error mb20" );
+				( $(my).prop('checked') == true ) ? $(my).prop('checked', false) : $(my).prop('checked', true);
+			}
 
 		}
 	});

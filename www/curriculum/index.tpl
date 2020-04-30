@@ -100,7 +100,7 @@
 									</div>
 								</div>
 							</div>
-							<p>{$curriculum.comment}</p>
+							{$curriculum.comment}
 						</div>
 					{/foreach}
 				</div>

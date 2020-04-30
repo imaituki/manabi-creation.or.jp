@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.18, created on 2020-04-24 15:43:45
+<?php /* Smarty version Smarty-3.1.18, created on 2020-04-30 14:05:20
          compiled from "./index.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:21419287895ea02680924f49-96691767%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'e8b82e36b14a5b32b9082c90cfde424dcce75e56' => 
     array (
       0 => './index.tpl',
-      1 => 1587710096,
+      1 => 1588222902,
       2 => 'file',
     ),
   ),
@@ -162,8 +162,8 @@ $_smarty_tpl->tpl_vars["curriculum"]->_loop = true;
 									</div>
 								</div>
 							</div>
-							<p><?php echo $_smarty_tpl->tpl_vars['curriculum']->value['comment'];?>
-</p>
+							<?php echo $_smarty_tpl->tpl_vars['curriculum']->value['comment'];?>
+
 						</div>
 					<?php } ?>
 				</div>

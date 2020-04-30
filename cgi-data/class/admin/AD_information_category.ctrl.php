@@ -1,6 +1,6 @@
 <?php
 //----------------------------------------------------------------------------
-// 作成日：2020/03/31
+// 作成日：2020/04/23
 // 作成者：鈴木
 // 内  容：新着情報カテゴリ操作クラス
 //----------------------------------------------------------------------------
@@ -99,7 +99,7 @@ class AD_information_category {
 		
 		// チェックエントリー
 		$objInputCheck->entryData( "カテゴリ名"  , "name"       , $arrVal["name"]       , array( "CHECK_EMPTY", "CHECK_MIN_MAX_LEN" ), 0, 255 );
-		$objInputCheck->entryData( "表示／非表示", "display_flg", $arrVal["display_flg"], array( "CHECK_EMPTY", "CHECK_MIN_MAX_NUM" ), 0, 1 );
+		$objInputCheck->entryData( "公開／非公開", "display_flg", $arrVal["display_flg"], array( "CHECK_EMPTY", "CHECK_MIN_MAX_NUM" ), 0, 1 );
 		
 		// チェックエントリー（UPDATE時）
 		if( ( strcmp( $mode, "update" ) == 0 ) ) {
@@ -263,7 +263,7 @@ class AD_information_category {
 		// SQL配列
 		$creation_kit = array(  "select" => "*",
 								"from"   => $this->_CtrTable,
-								"where"  => "1 ",
+								"where"  => "delete_flg = 0 ",
 								"order"  => "display_num ASC",
 								"bind"   => array()
 							);
@@ -315,7 +315,7 @@ class AD_information_category {
 		// SQL配列
 		$creation_kit = array( "select" => "*",
 							   "from"   => $this->_CtrTable,
-							   "where"  => $this->_CtrTablePk . " = ?",
+							   "where"  => $this->_CtrTablePk . " = ? AND delete_flg = 0 ",
 							   "bind"   => array( $id ) );
 		
 		// データ取得

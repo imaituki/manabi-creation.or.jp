@@ -91,8 +91,6 @@
 					<h2 class="hl_2 mb50"><span class="border"><span class="title">{$OptionInformationCategory[$arr_get.cat]|default:"すべて"}</span></span></h2>
 					<div class="row mb50">
 						{function name="news" row=[]}
-						{assign var="OptionCategory1" value=["1" => "お知らせ", "2" => "イベント"]}
-						{assign var="OptionCategory2" value=["1" => "_news", "2" => "_event"]}
 						<div class="col-sm-4 col-xs-6 height-1 mb30 news_box news_unit">
 							<a href="./detail.php?id={$row.id_information}" class="ov">
 								<div class="photo img_rect{if $row.date eq date("Y-m-d")} new_triangle{/if}">
@@ -100,7 +98,7 @@
 								</div>
 								<div class="text_unit height-2">
 									<p class="sub">
-										<span class="cat {$OptionCategory2[$row.id_information_category]}">{$OptionCategory1[$row.id_information_category]}</span>
+										<span class="cat  {if $row.category_id == 2}_event{else}_news{/if}">{$OptionInformationCategory[$row.id_information_category]}</span>
 										<span class="date">{$row.date|date_format:"%Y.%m.%d"}</span>
 									</p>
 									<h3>{$row.title}</h3>

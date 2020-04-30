@@ -19,24 +19,7 @@ $objManage       = new DB_manage( _DNS );
 $objInformation  = new FT_information( $objManage );
 
 // お知らせ
-// ページ切り替え配列
-$_PAGE_INFO = array(
-	"PageNumber"      => empty( $arr_get["page"] ) ? 1 : $arr_get["page"],
-	"PageShowLimit"   => _PAGESHOWLIMIT,
-	"PageNaviLimit"   => _PAGENAVILIMIT,
-	"LinkSeparator"   => " ",
-	"LinkBackText"    => "<i class=\"fas fa-chevron-left\"></i>",
-	"LinkNextText"    => "<i class=\"fas fa-chevron-right\"></i>",
-	"LinkBackClass"   => "next",
-	"LinkNextClass"   => "back",
-	"LinkSpanPref"    => "<li>",
-	"LinkSpanPost"    => "</li>",
-	"LinkSpanNowPref" => "<strong>",
-	"LinkSpanNowPost" => "</strong>",
-);
-// オプション
-$option = array( "fetch" => _DB_FETCH_ALL, "page"  => $_PAGE_INFO );
-$t_information = $objInformation->GetSearchList( $arr_get, $option );
+$t_information = $objInformation->GetSearchList( $arr_get );
 
 // DB切断
 unset( $objManage       );
@@ -48,7 +31,7 @@ unset( $objInformation  );
 //----------------------------------------
 $smarty = new MySmarty("front");
 $smarty->template_dir = "./";
-$smarty->compile_dir .= "information/";
+$smarty->compile_dir .= "news/";
 
 // テンプレートに設定
 $smarty->assign( "t_information", $t_information );

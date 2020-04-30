@@ -55,64 +55,52 @@
 					</p>
 					<p class="mb50 top_text">下記項目にご入力ください。「必須」印は入力必須項目です。<br>入力後、一番下の「 入力内容を確認する」ボタンをクリックしてください。</p>
 					<form action="./check.php#form" method="post">
-{function name="ng" msg="all"}{if not empty($message.ng[$msg])}<p class="error">{$message.ng[$msg]}</p>{/if}{/function}
+						{function name="ng" msg="all"}{if not empty($message.ng[$msg])}<p class="error">{$message.ng[$msg]}</p>{/if}{/function}
 						<table class="tbl_form">
 							<tbody>
 								<tr>
 									<th scope="row">ご用件</th>
 									<td>
-										{ng msg="content"}
-										<input type="radio" name="content" value="0" id="content_0"{if $arr_post.content|default:0 eq 0} checked="checked"{/if}><label for="content_0" class="sp_mb10">お問い合わせ</label>
-										<input type="radio" name="content" value="1" id="content_1"{if $arr_post.content eq 1} checked="checked"{/if}><label for="content_1">オンライン授業申し込み</label>
+										{ng msg="type"}
+										{html_radios options=$OptionContactType selected=$arr_post.type|default:"0" name="type"}
 									</td>
 								</tr>
 								<tr>
 									<th scope="row">保護者氏名<span class="need">必須</span></th>
 									<td>
 										{ng msg="name"}
-										<input type="text" name="name" value="{$arr_post.name|default:""}">
+										<input type="text" name="name" value="{$arr_post.name|default:""}" maxlength="255">
 									</td>
 								</tr>
 								<tr>
 									<th scope="row">保護者氏名(フリガナ)<span class="need">必須</span></th>
 									<td>
 										{ng msg="ruby"}
-										<input type="text" name="ruby" value="{$arr_post.ruby|default:""}">
+										<input type="text" name="ruby" value="{$arr_post.ruby|default:""}" maxlength="255">
 									</td>
 								</tr>
 								<tr>
 									<th scope="row">受講するお子様の学年<span class="need">必須</span></th>
 									<td>
-										{ng msg="g"}
-										<select name="g" id="" class="mb10">
+										{ng msg="school_year"}
+										<select name="school_year" id="" class="mb10">
 											<option value="">選択してください</option>
-											<option value="1"{if $arr_post.g eq 1} selected="selected"{/if}>小学校1年生</option>
-											<option value="2"{if $arr_post.g eq 2} selected="selected"{/if}>小学校2年生</option>
-											<option value="3"{if $arr_post.g eq 3} selected="selected"{/if}>小学校3年生</option>
-											<option value="4"{if $arr_post.g eq 4} selected="selected"{/if}>小学校4年生</option>
-											<option value="5"{if $arr_post.g eq 5} selected="selected"{/if}>小学校5年生</option>
-											<option value="6"{if $arr_post.g eq 6} selected="selected"{/if}>小学校6年生</option>
-											<option value="7"{if $arr_post.g eq 7} selected="selected"{/if}>中学校1年生</option>
-											<option value="8"{if $arr_post.g eq 8} selected="selected"{/if}>中学校2年生</option>
-											<option value="9"{if $arr_post.g eq 9} selected="selected"{/if}>中学校3年生</option>
-											<option value="10"{if $arr_post.g eq 10} selected="selected"{/if}>高等学校1年生</option>
-											<option value="11"{if $arr_post.g eq 11} selected="selected"{/if}>高等学校2年生</option>
-											<option value="12"{if $arr_post.g eq 12} selected="selected"{/if}>高等学校3年生</option>
+											{html_options options=$OptionContactSchoolYear selected=$arr_post.school_year}
 										</select>
 									</td>
 								</tr>
 								<tr>
 									<th scope="row">受講者氏名</th>
 									<td>
-										{ng msg="name2"}
-										<input type="text" name="name2" value="{$arr_post.name2|default:""}">
+										{ng msg="student_name"}
+										<input type="text" name="student_name" value="{$arr_post.student_name|default:""}" maxlength="255">
 									</td>
 								</tr>
 								<tr>
 									<th scope="row">受講者氏名(フリガナ)</th>
 									<td>
-										{ng msg="ruby2"}
-										<input type="text" name="ruby2" value="{$arr_post.ruby2|default:""}">
+										{ng msg="student_ruby"}
+										<input type="text" name="student_ruby" value="{$arr_post.student_ruby|default:""}" maxlength="255">
 									</td>
 								</tr>
 								<tr>
@@ -125,7 +113,7 @@
 									<dl>
 										<dt>郵便番号</dt>
 										<dd class="mb20">
-											<input name="zip" value="{$arr_post.zip|default:""}" type="text" class="zip w150" placeholder="000-000">
+											<input name="zip" value="{$arr_post.zip|default:""}" type="text" class="zip w150" placeholder="000-0000" maxlength="8">
 											<a href="javascript:AjaxZip3.zip2addr('zip','','prefecture','address1');" class="bTn wp100 w_sm_A dis_b dis_sm_ib zip_block ov">郵便番号から検索する</a>
 										</dd>
 									</dl>
@@ -140,13 +128,13 @@
 									<dl>
 										<dt>市区町村・番地</dt>
 										<dd class="mb20">
-											<input name="address1" value="{$arr_post.address1|default:""}" type="text" placeholder="市区町村・番地を入力してください">
+											<input name="address1" value="{$arr_post.address1|default:""}" type="text" placeholder="市区町村・番地を入力してください" maxlength="255">
 										</dd>
 									</dl>
 									<dl>
 										<dt>建物・マンション名</dt>
 										<dd class="mb20">
-											<input name="address2" value="{$arr_post.address2|default:""}" type="text" placeholder="建物・マンション名を入力してください">
+											<input name="address2" value="{$arr_post.address2|default:""}" type="text" placeholder="建物・マンション名を入力してください" maxlength="255">
 										</dd>
 									</dl>
 								</td>
@@ -162,22 +150,21 @@
 									<th scope="row">電話番号<span class="need">必須</span></th>
 									<td>
 										{ng msg="tel"}
-										<input type="text" name="tel" value="{$arr_post.tel|default:""}" maxlength="13" class="w150" placeholder="090-000-000">
+										<input type="text" name="tel" value="{$arr_post.tel|default:""}" maxlength="13" class="w150" placeholder="090-000-000" maxlength="14">
 									</td>
 								</tr>
 								<!--オンライン授業申し込み選択時のみ表示-->
-								<tr id="th_content2"{if $arr_post.content|default:0 eq 0} style="display:none;"{/if}>
+								<tr id="th_content2"{if $arr_post.type|default:0 eq 0} style="display:none;"{/if}>
 									<th scope="row" class="zoom">ZOOMオンラインの<br class="md_br">利用経験<span class="need">必須</span></th>
 									<td>
-										{ng msg="content2"}
-										<input type="radio" name="content2" value="0" id="content20"{if $arr_post.content2|default:0 eq 0} checked="checked"{/if}><label for="content20" class="sp_mb10">ある</label>
-										<input type="radio" name="content2" value="1" id="content21"{if $arr_post.content2 eq 1} checked="checked"{/if}><label for="content21">ない</label>
+										{ng msg="zoom"}
+										{html_radios options=$OptionContactZoom selected=$arr_post.zoom|default:"0" name="zoom"}
 									</td>
 								</tr>
 								<!--オンライン授業申し込み選択時のみ表示-->
 								<tr class="last">
 									<th scope="row" id="th_comment">
-										{if $arr_post.content|default:0 eq 0}
+										{if $arr_post.type|default:0 eq 0}
 											お問い合わせ内容<span class="need">必須</span>
 										{else}
 											その他お問い合わせ
@@ -185,7 +172,7 @@
 									</th>
 									<td>
 										{ng msg="comment"}
-										<textarea rows="5" name="comment">{$arr_post.comment}</textarea>
+										<textarea rows="5" name="comment">{$arr_post.comment|default:""}</textarea>
 									</td>
 								</tr>
 							</tbody>

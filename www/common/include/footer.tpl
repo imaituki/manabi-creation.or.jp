@@ -23,7 +23,7 @@
 				<div class="col-md-5">
 					<div class="address_unit">
 						<div class="disp_td fw_bold">
-							<h5><a class="ov" href="/"><img src="/common/image/foot/logo.png" alt="岡山の学習塾 学びクリエーション" /></a></h5>
+							<h5><a class="ov" href="/"><img src="/common/image/foot/logo.png" alt="岡山の学習塾 日本学びクリエーション" /></a></h5>
 							<p>〒700-0973  岡山県岡山市北区下中野1200-4 4F</p>
 							<p><span class="tel" data-tel="086-242-3318">TEL：<a href="tel:086-242-3318">086-242-3318</a></span>
 							</p>
@@ -34,7 +34,7 @@
 				<div class="col-md-7">
 					<div class="foot_navi">
 						<ul>
-							<li class="main"><a href="/about/" class="ov">学びクリエーションとは？</a></li>
+							<li class="main"><a href="/about/" class="ov">日本学びクリエーションとは？</a></li>
 							<li class="main"><a href="/curriculum/" class="ov">カリキュラム</a></li>
 							{foreach from=$OptionCurriculum item="curriculum" key="key" name="loopCurriculum"}
 							<li class="sub"><a href="/curriculum/#curriculum{$key}">{$curriculum}</a></li>
@@ -43,9 +43,9 @@
 {*
 						<ul class="second">
 							<li class="main"><a href="/school/list.php" class="ov">学校紹介</a></li>
-							<li class="sub"><a href="###">岡山エリア</a></li>
-							<li class="sub"><a href="###">兵庫エリア</a></li>
-							<li class="sub"><a href="###">名古屋エリア</a></li>
+							{foreach from=$OptionArea item="area" key="key" name="loopArea"}
+							<li class="sub"><a href="/school/list.php#area{$key}">{$area}</a></li>
+							{/foreach}
 						</ul>
 *}
 						<ul>

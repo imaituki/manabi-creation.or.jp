@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.18, created on 2020-04-23 09:26:31
+<?php /* Smarty version Smarty-3.1.18, created on 2020-04-30 14:04:21
          compiled from "../template/index.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:7090858495ea0e0b78a55e5-62485808%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '6c39e247f385d95767962e1dac86ee8434c9a9c2' => 
     array (
       0 => '../template/index.tpl',
-      1 => 1587536672,
+      1 => 1588222237,
       2 => 'file',
     ),
   ),
@@ -15,6 +15,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
+  'version' => 'Smarty-3.1.18',
+  'unifunc' => 'content_5ea0e0b79111c9_00188960',
   'variables' => 
   array (
     'template_javascript' => 0,
@@ -26,8 +28,6 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'message' => 0,
   ),
   'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.18',
-  'unifunc' => 'content_5ea0e0b79111c9_00188960',
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_5ea0e0b79111c9_00188960')) {function content_5ea0e0b79111c9_00188960($_smarty_tpl) {?><!DOCTYPE html>
 <html>
@@ -41,15 +41,14 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 <link href="/admin/common/css/plugins/codemirror/codemirror.css" rel="stylesheet">
 <link href="/admin/common/css/plugins/codemirror/ambiance.css" rel="stylesheet">
 <link href="/admin/common/css/style.css" rel="stylesheet">
-<!-- FooTable -->
-<link href="/admin/common/css/plugins/footable/footable.core.css" rel="stylesheet">
-<link href="/admin/common/css/plugins/blueimp/css/blueimp-gallery.min.css" rel="stylesheet">
 <?php echo $_smarty_tpl->getSubTemplate ($_smarty_tpl->tpl_vars['template_javascript']->value, $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
 
 <script src="/admin/common/js/plugins/jquery-ui/jquery-ui.min.js"></script>
-<script src="/admin/common/js/plugins/blueimp/jquery.blueimp-gallery.min.js"></script>
 <script src="/admin/common/js/plugins/datapicker/bootstrap-datepicker-import.js"></script>
 <script src="/admin/common/js/list.js"></script>
+<!-- blueimp gallery -->
+<link href="/admin/common/css/plugins/blueimp/css/blueimp-gallery.min.css" rel="stylesheet">
+<script src="/admin/common/js/plugins/blueimp/jquery.blueimp-gallery.min.js"></script>
 </head>
 <body class="fixed-sidebar no-skin-config">
 <div id="wrapper">

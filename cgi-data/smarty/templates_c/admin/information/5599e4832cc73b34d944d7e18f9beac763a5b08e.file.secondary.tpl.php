@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.18, created on 2020-04-24 15:39:36
+<?php /* Smarty version Smarty-3.1.18, created on 2020-04-30 14:04:21
          compiled from "/home/manabi-creation/www//admin/common/inc/secondary.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:746411755ea0e0b7921b07-49490223%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '5599e4832cc73b34d944d7e18f9beac763a5b08e' => 
     array (
       0 => '/home/manabi-creation/www//admin/common/inc/secondary.tpl',
-      1 => 1587710358,
+      1 => 1588222411,
       2 => 'file',
     ),
   ),
@@ -43,10 +43,10 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 				<li><a href="/admin/"><i class="fa fa-home"></i><span class="nav-label">HOME</span></a></li>
 				<li><a href="/admin/contents/information/"><i class="fa fa-newspaper-o"></i><span class="nav-label">お知らせ管理</span></a></li>
 
-
+				<li><a href="/admin/contents/contact/"><i class="fa fa-newspaper-o"></i><span class="nav-label">お問い合わせ管理</span></a></li>
 				<li><a href="/admin/contents/curriculum/"><i class="fa fa-newspaper-o"></i><span class="nav-label">カリキュラム管理</span></a></li>
-				<li><a href="/admin/contents/school/"><i class="fa fa-newspaper-o"></i><span class="nav-label">学校管理</span></a></li>
-
+				<li><a href="/admin/contents/school/"><i class="fa fa-newspaper-o"></i><span class="nav-label">契約学校管理</span></a></li>
+				<li><a href="/admin/contents/staff/"><i class="fa fa-newspaper-o"></i><span class="nav-label">総合アカウント管理</span></a></li>
 			</ul>
 		</div>
 	</nav>

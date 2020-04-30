@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.18, created on 2020-04-23 15:05:51
+<?php /* Smarty version Smarty-3.1.18, created on 2020-04-28 13:10:08
          compiled from "./index.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:13578043815ea101ae078ee2-51977042%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'e8b82e36b14a5b32b9082c90cfde424dcce75e56' => 
     array (
       0 => './index.tpl',
-      1 => 1587621944,
+      1 => 1587791577,
       2 => 'file',
     ),
   ),
@@ -29,9 +29,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 <meta charset="utf-8">
 <!-- meta -->
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<title>一般社団法人 学びクリエーション</title>
+<title>一般社団法人 日本学びクリエーション</title>
 <meta name="description" content="">
-<meta name="keyword" content="学びクリエーション,岡山,">
+<meta name="keyword" content="日本学びクリエーション,岡山,">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+JP:400,700&display=swap">
@@ -48,8 +48,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 		<div class="head_wrap">
 			<h1 class="site_logo">
 				<a class="ov" href="/school/">
-					<img src="/common/image/head/logo.png" alt="学びクリエーション" / class="top_logo">
-					<img src="/common/image/head/logo_sp.png" alt="学びクリエーション" / class="top_none_logo">
+					<img src="/common/image/head/logo.png" alt="日本学びクリエーション" / class="top_logo">
+					<img src="/common/image/head/logo_sp.png" alt="日本学びクリエーション" / class="top_none_logo">
 				</a>
 			</h1>
 			<div class="head_contact _head hidden-xs">

@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.18, created on 2020-04-24 17:18:01
+<?php /* Smarty version Smarty-3.1.18, created on 2020-04-30 14:14:08
          compiled from "/home/manabi-creation/www//common/include/header.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:12948704215ea007c12d8dd6-63533682%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'e7fc021756cb70060da37b3b31f06bf91d18e67a' => 
     array (
       0 => '/home/manabi-creation/www//common/include/header.tpl',
-      1 => 1587716164,
+      1 => 1588223534,
       2 => 'file',
     ),
   ),
@@ -24,14 +24,14 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 		<div class="head_wrap">
 			<h1 class="site_logo">
 				<a class="ov" href="/">
-					<img src="/common/image/head/logo.png" alt="学びクリエーション" / class="top_logo">
-					<img src="/common/image/head/logo_sp.png" alt="学びクリエーション" / class="top_none_logo">
+					<img src="/common/image/head/logo.png" alt="日本学びクリエーション" / class="top_logo">
+					<img src="/common/image/head/logo_sp.png" alt="日本学びクリエーション" / class="top_none_logo">
 				</a>
 			</h1>
 			<div class="head_contact _head hidden-xs">
 				<div class="tel_unit pos_re">
 					<span class="tel sans" data-tel="086-242-3318"><img src="/common/image/head/phone.png" class="pos_vm tel_i" alt="電話番号" /><a href="tel:086-242-3318">086-242-3318</a></span>
-					<span class="time">受付時間 10:00～11：00（日曜定休）</span>
+					<span class="time">受付時間 9:00～18：00（日曜定休）</span>
 					<p class=" tel_back"><img src="/common/image/head/tel_back.png" alt="電話番号" /></p>
 				</div>
 				<div class="mail_unit">
@@ -48,7 +48,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 		<div id="head_navi">
 			<div class="center">
 				<ul>
-					<li class="first"><a href="/about/">学びクリエーションとは？</a></li>
+					<li class="first"><a href="/about/">日本学びクリエーションとは？</a></li>
 					<li><a href="/news/">お知らせ・イベント</a></li>
 					<li><a href="/curriculum/">カリキュラム</a></li>
 
@@ -56,7 +56,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 					<li class="head_contact">
 						<div class="tel_unit">
 							<span class="tel sans" data-tel="086-242-3318"><img src="/common/image/head/phone.png" class="pos_vm" alt="電話番号" /><a href="tel:086-242-3318">086-242-3318</a></span>
-							<span class="time">受付時間 10:00～11：00（日曜定休）</span>
+							<span class="time">受付時間 9:00～18：00（日曜定休）</span>
 						</div>
 						<div class="mail_unit">
 							<a href="/contact/" class="btn_contact ov">

@@ -95,7 +95,7 @@
 							<h2 class="hl_2 mb30" id="area{$key}"><span class="border"><span class="title">{$area}</span></span></h2>
 							{foreach from=$mst_school[$key] item="school" key="key2" name="loopSchool"}
 							<div class="access_unit mb50">
-								<h3 class="hl_4 mb20">▼{$school.name}</h3>
+								<h3 class="hl_4 mb20">▼{$school.short_name|default:$school.name}</h3>
 								<p class="map mb20">
 									{$school.map}
 								</p>

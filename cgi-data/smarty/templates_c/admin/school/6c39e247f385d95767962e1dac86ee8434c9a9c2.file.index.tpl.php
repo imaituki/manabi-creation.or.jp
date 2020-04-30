@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.18, created on 2020-04-24 15:39:35
+<?php /* Smarty version Smarty-3.1.18, created on 2020-04-30 13:51:06
          compiled from "../template/index.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:18055359245ea289a7cf5d48-30008488%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '6c39e247f385d95767962e1dac86ee8434c9a9c2' => 
     array (
       0 => '../template/index.tpl',
-      1 => 1587710086,
+      1 => 1588222239,
       2 => 'file',
     ),
   ),
@@ -15,6 +15,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
+  'version' => 'Smarty-3.1.18',
+  'unifunc' => 'content_5ea289a7d43c63_81150399',
   'variables' => 
   array (
     'template_javascript' => 0,
@@ -26,8 +28,6 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'message' => 0,
   ),
   'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.18',
-  'unifunc' => 'content_5ea289a7d43c63_81150399',
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_5ea289a7d43c63_81150399')) {function content_5ea289a7d43c63_81150399($_smarty_tpl) {?><!DOCTYPE html>
 <html>
@@ -46,6 +46,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 <script src="/admin/common/js/plugins/jquery-ui/jquery-ui.min.js"></script>
 <script src="/admin/common/js/list.js"></script>
 <script type="text/javascript" src="../js/list.js"></script>
+<!-- blueimp gallery -->
+<link href="/admin/common/css/plugins/blueimp/css/blueimp-gallery.min.css" rel="stylesheet">
+<script src="/admin/common/js/plugins/blueimp/jquery.blueimp-gallery.min.js"></script>
 </head>
 <body class="fixed-sidebar no-skin-config">
 <div id="wrapper">

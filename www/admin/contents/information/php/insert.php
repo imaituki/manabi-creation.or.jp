@@ -1,6 +1,6 @@
 <?php
 //-------------------------------------------------------------------
-// 作成日：2020/03/31
+// 作成日：2020/04/23
 // 作成者：鈴木
 // 内  容：お知らせ・イベント 新規登録
 //-------------------------------------------------------------------
@@ -67,7 +67,13 @@ if( empty( $message["ng"] ) ) {
 
 } else {
 
-
+	// 写真
+	if( !empty($_ARR_IMAGE) && is_array($_ARR_IMAGE) ){
+		foreach( $_ARR_IMAGE as $key => $val ) {
+			$arr_post[$val["name"]] = $arr_post["_" . $val["name"]."_now"];
+		}
+	}
+	
 	// smarty設定
 	$smarty = new MySmarty("admin");
 	$smarty->compile_dir .= "information/";

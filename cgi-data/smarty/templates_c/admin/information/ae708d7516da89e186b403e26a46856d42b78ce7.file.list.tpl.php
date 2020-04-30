@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.18, created on 2020-04-23 09:26:31
+<?php /* Smarty version Smarty-3.1.18, created on 2020-04-30 14:04:21
          compiled from "/home/manabi-creation/www/admin/contents/information/template/list.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:9477812425ea0e0b7940e97-93201582%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'ae708d7516da89e186b403e26a46856d42b78ce7' => 
     array (
       0 => '/home/manabi-creation/www/admin/contents/information/template/list.tpl',
-      1 => 1587536672,
+      1 => 1588222237,
       2 => 'file',
     ),
   ),
@@ -15,11 +15,14 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
+  'version' => 'Smarty-3.1.18',
+  'unifunc' => 'content_5ea0e0b79a26c6_84536836',
   'variables' => 
   array (
     'template_pagenavi' => 0,
     't_information' => 0,
     'information' => 0,
+    'OptionInformationCategory' => 0,
     '_ARR_IMAGE' => 0,
     'file' => 0,
     '_IMAGEFULLPATH' => 0,
@@ -27,8 +30,6 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '_CONTENTS_NAME' => 0,
   ),
   'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.18',
-  'unifunc' => 'content_5ea0e0b79a26c6_84536836',
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_5ea0e0b79a26c6_84536836')) {function content_5ea0e0b79a26c6_84536836($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include '/home/manabi-creation/cgi-data/smarty/libs/plugins/modifier.date_format.php';
 ?>			<?php echo $_smarty_tpl->getSubTemplate ($_smarty_tpl->tpl_vars['template_pagenavi']->value, $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
@@ -38,6 +39,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 					<tr>
 						<th>日付</th>
 						<th>掲載期間</th>
+						<th>カテゴリ</th>
 						<th>タイトル</th>
 						<th class="photo">写真</th>
 						<th class="showhide">表示</th>
@@ -63,6 +65,8 @@ $_smarty_tpl->tpl_vars["information"]->_loop = true;
 								無期限
 							<?php }?>
 						</td>
+						<td><?php echo $_smarty_tpl->tpl_vars['OptionInformationCategory']->value[$_smarty_tpl->tpl_vars['information']->value['id_information_category']];?>
+</td>
 						<td><a href="./edit.php?id=<?php echo $_smarty_tpl->tpl_vars['information']->value['id_information'];?>
 "><?php echo $_smarty_tpl->tpl_vars['information']->value['title'];?>
 </a></td>
@@ -126,6 +130,8 @@ if (!$_smarty_tpl->tpl_vars["information"]->_loop) {
 					</tr>
 				</tfoot>
 			</table>
+			<?php echo $_smarty_tpl->getSubTemplate ($_smarty_tpl->tpl_vars['template_pagenavi']->value, $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
+
 			<div id="blueimp-gallery" class="blueimp-gallery">
 				<div class="slides"></div>
 				<h3 class="title"></h3>
@@ -135,6 +141,4 @@ if (!$_smarty_tpl->tpl_vars["information"]->_loop) {
 				<a class="play-pause"></a>
 				<ol class="indicator"></ol>
 			</div>
-			<?php echo $_smarty_tpl->getSubTemplate ($_smarty_tpl->tpl_vars['template_pagenavi']->value, $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
-
 <?php }} ?>

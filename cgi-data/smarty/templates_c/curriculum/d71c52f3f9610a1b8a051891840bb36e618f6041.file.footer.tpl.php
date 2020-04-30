@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.18, created on 2020-04-24 17:08:12
+<?php /* Smarty version Smarty-3.1.18, created on 2020-04-30 15:07:14
          compiled from "/home/manabi-creation/www//common/include/footer.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:8274394865ea02680986378-56302185%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'd71c52f3f9610a1b8a051891840bb36e618f6041' => 
     array (
       0 => '/home/manabi-creation/www//common/include/footer.tpl',
-      1 => 1587715682,
+      1 => 1588224481,
       2 => 'file',
     ),
   ),
@@ -50,7 +50,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 				<div class="col-md-5">
 					<div class="address_unit">
 						<div class="disp_td fw_bold">
-							<h5><a class="ov" href="/"><img src="/common/image/foot/logo.png" alt="岡山の学習塾 学びクリエーション" /></a></h5>
+							<h5><a class="ov" href="/"><img src="/common/image/foot/logo.png" alt="岡山の学習塾 日本学びクリエーション" /></a></h5>
 							<p>〒700-0973  岡山県岡山市北区下中野1200-4 4F</p>
 							<p><span class="tel" data-tel="086-242-3318">TEL：<a href="tel:086-242-3318">086-242-3318</a></span>
 							</p>
@@ -61,7 +61,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 				<div class="col-md-7">
 					<div class="foot_navi">
 						<ul>
-							<li class="main"><a href="/about/" class="ov">学びクリエーションとは？</a></li>
+							<li class="main"><a href="/about/" class="ov">日本学びクリエーションとは？</a></li>
 							<li class="main"><a href="/curriculum/" class="ov">カリキュラム</a></li>
 							<?php  $_smarty_tpl->tpl_vars["curriculum"] = new Smarty_Variable; $_smarty_tpl->tpl_vars["curriculum"]->_loop = false;
  $_smarty_tpl->tpl_vars["key"] = new Smarty_Variable;

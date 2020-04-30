@@ -4,6 +4,7 @@
 					<tr>
 						<th>日付</th>
 						<th>掲載期間</th>
+						<th>カテゴリ</th>
 						<th>タイトル</th>
 						<th class="photo">写真</th>
 						<th class="showhide">表示</th>
@@ -22,6 +23,7 @@
 								無期限
 							{/if}
 						</td>
+						<td>{$OptionInformationCategory[$information.id_information_category]}</td>
 						<td><a href="./edit.php?id={$information.id_information}">{$information.title}</a></td>
 						<td class="pos_al">
 							<div class="lightBoxGallery">
@@ -61,6 +63,7 @@
 					</tr>
 				</tfoot>
 			</table>
+			{include file=$template_pagenavi}
 			<div id="blueimp-gallery" class="blueimp-gallery">
 				<div class="slides"></div>
 				<h3 class="title"></h3>
@@ -70,4 +73,3 @@
 				<a class="play-pause"></a>
 				<ol class="indicator"></ol>
 			</div>
-			{include file=$template_pagenavi}

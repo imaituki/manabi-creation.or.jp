@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.18, created on 2020-04-23 11:12:05
+<?php /* Smarty version Smarty-3.1.18, created on 2020-04-30 14:31:48
          compiled from "./check.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:9822973345ea007c109ceb7-23515440%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '5b4b2052636ec9f26a16ab03f9e8ef7a8dc00733' => 
     array (
       0 => './check.tpl',
-      1 => 1587607910,
+      1 => 1588224557,
       2 => 'file',
     ),
   ),
@@ -19,14 +19,13 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'unifunc' => 'content_5ea007c115d602_09082491',
   'variables' => 
   array (
-    'message' => 0,
     'template_meta' => 0,
     'template_javascript' => 0,
     'template_header' => 0,
     'arr_post' => 0,
-    'c1' => 0,
-    'g' => 0,
-    'c2' => 0,
+    'OptionContactType' => 0,
+    'OptionContactSchoolYear' => 0,
+    'OptionContactZoom' => 0,
     'name' => 0,
     'value' => 0,
     'template_footer' => 0,
@@ -34,10 +33,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_5ea007c115d602_09082491')) {function content_5ea007c115d602_09082491($_smarty_tpl) {?><?php if (!is_callable('smarty_function_html_select_ken')) include '/home/manabi-creation/cgi-data/smarty/libs/plugins/function.html_select_ken.php';
-?><?php if (empty($_smarty_tpl->tpl_vars['message']->value['ng'])) {?>
-<?php echo $_smarty_tpl->getSubTemplate ("array.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
-
-<!DOCTYPE html>
+?><!DOCTYPE html>
 <html lang="ja">
 <head>
 <meta charset="utf-8">
@@ -100,7 +96,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 							<tbody>
 								<tr class="first">
 									<th scope="row">ご用件</th>
-									<td><?php echo $_smarty_tpl->tpl_vars['c1']->value[$_smarty_tpl->tpl_vars['arr_post']->value['content']];?>
+									<td><?php echo $_smarty_tpl->tpl_vars['OptionContactType']->value[$_smarty_tpl->tpl_vars['arr_post']->value['type']];?>
 </td>
 								</tr>
 								<tr>
@@ -115,17 +111,17 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 								</tr>
 								<tr>
 									<th scope="row">受講するお子様の学年</th>
-									<td><?php echo $_smarty_tpl->tpl_vars['g']->value[$_smarty_tpl->tpl_vars['arr_post']->value['g']];?>
+									<td><?php echo $_smarty_tpl->tpl_vars['OptionContactSchoolYear']->value[$_smarty_tpl->tpl_vars['arr_post']->value['school_year']];?>
 </td>
 								</tr>
 								<tr>
 									<th scope="row">受講者氏名</th>
-									<td><?php echo $_smarty_tpl->tpl_vars['arr_post']->value['name2'];?>
+									<td><?php echo $_smarty_tpl->tpl_vars['arr_post']->value['student_name'];?>
 </td>
 								</tr>
 								<tr>
 									<th scope="row">受講者氏名(フリガナ)</th>
-									<td><?php echo $_smarty_tpl->tpl_vars['arr_post']->value['ruby2'];?>
+									<td><?php echo $_smarty_tpl->tpl_vars['arr_post']->value['student_ruby'];?>
 </td>
 								</tr>
 								<tr>
@@ -146,15 +142,15 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 									<td><?php echo $_smarty_tpl->tpl_vars['arr_post']->value['tel'];?>
 </td>
 								</tr>
-								<?php if (!empty($_smarty_tpl->tpl_vars['arr_post']->value['content'])) {?>
+								<?php if (!empty($_smarty_tpl->tpl_vars['arr_post']->value['type'])) {?>
 								<tr>
 									<th scope="row" class="zoom">ZOOMオンラインの<br class="md_br">利用経験</th>
-									<td><?php echo $_smarty_tpl->tpl_vars['c2']->value[$_smarty_tpl->tpl_vars['arr_post']->value['content2']];?>
+									<td><?php echo $_smarty_tpl->tpl_vars['OptionContactZoom']->value[$_smarty_tpl->tpl_vars['arr_post']->value['zoom']];?>
 </td>
 								</tr>
 								<?php }?>
 								<tr>
-									<th scope="row"><?php if (!empty($_smarty_tpl->tpl_vars['arr_post']->value['content'])) {?>その他お問い合わせ<?php } else { ?>お問い合わせ内容<?php }?></th>
+									<th scope="row"><?php if (!empty($_smarty_tpl->tpl_vars['arr_post']->value['type'])) {?>その他お問い合わせ<?php } else { ?>お問い合わせ内容<?php }?></th>
 									<td><?php echo nl2br($_smarty_tpl->tpl_vars['arr_post']->value['comment']);?>
 </td>
 								</tr>
@@ -195,7 +191,4 @@ $_smarty_tpl->tpl_vars["value"]->_loop = true;
 </div>
 </body>
 </html>
-<?php } else { ?>
-<?php echo $_smarty_tpl->getSubTemplate ("index.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
-
-<?php }?><?php }} ?>
+<?php }} ?>

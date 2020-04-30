@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.18, created on 2020-04-24 17:24:08
+<?php /* Smarty version Smarty-3.1.18, created on 2020-04-25 14:32:04
          compiled from "./index.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:9911712245ea0e0a019fbe9-82658045%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'e8b82e36b14a5b32b9082c90cfde424dcce75e56' => 
     array (
       0 => './index.tpl',
-      1 => 1587716634,
+      1 => 1587792719,
       2 => 'file',
     ),
   ),
@@ -56,8 +56,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 <main>
 <div id="top_main">
 	<div class="image">
-		<div class="visible-xs"><img src="common/image/contents/top/main-sp.jpg" alt="一般社団法人 学びクリエーション"></div>
-		<div class="hidden-xs"><img src="common/image/contents/top/main.jpg" alt="一般社団法人 学びクリエーション"></div>
+		<div class="visible-xs"><img src="common/image/contents/top/main-sp.jpg" alt="一般社団法人 日本学びクリエーション"></div>
+		<div class="hidden-xs"><img src="common/image/contents/top/main.jpg" alt="一般社団法人 日本学びクリエーション"></div>
 	</div>
 	<div id="main_text" class="text">
 		<div class="center">
@@ -70,7 +70,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 <div id="top_head_navi">
 	<div class="center">
 		<ul>
-			<li class="first"><a href="/about/">学びクリエーションとは？</a></li>
+			<li class="first"><a href="/about/">日本学びクリエーションとは？</a></li>
 			<li><a href="/news/">お知らせ・イベント</a></li>
 			<li><a href="/curriculum/">カリキュラム</a></li>
 
@@ -91,11 +91,11 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 	</section>
 	<section>
 		<div id="top_about">
-			<div class="photo img_back"><img src="common/image/contents/top/image1.jpg" alt="学びクリエーションとは"></div>
+			<div class="photo img_back"><img src="common/image/contents/top/image1.jpg" alt="日本学びクリエーションとは"></div>
 			<div class="text">
 				<div class="center">
 					<div class="text_in">
-						<h2 class="c_lgreen">学びクリエーションとは？</h2>
+						<h2 class="c_lgreen">日本学びクリエーションとは？</h2>
 						<p class="mb20">ひとり一人の子どもたちと家族が豊かに育ちあう学びとして、世界中の最先端の教育プログラムを研究し、一人ひとりにあったカスタマイズド教育を行っています。</p>
 						<div class="button"><a href="/about/" class="_type1 ov">詳しく見る<i class="fas fa-caret-right"></i></a></div>
 					</div>

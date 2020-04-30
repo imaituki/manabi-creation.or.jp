@@ -13,7 +13,7 @@
 {include file=$template_javascript}
 <script src="/admin/common/js/plugins/jquery-ui/jquery-ui.min.js"></script>
 <script src="/admin/common/js/list.js"></script>
-<script type="text/javascript" src="../js/script.js"></script>
+<script type="text/javascript" src="../js/list.js"></script>
 </head>
 <body class="fixed-sidebar no-skin-config">
 <div id="wrapper">
