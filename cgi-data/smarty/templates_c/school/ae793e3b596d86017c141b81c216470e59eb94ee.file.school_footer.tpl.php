@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.18, created on 2020-04-30 14:57:44
+<?php /* Smarty version Smarty-3.1.18, created on 2020-04-30 18:15:53
          compiled from "/home/manabi-creation/www//common/include/school_footer.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:2020642635eaa68d88bd8f0-55159931%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'ae793e3b596d86017c141b81c216470e59eb94ee' => 
     array (
       0 => '/home/manabi-creation/www//common/include/school_footer.tpl',
-      1 => 1588223602,
+      1 => 1588237745,
       2 => 'file',
     ),
   ),
@@ -15,6 +15,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
+  'version' => 'Smarty-3.1.18',
+  'unifunc' => 'content_5eaa68d890ae22_48487345',
   'variables' => 
   array (
     'displaySchool' => 0,
@@ -23,8 +25,6 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'curriculum' => 0,
   ),
   'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.18',
-  'unifunc' => 'content_5eaa68d890ae22_48487345',
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_5eaa68d890ae22_48487345')) {function content_5eaa68d890ae22_48487345($_smarty_tpl) {?><?php if (!is_callable('smarty_function_html_select_ken')) include '/home/manabi-creation/cgi-data/smarty/libs/plugins/function.html_select_ken.php';
 ?><footer>
@@ -75,7 +75,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 				<div class="col-md-7">
 					<div class="foot_navi">
 						<ul>
-							<li class="main"><a href="/" class="ov">学びクリエーションTOP</a></li>
+							<li class="main"><a href="/" class="ov">日本学びクリエーションTOP</a></li>
 							<li class="main"><a href="/school/?sc=<?php echo $_smarty_tpl->tpl_vars['displaySchool']->value['id_school'];?>
 #top_about" class="ov"><?php echo $_smarty_tpl->tpl_vars['displaySchool']->value['short_name'];?>
 について</a></li>
@@ -119,4 +119,5 @@ $_smarty_tpl->tpl_vars["curriculum"]->_loop = true;
 		<p class="pos_ac">&copy; 2020 Manabi Creation All Rights Reserved.</p>
 	</div>
     <div id="pagetop"><a href="javascript:void(0);" class="fa fa-angle-up"><span>pagetop</span></a></div>
-</footer><?php }} ?>
+</footer>
+<?php }} ?>

@@ -32,7 +32,7 @@
 					<li><a href="/school/news/?sc={$displaySchool.id_school}">お知らせ・イベント</a></li>
 					<li><a href="/school/curriculum/?sc={$displaySchool.id_school}">カリキュラム</a></li>
 					<li><a href="/school/teacher/?sc={$displaySchool.id_school}">講師</a></li>
-					<li class="last"><a href="/school/access/?sc={$displaySchool.id_school}">アクセス</a></li>
+					<li class="last"><a href="/school/?sc={$displaySchool.id_school}#top_info">アクセス</a></li>
 					<li class="head_contact">
 						<div class="tel_unit">
 							<span class="tel sans" data-tel="{$displaySchool.tel}"><img src="/common/image/head/phone.png" class="pos_vm" alt="電話番号" /><a href="tel:{$displaySchool.tel}">{$displaySchool.tel}</a></span>

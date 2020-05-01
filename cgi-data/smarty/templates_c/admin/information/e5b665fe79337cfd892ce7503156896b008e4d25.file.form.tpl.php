@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.18, created on 2020-04-25 16:42:06
+<?php /* Smarty version Smarty-3.1.18, created on 2020-04-30 20:37:47
          compiled from "/home/manabi-creation/www/admin/contents/information/template/form.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:11667167045ea0e0b9b50131-38878852%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'e5b665fe79337cfd892ce7503156896b008e4d25' => 
     array (
       0 => '/home/manabi-creation/www/admin/contents/information/template/form.tpl',
-      1 => 1587791625,
+      1 => 1588222236,
       2 => 'file',
     ),
   ),
@@ -110,7 +110,7 @@ if (!is_callable('smarty_function_html_radios')) include '/home/manabi-creation/
 					</div>
 					<div class="hr-line-dashed"></div>
 					<div class="form-group">
-						<label class="col-sm-2 control-label">表示／非表示</label>
+						<label class="col-sm-2 control-label">公開／非公開</label>
 						<div class="col-sm-6">
 							<?php if ((($tmp = @$_smarty_tpl->tpl_vars['message']->value['ng']['display_flg'])===null||$tmp==='' ? '' : $tmp)!=null) {?><p class="error"><?php echo $_smarty_tpl->tpl_vars['message']->value['ng']['display_flg'];?>
 </p><?php }?>

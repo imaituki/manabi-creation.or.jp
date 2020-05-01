@@ -83,7 +83,7 @@ if( empty( $message["ng"] ) ) {
 	// smarty設定
 	$smarty = new MySmarty("front_school");
 	$smarty->template_dir = "./";
-	$smarty->compile_dir .= "contact/";
+	$smarty->compile_dir .= "school/contact/";
 
 	// 内容
 	$smarty->assign( array(

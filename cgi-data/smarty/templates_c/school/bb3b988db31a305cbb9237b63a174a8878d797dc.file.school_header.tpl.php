@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.18, created on 2020-04-30 14:57:44
+<?php /* Smarty version Smarty-3.1.18, created on 2020-04-30 18:03:20
          compiled from "/home/manabi-creation/www//common/include/school_header.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:19958223585eaa68d8869d54-33893185%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'bb3b988db31a305cbb9237b63a174a8878d797dc' => 
     array (
       0 => '/home/manabi-creation/www//common/include/school_header.tpl',
-      1 => 1588223605,
+      1 => 1588237398,
       2 => 'file',
     ),
   ),
@@ -15,13 +15,13 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
+  'version' => 'Smarty-3.1.18',
+  'unifunc' => 'content_5eaa68d88afd01_44840536',
   'variables' => 
   array (
     'displaySchool' => 0,
   ),
   'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.18',
-  'unifunc' => 'content_5eaa68d88afd01_44840536',
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_5eaa68d88afd01_44840536')) {function content_5eaa68d88afd01_44840536($_smarty_tpl) {?><header>
 	<div id="head">
@@ -69,8 +69,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 ">カリキュラム</a></li>
 					<li><a href="/school/teacher/?sc=<?php echo $_smarty_tpl->tpl_vars['displaySchool']->value['id_school'];?>
 ">講師</a></li>
-					<li class="last"><a href="/school/access/?sc=<?php echo $_smarty_tpl->tpl_vars['displaySchool']->value['id_school'];?>
-">アクセス</a></li>
+					<li class="last"><a href="/school/?sc=<?php echo $_smarty_tpl->tpl_vars['displaySchool']->value['id_school'];?>
+#top_info">アクセス</a></li>
 					<li class="head_contact">
 						<div class="tel_unit">
 							<span class="tel sans" data-tel="<?php echo $_smarty_tpl->tpl_vars['displaySchool']->value['tel'];?>

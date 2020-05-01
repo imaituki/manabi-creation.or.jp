@@ -108,7 +108,11 @@
 							</a>
 						</div>
 						{/function}
-						{foreach from=$t_information.data|default:[] item="row"}{news row=$row}{foreachelse}{/foreach}
+						{foreach from=$t_information.data|default:[] item="row"}
+							{news row=$row}
+						{foreachelse}
+							<p class="pos_ac">現在、お知らせ・イベント情報を準備中です。</p>
+						{/foreach}
 					</div>
 					<div class="list_pager">
 						<ul>

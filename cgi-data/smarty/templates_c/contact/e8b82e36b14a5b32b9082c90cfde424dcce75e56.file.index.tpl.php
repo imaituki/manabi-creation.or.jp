@@ -1,6 +1,6 @@
-<?php /* Smarty version Smarty-3.1.18, created on 2020-04-30 14:30:46
+<?php /* Smarty version Smarty-3.1.18, created on 2020-04-30 18:54:43
          compiled from "./index.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:17917484395ea007c11645f0-22289950%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:19010153775eaaa063ee60d3-72634255%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
@@ -11,7 +11,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '17917484395ea007c11645f0-22289950',
+  'nocache_hash' => '19010153775eaaa063ee60d3-72634255',
   'function' => 
   array (
     'ng' => 
@@ -23,8 +23,6 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       'compiled' => '',
     ),
   ),
-  'version' => 'Smarty-3.1.18',
-  'unifunc' => 'content_5ea007c12928b9_82643821',
   'variables' => 
   array (
     'template_meta' => 0,
@@ -39,8 +37,10 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'template_footer' => 0,
   ),
   'has_nocache_code' => 0,
+  'version' => 'Smarty-3.1.18',
+  'unifunc' => 'content_5eaaa06405f839_49708630',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5ea007c12928b9_82643821')) {function content_5ea007c12928b9_82643821($_smarty_tpl) {?><?php if (!is_callable('smarty_function_html_radios')) include '/home/manabi-creation/cgi-data/smarty/libs/plugins/function.html_radios.php';
+<?php if ($_valid && !is_callable('content_5eaaa06405f839_49708630')) {function content_5eaaa06405f839_49708630($_smarty_tpl) {?><?php if (!is_callable('smarty_function_html_radios')) include '/home/manabi-creation/cgi-data/smarty/libs/plugins/function.html_radios.php';
 if (!is_callable('smarty_function_html_options')) include '/home/manabi-creation/cgi-data/smarty/libs/plugins/function.html_options.php';
 if (!is_callable('smarty_function_html_select_ken')) include '/home/manabi-creation/cgi-data/smarty/libs/plugins/function.html_select_ken.php';
 ?><!DOCTYPE html>

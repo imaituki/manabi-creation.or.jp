@@ -40,7 +40,7 @@ unset( $objContact );
 //----------------------------------------
 $smarty = new MySmarty("front_school");
 $smarty->template_dir = "./";
-$smarty->compile_dir .= "contact/";
+$smarty->compile_dir .= "school/contact/";
 
 // テンプレートに設定
 $smarty->assign( "message", $message );

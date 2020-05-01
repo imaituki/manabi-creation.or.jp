@@ -64,7 +64,7 @@
 						<div class="row tag">
 							{foreach from=$OptionSchoolCurriculum item="curriculum" key="cid" name="loopCurriculum"}
 							<div class="col-xs-4">
-								<p style="background: #{$OptionCurriculumColor[$cid]};"><span>{$curriculum}</span></p>
+								<p><i class="fas fa-square" style="color:#{$OptionCurriculumColor[$cid]};"></i><span>{$curriculum}</span></p>
 							</div>
 							{/foreach}
 						</div>
@@ -124,6 +124,7 @@
 						</span>
 						<span class="sub">お知らせ</span>
 					</h2>
+
 					<div class="row tab_unit no-gutters mb50">
 						<div class="col-xs-4 col-4 active">
 							<a href="#news-tab0">
@@ -172,6 +173,8 @@
 								</a>
 							</div>
 						</div>
+						{foreachelse}
+						<p>現在、お知らせ・イベント情報を準備中です。</p>
 						{/foreach}
 					</div>
 					<div class="button m0auto"><a href="./news/?sc={$displaySchool.id_school}" class="_type1 ov">一覧を見る<i class="fas fa-caret-right"></i></a></div>

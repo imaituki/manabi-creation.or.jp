@@ -2,19 +2,13 @@
 <html lang="ja">
 <head>
 <meta charset="utf-8">
-<!-- meta -->
 {include file=$template_meta}
-<!-- meta -->
 <link rel="stylesheet" href="/common/css/import.css">
-<!-- js -->
 {include file=$template_javascript}
-<!-- js -->
 </head>
 <body id="school_list">
 <div id="base">
-<!-- header -->
 {include file=$template_header}
-<!-- header -->
 <main>
 <div id="body">
 	<div id="page_title">

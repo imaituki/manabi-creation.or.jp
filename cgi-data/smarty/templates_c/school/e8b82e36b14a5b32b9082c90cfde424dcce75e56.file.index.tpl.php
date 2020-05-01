@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.18, created on 2020-04-30 14:57:44
+<?php /* Smarty version Smarty-3.1.18, created on 2020-04-30 16:44:34
          compiled from "./index.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:2657093645eaa68d872c4a8-30376204%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'e8b82e36b14a5b32b9082c90cfde424dcce75e56' => 
     array (
       0 => './index.tpl',
-      1 => 1588223030,
+      1 => 1588232670,
       2 => 'file',
     ),
   ),
@@ -15,6 +15,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
+  'version' => 'Smarty-3.1.18',
+  'unifunc' => 'content_5eaa68d8856136_14894039',
   'variables' => 
   array (
     'template_meta' => 0,
@@ -36,8 +38,6 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'template_footer' => 0,
   ),
   'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.18',
-  'unifunc' => 'content_5eaa68d8856136_14894039',
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_5eaa68d8856136_14894039')) {function content_5eaa68d8856136_14894039($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include '/home/manabi-creation/cgi-data/smarty/libs/plugins/modifier.date_format.php';
 if (!is_callable('smarty_function_html_select_ken')) include '/home/manabi-creation/cgi-data/smarty/libs/plugins/function.html_select_ken.php';
@@ -123,8 +123,8 @@ $_smarty_tpl->tpl_vars["curriculum"]->_loop = true;
  $_smarty_tpl->tpl_vars["cid"]->value = $_smarty_tpl->tpl_vars["curriculum"]->key;
 ?>
 							<div class="col-xs-4">
-								<p style="background: #<?php echo $_smarty_tpl->tpl_vars['OptionCurriculumColor']->value[$_smarty_tpl->tpl_vars['cid']->value];?>
-;"><span><?php echo $_smarty_tpl->tpl_vars['curriculum']->value;?>
+								<p><i class="fas fa-square" style="color:#<?php echo $_smarty_tpl->tpl_vars['OptionCurriculumColor']->value[$_smarty_tpl->tpl_vars['cid']->value];?>
+;"></i><span><?php echo $_smarty_tpl->tpl_vars['curriculum']->value;?>
 </span></p>
 							</div>
 							<?php } ?>
@@ -266,6 +266,7 @@ $_smarty_tpl->tpl_vars['smarty']->value['section']["loopEnd"]['last']       = ($
 						</span>
 						<span class="sub">お知らせ</span>
 					</h2>
+
 					<div class="row tab_unit no-gutters mb50">
 						<div class="col-xs-4 col-4 active">
 							<a href="#news-tab0">
@@ -339,6 +340,10 @@ $_smarty_tpl->tpl_vars["information"]->_loop = true;
 								</a>
 							</div>
 						</div>
+						<?php }
+if (!$_smarty_tpl->tpl_vars["information"]->_loop) {
+?>
+						<p>現在、お知らせ・イベント情報を準備中です。</p>
 						<?php } ?>
 					</div>
 					<div class="button m0auto"><a href="./news/?sc=<?php echo $_smarty_tpl->tpl_vars['displaySchool']->value['id_school'];?>

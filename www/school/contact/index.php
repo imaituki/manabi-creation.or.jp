@@ -16,7 +16,7 @@ require "./config.ini";
 //----------------------------------------
 $smarty = new MySmarty("front_school");
 $smarty->template_dir = "./";
-$smarty->compile_dir .= "contact/";
+$smarty->compile_dir .= "school/contact/";
 
 // オプション配列
 $smarty->assign( "OptionContactType"      , $OptionContactType       );

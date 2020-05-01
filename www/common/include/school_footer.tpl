@@ -33,7 +33,7 @@
 				<div class="col-md-7">
 					<div class="foot_navi">
 						<ul>
-							<li class="main"><a href="/" class="ov">学びクリエーションTOP</a></li>
+							<li class="main"><a href="/" class="ov">日本学びクリエーションTOP</a></li>
 							<li class="main"><a href="/school/?sc={$displaySchool.id_school}#top_about" class="ov">{$displaySchool.short_name}について</a></li>
 							<li class="main"><a href="/school/?sc={$displaySchool.id_school}#top_schedule" class="ov">スケジュール</a></li>
 							<li class="main"><a href="/school/teacher/?sc={$displaySchool.id_school}" class="ov">講師紹介</a></li>

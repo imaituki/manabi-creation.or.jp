@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.18, created on 2020-04-25 16:42:06
+<?php /* Smarty version Smarty-3.1.18, created on 2020-04-30 20:37:47
          compiled from "../template/new.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:5332430455ea0e0b9b22e77-57674883%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '238c380072b5c29c5fa3993b7a21d862193e5e28' => 
     array (
       0 => '../template/new.tpl',
-      1 => 1587791626,
+      1 => 1588222237,
       2 => 'file',
     ),
   ),
@@ -39,8 +39,6 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 <link href="/admin/common/css/plugins/codemirror/ambiance.css" rel="stylesheet">
 <link href="/admin/common/css/plugins/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.css" rel="stylesheet">
 <link href="/admin/common/css/style.css" rel="stylesheet">
-<!-- FooTable -->
-<link href="/admin/common/css/plugins/footable/footable.core.css" rel="stylesheet">
 <?php echo $_smarty_tpl->getSubTemplate ($_smarty_tpl->tpl_vars['template_javascript']->value, $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
 
 <script type="text/javascript" src="/admin/common/js/input.js"></script>

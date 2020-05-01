@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.18, created on 2020-04-30 14:45:15
+<?php /* Smarty version Smarty-3.1.18, created on 2020-04-30 16:17:52
          compiled from "./list.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:7660651125ea163dab89737-74989435%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '92b8fc6854888eba839331496c02107d1567356a' => 
     array (
       0 => './list.tpl',
-      1 => 1588223031,
+      1 => 1588231072,
       2 => 'file',
     ),
   ),
@@ -36,22 +36,16 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 <html lang="ja">
 <head>
 <meta charset="utf-8">
-<!-- meta -->
 <?php echo $_smarty_tpl->getSubTemplate ($_smarty_tpl->tpl_vars['template_meta']->value, $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
 
-<!-- meta -->
 <link rel="stylesheet" href="/common/css/import.css">
-<!-- js -->
 <?php echo $_smarty_tpl->getSubTemplate ($_smarty_tpl->tpl_vars['template_javascript']->value, $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
 
-<!-- js -->
 </head>
-<body id="school">
+<body id="school_list">
 <div id="base">
-<!-- header -->
 <?php echo $_smarty_tpl->getSubTemplate ($_smarty_tpl->tpl_vars['template_header']->value, $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
 
-<!-- header -->
 <main>
 <div id="body">
 	<div id="page_title">

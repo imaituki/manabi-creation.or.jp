@@ -323,7 +323,7 @@
 
 
 #school #top_schedule .tag p span{margin-left: 5px; font-weight: bold; }
-#school #top_schedule .tag p:before { content: ''; display: inline-block; position: relative; left: 0px; top: 0px;     width: 15px; height: 15px; border-radius: 2px;}
+/*#school #top_schedule .tag p:before { content: ''; display: inline-block; position: relative; left: 0px; top: 0px;     width: 15px; height: 15px; border-radius: 2px;}*/
 #school #top_schedule .tag p._1:before,#school #top_schedule span.curriculum._1 { background: #E83344;}
 #school #top_schedule .tag p._2:before,#school #top_schedule span.curriculum._2 { background: #FF7E45;}
 #school #top_schedule .tag p._3:before,#school #top_schedule span.curriculum._3 { background: #3EB6E2;}

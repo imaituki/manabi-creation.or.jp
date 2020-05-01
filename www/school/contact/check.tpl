@@ -63,10 +63,12 @@
 										{$displaySchool.short_name}
 									</td>
 								</tr>
+{*
 								<tr>
 									<th scope="row">ご用件</th>
 									<td>{$OptionContactType[$arr_post.type]}</td>
 								</tr>
+*}
 								<tr>
 									<th scope="row">保護者氏名</th>
 									<td>{$arr_post.name}</td>

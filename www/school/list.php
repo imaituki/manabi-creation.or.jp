@@ -24,7 +24,16 @@ $tmp_school = $objSchool->GetHpDisplayList( $arr_get, array( "fetch" => _DB_FETC
 // エリア別に振り分け
 if( is_array( $tmp_school ) ) {
 	foreach( $tmp_school as $key => $val ) {
-		$mst_school[$val["id_area"]][] = $val;
+		$mst_school[$val["id_area"]][]  = $val;
+	}
+}
+
+// 不要エリア削除
+if( is_array( $OptionArea ) ) {
+	foreach( $OptionArea as $key => $val ) {
+		if( empty( $mst_school[$key] ) ) {
+			unset( $OptionArea[$key] );
+		}
 	}
 }
 

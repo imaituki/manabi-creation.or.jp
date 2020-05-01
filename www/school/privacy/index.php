@@ -16,7 +16,7 @@ require "./config.ini";
 //----------------------------------------
 $smarty = new MySmarty("front_school");
 $smarty->template_dir = "./";
-$smarty->compile_dir .= "privacy/";
+$smarty->compile_dir .= "school/privacy/";
 
 // 表示
 $smarty->display("index.tpl");

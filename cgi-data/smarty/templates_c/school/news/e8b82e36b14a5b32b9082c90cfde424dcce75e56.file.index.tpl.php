@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.18, created on 2020-04-28 15:09:11
+<?php /* Smarty version Smarty-3.1.18, created on 2020-04-30 16:47:08
          compiled from "./index.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:2922676275ea030e23b1d04-17032048%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'e8b82e36b14a5b32b9082c90cfde424dcce75e56' => 
     array (
       0 => './index.tpl',
-      1 => 1587791578,
+      1 => 1588232826,
       2 => 'file',
     ),
   ),
@@ -19,22 +19,28 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'unifunc' => 'content_5ea030e23d2424_82143586',
   'variables' => 
   array (
+    'template_meta' => 0,
     'template_javascript' => 0,
+    'template_header' => 0,
+    'displaySchool' => 0,
+    'OptionInformationCategory' => 0,
+    'key' => 0,
+    'category' => 0,
+    't_school_information' => 0,
+    'information' => 0,
+    'page_navi' => 0,
+    'template_footer' => 0,
   ),
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5ea030e23d2424_82143586')) {function content_5ea030e23d2424_82143586($_smarty_tpl) {?><!DOCTYPE html>
+<?php if ($_valid && !is_callable('content_5ea030e23d2424_82143586')) {function content_5ea030e23d2424_82143586($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include '/home/manabi-creation/cgi-data/smarty/libs/plugins/modifier.date_format.php';
+?><!DOCTYPE html>
 <html lang="ja">
 <head>
 <meta charset="utf-8">
 <!-- meta -->
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<title>一般社団法人 日本学びクリエーション 下中野校</title>
-<meta name="description" content="">
-<meta name="keyword" content="日本学びクリエーション,岡山,下中野,">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+JP:400,700&display=swap">
+<?php echo $_smarty_tpl->getSubTemplate ($_smarty_tpl->tpl_vars['template_meta']->value, $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
+
 <!-- meta -->
 <link rel="stylesheet" href="/common/css/import.css">
 <!-- js -->
@@ -45,65 +51,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 <body id="school">
 <div id="base">
 <!-- header -->
-<header>
-	<div id="head">
-		<div class="head_wrap">
-			<h1 class="site_logo">
-				<a class="ov" href="/school/">
-					<img src="/common/image/head/logo.png" alt="日本学びクリエーション" / class="top_logo">
-					<img src="/common/image/head/logo_sp.png" alt="日本学びクリエーション" / class="top_none_logo">
-				</a>
-			</h1>
-			<div class="head_contact _head hidden-xs">
-				<div class="tel_unit pos_re">
-					<span class="tel sans" data-tel="086-242-3318"><img src="/common/image/head/phone.png" class="pos_vm tel_i" alt="電話番号" /><a href="tel:086-242-3318">086-242-3318</a></span>
-					<span class="time">受付時間 10:00～11：00（日曜定休）</span>
-					<p class=" tel_back"><img src="/common/image/head/tel_back.png" alt="電話番号" /></p>
-				</div>
-				<div class="mail_unit">
-					<a href="/contact/" class="btn_contact ov">
-						<div class="disp_td">
-							<p class="mail_i m0auto"><img src="/common/image/head/mail.png" class="pos_vm" alt="お問合せ"></p>
-							<p class="pos_ac">お問合せ</p>
-						</div>
-					</a>
-				</div>
-			</div>
-			<div id="btn_open"><a href="javascript:void(0);"><i class="fa fa-bars"></i></a></div>
-		</div>
-		<div id="head_navi">
-			<div class="center">
-				<ul>
-					<li class="first"><a href="/school/#top_about">下中野校について</a></li>
-					<li><a href="/school/#top_schedule">スケジュール</a></li>
-					<li><a href="/school/news/">お知らせ・イベント</a></li>
-					<li><a href="/school/curriculum/">カリキュラム</a></li>
-					<li><a href="/school/teacher/">講師</a></li>
-					<li class="last"><a href="/access/">アクセス</a></li>
-					<li class="head_contact">
-						<div class="tel_unit">
-							<span class="tel sans" data-tel="086-242-3318"><img src="/common/image/head/phone.png" class="pos_vm" alt="電話番号" /><a href="tel:086-242-3318">086-242-3318</a></span>
-							<span class="time">受付時間 10:00～11：00（日曜定休）</span>
-						</div>
-						<div class="mail_unit">
-							<a href="/contact/" class="btn_contact ov">
-								<div class="disp_td">
-									<p class="mail_i m0auto"><img src="/common/image/head/mail.png" class="pos_vm" alt="お問い合わせ" /></p>
-									<p class="pos_ac sp_none">お問合せ</p>
-									<p class="pos_ac pc_none">お問い合わせ</p>
-								</div>
-							</a>
-						</div>
-					</li>
-				</ul>
-			</div>
-			<div class="sns_icon">
-				<a class="fb ov ga_link" href="###" target="_blank"><i class="fab fa-facebook-f"></i></a>
-				<a href="###" target="_blank" class="twitter ov"><i class="fab fa-twitter"></i></a>
-			</div>
-		</div>
-	</div>
-</header>
+<?php echo $_smarty_tpl->getSubTemplate ($_smarty_tpl->tpl_vars['template_header']->value, $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
+
 <!-- header -->
 <main>
 <div id="body">
@@ -115,7 +64,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 			<div class="center">
 				<h2>
 					<span class="main">
-						下中野校
+						<?php echo $_smarty_tpl->tpl_vars['displaySchool']->value['short_name'];?>
+
 					</span>
 					<span class="sub">お知らせ・イベント</span>
 				</h2>
@@ -126,6 +76,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 		<div class="center">
 			<ul>
 				<li><a href="/">HOME</a></li>
+				<li><a href="/school/?sc=<?php echo $_smarty_tpl->tpl_vars['displaySchool']->value['id_school'];?>
+"><?php echo $_smarty_tpl->tpl_vars['displaySchool']->value['short_name'];?>
+</a></li>
 				<li>お知らせ・イベント</li>
 			</ul>
 		</div>
@@ -166,156 +119,79 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 						<!--スマホ時　ID絞込　開いている時-->
 					</div>
 					<ul>
-						<li class="first"><a href="###"><i class="fas fa-angle-right"></i>すべて</a></li>
-						<li><a href="###"><i class="fas fa-angle-right"></i>お知らせ</a></li>
-						<li><a href="###"><i class="fas fa-angle-right"></i>イベント</a></li>
+						<li class="first"><a href="./?sc=<?php echo $_smarty_tpl->tpl_vars['displaySchool']->value['id_school'];?>
+"><i class="fas fa-angle-right"></i>すべて</a></li>
+						<?php  $_smarty_tpl->tpl_vars["category"] = new Smarty_Variable; $_smarty_tpl->tpl_vars["category"]->_loop = false;
+ $_smarty_tpl->tpl_vars["key"] = new Smarty_Variable;
+ $_from = $_smarty_tpl->tpl_vars['OptionInformationCategory']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+foreach ($_from as $_smarty_tpl->tpl_vars["category"]->key => $_smarty_tpl->tpl_vars["category"]->value) {
+$_smarty_tpl->tpl_vars["category"]->_loop = true;
+ $_smarty_tpl->tpl_vars["key"]->value = $_smarty_tpl->tpl_vars["category"]->key;
+?>
+						<li><a href="./?sc=<?php echo $_smarty_tpl->tpl_vars['displaySchool']->value['id_school'];?>
+&cat=<?php echo $_smarty_tpl->tpl_vars['key']->value;?>
+"><i class="fas fa-angle-right"></i><?php echo $_smarty_tpl->tpl_vars['category']->value;?>
+</a></li>
+						<?php } ?>
 					</ul>
 				</div>
 			</div>
 			<div class="col-sm-9" id="news">
 				<h2 class="hl_2 mb50"><span class="border"><span class="title">お知らせ</span></span></h2>
 				<div class="row mb50">
-					<div class="col-sm-4 col-xs-6 height-1 mb30 news_box news_unit">
-	                    <a href="###" class="ov">
-	                        <div class="photo img_rect new_triangle">
-	                            <img src="/common/image/contents/null2.jpg" alt="ここにブログのタイトルが入ります。">
-	                        </div>
-	                        <div class="text_unit height-2">
+					<?php  $_smarty_tpl->tpl_vars["information"] = new Smarty_Variable; $_smarty_tpl->tpl_vars["information"]->_loop = false;
+ $_from = $_smarty_tpl->tpl_vars['t_school_information']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+foreach ($_from as $_smarty_tpl->tpl_vars["information"]->key => $_smarty_tpl->tpl_vars["information"]->value) {
+$_smarty_tpl->tpl_vars["information"]->_loop = true;
+?>
+					<div class="news-tab-<?php echo $_smarty_tpl->tpl_vars['information']->value['category_id'];?>
+ col-sm-4 col-xs-6 height-1 mb30 news_box news_unit">
+						<a href="./detail.php?sc=<?php echo $_smarty_tpl->tpl_vars['displaySchool']->value['id_school'];?>
+&id=<?php echo $_smarty_tpl->tpl_vars['information']->value['id_school_information'];?>
+" class="ov">
+							<div class="photo img_rect new_triangle">
+								<img src="<?php if ($_smarty_tpl->tpl_vars['information']->value['image1']!=null) {?>/common/photo/school_information/image1/m_<?php echo $_smarty_tpl->tpl_vars['information']->value['image1'];?>
+<?php } else { ?>/common/image/contents/null.jpg<?php }?>" alt="<?php echo $_smarty_tpl->tpl_vars['information']->value['title'];?>
+">
+							</div>
+							<div class="text_unit height-2">
 								<p class="sub">
-									<span class="cat _news">お知らせ</span>
-									<span class="date">2019.12.12</span>
+									<span class="cat <?php if ($_smarty_tpl->tpl_vars['information']->value['category_id']==2) {?>_event<?php } else { ?>_news<?php }?>"><?php echo $_smarty_tpl->tpl_vars['information']->value['category_name'];?>
+</span>
+									<span class="date"><?php echo smarty_modifier_date_format($_smarty_tpl->tpl_vars['information']->value['date'],"%Y.%m.%d");?>
+</span>
 								</p>
-	                            <h3>お知らせのTITLEが入ります</h3>
-	                        </div>
+								<h3><?php echo $_smarty_tpl->tpl_vars['information']->value['title'];?>
+</h3>
+							</div>
 							<div class="triangle"></div>
 							<i class="fas fa-arrow-right"></i>
-	                    </a>
-	                </div>
-	                <div class="col-sm-4 col-xs-6 height-1 mb30 news_box news_unit">
-	                    <a href="###" class="ov">
-	                        <div class="photo img_rect">
-	                            <img src="/common/image/contents/null2.jpg" alt="ここにブログのタイトルが入ります。">
-	                        </div>
-	                        <div class="text_unit height-2">
-								<p class="sub">
-									<span class="cat _event">イベント</span>
-									<span class="date">2019.12.12</span>
-								</p>
-	                            <h3>お知らせのTITLEが入りますお知らせのTITLEが入ります</h3>
-	                        </div>
-							<div class="triangle _event"></div>
-							<i class="fas fa-arrow-right"></i>
-	                    </a>
-	                </div>
-	                <div class="col-sm-4 col-xs-6 height-1 mb30 news_box news_unit">
-	                    <a href="###" class="ov">
-	                        <div class="photo img_rect">
-	                            <img src="/common/image/contents/null2.jpg" alt="ここにブログのタイトルが入ります。">
-	                        </div>
-	                        <div class="text_unit height-2">
-								<p class="sub">
-									<span class="cat _news">お知らせ</span>
-									<span class="date">2019.12.12</span>
-								</p>
-	                            <h3>お知らせのTITLEが入りますお知らせのTITLEが入りますお知らせのTITLEが入ります</h3>
-	                        </div>
-							<div class="triangle"></div>
-							<i class="fas fa-arrow-right"></i>
-	                    </a>
-	                </div>
-					<div class="col-sm-4 col-xs-6 height-1 mb30 news_box news_unit">
-					   <a href="###" class="ov">
-						   <div class="photo img_rect">
-							   <img src="/common/image/contents/null2.jpg" alt="ここにブログのタイトルが入ります。">
-						   </div>
-						   <div class="text_unit height-2">
-							   <p class="sub">
-								   <span class="cat _news">お知らせ</span>
-								   <span class="date">2019.12.12</span>
-							   </p>
-							   <h3>お知らせのTITLEが入りますお知らせのTITLEが入りますお知らせのTITLEが入ります</h3>
-						   </div>
-						   <div class="triangle"></div>
-						   <i class="fas fa-arrow-right"></i>
-					   </a>
-				   </div>
+						</a>
+					</div>
+					<?php }
+if (!$_smarty_tpl->tpl_vars["information"]->_loop) {
+?>
+					<p class="pos_ac">現在、お知らせ・イベント情報を準備中です。</p>
+					<?php } ?>
 				</div>
 				<div class="list_pager">
-				   <ul>
-					   <li class="before"><a href="###"><i class="fas fa-chevron-left"></i></a></li>
-					   <li><strong>1</strong></li> <li><a href="/blog/index.php?page=2" class="page2">2</a></li> <li><a href="/blog/index.php?page=3" class="page3">3</a></li> <li><a href="/blog/index.php?page=4" class="page4">4</a></li>
-					   <li class="after"><a href="###"><i class="fas fa-chevron-right"></i></a></li>
-				   </ul>
-			   </div>
+					<ul>
+						<?php if ($_smarty_tpl->tpl_vars['page_navi']->value['LinkBack']!=null) {?><li class="before"><?php echo $_smarty_tpl->tpl_vars['page_navi']->value['LinkBack'];?>
+</li><?php }?>
+						<?php echo $_smarty_tpl->tpl_vars['page_navi']->value['LinkPage'];?>
+
+						<?php if ($_smarty_tpl->tpl_vars['page_navi']->value['LinkBack']!=null) {?><li class="after"><?php echo $_smarty_tpl->tpl_vars['page_navi']->value['LinkNext'];?>
+</li><?php }?>
+					</ul>
+				</div>
 			</div>
 		</div>
 	</section>
 </div>
 </main>
 <!-- footer -->
-<footer>
-	<div id="foot_contact" class="wrapper center">
-		<div class="contact_area">
-			<div class="row">
-				<div class="col-xs-6">
-					<div class="tel_unit">
-						<h4>お電話でのお問い合わせ</h4>
-						<span class="tel" data-tel="086-242-3318"><img src="/common/image/head/phone.png" alt="電話番号" /><a href="tel:086-242-3318">086-242-3318</a></span>
-					</div>
-				</div>
-				<div class="col-xs-6">
-					<a href="/contact/" class="ov btn_foot_contact">
-						<span class="img flex_c"><img src="/common/image/contents/top/mail.png" alt="お問合せ"></span>
-						<span class="text flex_c">お問い合わせ</span>
-					</a>
-				</div>
-			</div>
-		</div>
-	</div>
-	<div id="foot">
-		<div class="center">
-			<div class="row">
-				<div class="col-md-5">
-					<div class="address_unit">
-						<div class="disp_td fw_bold">
-							<h5><a class="ov" href="/"><img src="/common/image/foot/logo.png" alt="岡山の学習塾 学びクリエーション" /></a></h5>
-							<p>〒700-0973  岡山県岡山市北区下中野1200-4 4F</p>
-							<p><span class="tel" data-tel="086-242-3318">TEL：<a href="tel:086-242-3318">086-242-3318</a></span>
-							</p>
-							<p class="mb20">メール：<a href="mailto:info@manabi-creation.or.jp">info@manabi-creation.or.jp</a></p>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-7">
-					<div class="foot_navi">
-						<ul>
-							<li class="main"><a href="/" class="ov">学びクリエーションTOP</a></li>
-							<li class="main"><a href="/school/#top_about" class="ov">下中野校について</a></li>
-							<li class="main"><a href="/school/#top_schedule" class="ov">スケジュール</a></li>
-							<li class="main"><a href="/school/teacher/" class="ov">講師紹介</a></li>
-						</ul>
-						<ul class="second">
-							<li class="main"><a href="/school/curriculum/" class="ov">取り扱いカリキュラム</a></li>
-							<li class="sub"><a href="###">a.school</a></li>
-							<li class="sub"><a href="###">アースエイトイングリッシュ</a></li>
-							<li class="sub"><a href="###">幼児教室コペル</a></li>
-						</ul>
-						<ul>
-							<li class="main"><a href="/school/#top_info" class="ov">アクセス</a></li>
-							<li class="main"><a href="/school/news/" class="ov">お知らせ・イベント</a></li>
-							<li class="main"><a href="/contact/" class="ov">お問い合わせ</a></li>
-							<li class="main"><a href="/privacy/" class="ov">プライバシーポリシー</a></li>
-						</ul>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<div id="copyright" class="bg_lgreen">
-		<p class="pos_ac">&copy; 2020 Manabi Creation All Rights Reserved.</p>
-	</div>
-    <div id="pagetop"><a href="javascript:void(0);" class="fa fa-angle-up"><span>pagetop</span></a></div>
-</footer>
+<?php echo $_smarty_tpl->getSubTemplate ($_smarty_tpl->tpl_vars['template_footer']->value, $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
+
 <!-- footer -->
 <script>
 </script>

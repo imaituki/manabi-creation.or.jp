@@ -104,6 +104,8 @@
 							<i class="fas fa-arrow-right"></i>
 						</a>
 					</div>
+					{foreachelse}
+					<p class="pos_ac">現在、お知らせ・イベント情報を準備中です。</p>
 					{/foreach}
 				</div>
 				<div class="list_pager">

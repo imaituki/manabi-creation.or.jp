@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.18, created on 2020-04-30 15:07:32
+<?php /* Smarty version Smarty-3.1.18, created on 2020-04-30 18:39:47
          compiled from "./index.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:11242388145eaa6b24511106-99622603%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'e8b82e36b14a5b32b9082c90cfde424dcce75e56' => 
     array (
       0 => './index.tpl',
-      1 => 1588222931,
+      1 => 1588239586,
       2 => 'file',
     ),
   ),
@@ -25,6 +25,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       'compiled' => '',
     ),
   ),
+  'version' => 'Smarty-3.1.18',
+  'unifunc' => 'content_5eaa6b24563eb4_89716612',
   'variables' => 
   array (
     'template_meta' => 0,
@@ -39,8 +41,6 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'template_footer' => 0,
   ),
   'has_nocache_code' => 0,
-  'version' => 'Smarty-3.1.18',
-  'unifunc' => 'content_5eaa6b24563eb4_89716612',
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_5eaa6b24563eb4_89716612')) {function content_5eaa6b24563eb4_89716612($_smarty_tpl) {?><!DOCTYPE html>
 <html lang="ja">
@@ -181,10 +181,14 @@ foreach (Smarty::$global_tpl_vars as $key => $value) if(!isset($_smarty_tpl->tpl
  $_from = (($tmp = @$_smarty_tpl->tpl_vars['t_information']->value['data'])===null||$tmp==='' ? array() : $tmp); if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
 foreach ($_from as $_smarty_tpl->tpl_vars["row"]->key => $_smarty_tpl->tpl_vars["row"]->value) {
 $_smarty_tpl->tpl_vars["row"]->_loop = true;
-?><?php smarty_template_function_news($_smarty_tpl,array('row'=>$_smarty_tpl->tpl_vars['row']->value));?>
-<?php }
+?>
+							<?php smarty_template_function_news($_smarty_tpl,array('row'=>$_smarty_tpl->tpl_vars['row']->value));?>
+
+						<?php }
 if (!$_smarty_tpl->tpl_vars["row"]->_loop) {
-?><?php } ?>
+?>
+							<p class="pos_ac">現在、お知らせ・イベント情報を準備中です。</p>
+						<?php } ?>
 					</div>
 					<div class="list_pager">
 						<ul>

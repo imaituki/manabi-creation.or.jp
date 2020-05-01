@@ -66,6 +66,7 @@
 										<input type="hidden" name="id_school" value="{$displaySchool.id_school}" />
 									</td>
 								</tr>
+{*
 								<tr>
 									<th scope="row">ご用件</th>
 									<td>
@@ -73,6 +74,7 @@
 										{html_radios options=$OptionContactType selected=$arr_post.type|default:"0" name="type"}
 									</td>
 								</tr>
+*}
 								<tr>
 									<th scope="row">保護者氏名<span class="need">必須</span></th>
 									<td>
@@ -186,6 +188,7 @@
 							</tbody>
 						</table>
 						<div class="pos_ac form_button mb50">
+							<input type="hidden" name="type" value="1" />
 							<button class="button" type="submit">確認画面へ<i class="fas fa-caret-right"></i></button>
 						</div>
 					</form>
