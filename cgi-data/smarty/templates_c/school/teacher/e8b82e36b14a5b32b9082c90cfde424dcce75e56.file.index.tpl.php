@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.18, created on 2020-04-30 16:47:43
+<?php /* Smarty version Smarty-3.1.18, created on 2020-05-07 09:46:53
          compiled from "./index.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:1366845485ea100c1b1eb66-46018156%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'e8b82e36b14a5b32b9082c90cfde424dcce75e56' => 
     array (
       0 => './index.tpl',
-      1 => 1588227551,
+      1 => 1588844804,
       2 => 'file',
     ),
   ),
@@ -25,6 +25,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'displaySchool' => 0,
     'OptionSchoolTeacherRole' => 0,
     'key' => 0,
+    'teacher_role' => 0,
     'mst_teacher' => 0,
     'role' => 0,
     'teacher' => 0,
@@ -84,41 +85,37 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 	<section>
 		<div class="wrapper-t center">
 			<div class="col-sm-3">
-				<!--スマホ時　ID絞込　閉じている時-->
-				<div id="search" class="pc_none">
+				<div id="search">
 					<div class="search_title">
-						<p class="title">NEWS</p>
-						<p class="search_img"><img src="/common/image/contents/search.png" alt="NEWS"></p>
-						<div class="scroll">
-							<a href="###">
+						<p class="title">ROLE</p>
+						<p class="search_img"><img src="/common/image/contents/search.png" alt="ROLE"></p>
+						<div class="scroll pc_none close-menu">
+							<a href="javascript:void(0);" class="toggle-menu">
 								<i class="fas fa-chevron-down blink"></i>
 								<i class="fas fa-chevron-down blink2"></i>
 								<i class="fas fa-chevron-down blink3"></i>
 								<span>click</span>
 							</a>
 						</div>
-					</div>
-				</div>
-				<!--スマホ時　ID絞込　閉じている時-->
-
-				<div id="search">
-					<div class="search_title">
-						<p class="title">NEWS</p>
-						<p class="search_img"><img src="/common/image/contents/search.png" alt="NEWS"></p>
-						<!--スマホ時　ID絞込　開いている時-->
-						<div class="scroll pc_none">
-							<a href="###">
+						<div class="scroll pc_none open-menu" style="display: none;">
+							<a href="javascript:void(0);" class="toggle-menu">
 								<i class="fas fa-chevron-up blink4"></i>
 								<i class="fas fa-chevron-up blink5"></i>
 								<i class="fas fa-chevron-up blink6"></i>
 								<span>close</span>
 							</a>
 						</div>
-						<!--スマホ時　ID絞込　開いている時-->
 					</div>
-					<ul>
-						<li class="first"><a href="###"><i class="fas fa-angle-right"></i>開発総責任者</a></li>
-						<li><a href="###"><i class="fas fa-angle-right"></i>担当講師</a></li>
+					<ul class="list-menu sp_none">
+						<?php  $_smarty_tpl->tpl_vars["teacher_role"] = new Smarty_Variable; $_smarty_tpl->tpl_vars["teacher_role"]->_loop = false;
+ $_from = $_smarty_tpl->tpl_vars['OptionSchoolTeacherRole']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+foreach ($_from as $_smarty_tpl->tpl_vars["teacher_role"]->key => $_smarty_tpl->tpl_vars["teacher_role"]->value) {
+$_smarty_tpl->tpl_vars["teacher_role"]->_loop = true;
+?>
+						<li class="first"><a href="#role<?php echo $_smarty_tpl->tpl_vars['key']->value;?>
+"><i class="fas fa-angle-right"></i><?php echo $_smarty_tpl->tpl_vars['teacher_role']->value;?>
+</a></li>
+						<?php } ?>
 					</ul>
 				</div>
 			</div>
@@ -131,7 +128,8 @@ $_smarty_tpl->tpl_vars["role"]->_loop = true;
  $_smarty_tpl->tpl_vars["key"]->value = $_smarty_tpl->tpl_vars["role"]->key;
 ?>
 				<?php if ($_smarty_tpl->tpl_vars['mst_teacher']->value[$_smarty_tpl->tpl_vars['key']->value]!=null) {?>
-					<h2 class="hl_2 mb30"><span class="border"><span class="title"><?php echo $_smarty_tpl->tpl_vars['role']->value;?>
+					<h2 class="hl_2 mb30" id="role<?php echo $_smarty_tpl->tpl_vars['key']->value;?>
+"><span class="border"><span class="title"><?php echo $_smarty_tpl->tpl_vars['role']->value;?>
 </span></span></h2>
 					<?php  $_smarty_tpl->tpl_vars["teacher"] = new Smarty_Variable; $_smarty_tpl->tpl_vars["teacher"]->_loop = false;
  $_smarty_tpl->tpl_vars["key2"] = new Smarty_Variable;
@@ -143,7 +141,7 @@ $_smarty_tpl->tpl_vars["teacher"]->_loop = true;
 						<div class="teacher_unit<?php if ($_smarty_tpl->tpl_vars['teacher']->value['comment']==null) {?> mb50<?php }?>">
 							<div class="row no-gutters">
 								<div class="col-xs-3 height-1 photo">
-									<img src="<?php if ($_smarty_tpl->tpl_vars['teacher']->value['image']!=null) {?>/common/photo/teacher/image/m_<?php echo $_smarty_tpl->tpl_vars['teacher']->value['image'];?>
+									<img src="<?php if ($_smarty_tpl->tpl_vars['teacher']->value['image']!=null) {?>/common/photo/teacher/image/l_<?php echo $_smarty_tpl->tpl_vars['teacher']->value['image'];?>
 <?php } else { ?>/common/image/contents/school/teacher/null_sex<?php echo (($tmp = @$_smarty_tpl->tpl_vars['teacher']->value['sex'])===null||$tmp==='' ? "1" : $tmp);?>
 .jpg<?php }?>" alt="<?php echo $_smarty_tpl->tpl_vars['teacher']->value['name'];?>
 ">

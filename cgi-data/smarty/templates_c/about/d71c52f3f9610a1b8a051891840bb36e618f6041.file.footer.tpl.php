@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.18, created on 2020-04-30 15:07:07
+<?php /* Smarty version Smarty-3.1.18, created on 2020-05-07 00:23:00
          compiled from "/home/manabi-creation/www//common/include/footer.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:5318292665ea028e46fb031-96689342%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'd71c52f3f9610a1b8a051891840bb36e618f6041' => 
     array (
       0 => '/home/manabi-creation/www//common/include/footer.tpl',
-      1 => 1588224481,
+      1 => 1588810979,
       2 => 'file',
     ),
   ),
@@ -22,6 +22,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'OptionCurriculum' => 0,
     'key' => 0,
     'curriculum' => 0,
+    'OptionSchoolDispArea' => 0,
+    'area' => 0,
   ),
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
@@ -75,7 +77,20 @@ $_smarty_tpl->tpl_vars["curriculum"]->_loop = true;
 </a></li>
 							<?php } ?>
 						</ul>
-
+						<ul class="second">
+							<li class="main"><a href="/school/list.php" class="ov">学校紹介</a></li>
+							<?php  $_smarty_tpl->tpl_vars["area"] = new Smarty_Variable; $_smarty_tpl->tpl_vars["area"]->_loop = false;
+ $_smarty_tpl->tpl_vars["key"] = new Smarty_Variable;
+ $_from = $_smarty_tpl->tpl_vars['OptionSchoolDispArea']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+foreach ($_from as $_smarty_tpl->tpl_vars["area"]->key => $_smarty_tpl->tpl_vars["area"]->value) {
+$_smarty_tpl->tpl_vars["area"]->_loop = true;
+ $_smarty_tpl->tpl_vars["key"]->value = $_smarty_tpl->tpl_vars["area"]->key;
+?>
+							<li class="sub"><a href="/school/list.php#area<?php echo $_smarty_tpl->tpl_vars['key']->value;?>
+"><?php echo $_smarty_tpl->tpl_vars['area']->value;?>
+</a></li>
+							<?php } ?>
+						</ul>
 						<ul>
 							<li class="main"><a href="/access/" class="ov">アクセス</a></li>
 							<li class="main"><a href="/news/" class="ov">お知らせ・イベント</a></li>

@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.18, created on 2020-04-30 18:15:53
+<?php /* Smarty version Smarty-3.1.18, created on 2020-05-07 00:32:31
          compiled from "/home/manabi-creation/www//common/include/school_footer.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:2020642635eaa68d88bd8f0-55159931%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'ae793e3b596d86017c141b81c216470e59eb94ee' => 
     array (
       0 => '/home/manabi-creation/www//common/include/school_footer.tpl',
-      1 => 1588237745,
+      1 => 1588811549,
       2 => 'file',
     ),
   ),
@@ -34,10 +34,14 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 				<div class="col-xs-6">
 					<div class="tel_unit">
 						<h4>お電話でのお問い合わせ</h4>
-						<span class="tel" data-tel="<?php echo $_smarty_tpl->tpl_vars['displaySchool']->value['tel'];?>
+						<?php if ($_smarty_tpl->tpl_vars['displaySchool']->value['tel']!=null) {?>
+							<span class="tel" data-tel="<?php echo $_smarty_tpl->tpl_vars['displaySchool']->value['tel'];?>
 "><img src="/common/image/head/phone.png" alt="電話番号" /><a href="tel:<?php echo $_smarty_tpl->tpl_vars['displaySchool']->value['tel'];?>
 "><?php echo $_smarty_tpl->tpl_vars['displaySchool']->value['tel'];?>
 </a></span>
+						<?php } else { ?>
+							<span class="tel">準備中</span>
+						<?php }?>
 					</div>
 				</div>
 				<div class="col-xs-6">

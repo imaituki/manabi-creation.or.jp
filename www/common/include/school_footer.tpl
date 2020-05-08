@@ -5,7 +5,11 @@
 				<div class="col-xs-6">
 					<div class="tel_unit">
 						<h4>お電話でのお問い合わせ</h4>
-						<span class="tel" data-tel="{$displaySchool.tel}"><img src="/common/image/head/phone.png" alt="電話番号" /><a href="tel:{$displaySchool.tel}">{$displaySchool.tel}</a></span>
+						{if $displaySchool.tel != NULL}
+							<span class="tel" data-tel="{$displaySchool.tel}"><img src="/common/image/head/phone.png" alt="電話番号" /><a href="tel:{$displaySchool.tel}">{$displaySchool.tel}</a></span>
+						{else}
+							<span class="tel">準備中</span>
+						{/if}
 					</div>
 				</div>
 				<div class="col-xs-6">

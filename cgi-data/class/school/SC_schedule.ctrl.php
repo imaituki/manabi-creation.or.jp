@@ -118,7 +118,7 @@ class SC_schedule {
 		if( !empty( $date ) && is_numeric( $id_school ) && is_numeric( $id_curriculum ) ) {
 			
 			// 更新
-			$res = $this->_DBconn->delete( $this->_CtrTable, "DATE_FORMAT( date, '%Y%m%d' ) = ? AND id_school = ? AND id_curriculum = ? ", array( $date, $id, $id_curriculum ) );
+			$res = $this->_DBconn->delete( $this->_CtrTable, "DATE_FORMAT( date, '%Y%m%d' ) = ? AND id_school = ? AND id_curriculum = ? ", array( $date, $id_school, $id_curriculum ) );
 			
 		}
 		

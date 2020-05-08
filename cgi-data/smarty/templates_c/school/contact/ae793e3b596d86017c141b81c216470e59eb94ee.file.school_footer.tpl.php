@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.18, created on 2020-04-30 18:45:17
+<?php /* Smarty version Smarty-3.1.18, created on 2020-05-07 00:33:14
          compiled from "/home/manabi-creation/www//common/include/school_footer.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:12340641405eaa9e2dd4bcc3-66130164%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'ae793e3b596d86017c141b81c216470e59eb94ee' => 
     array (
       0 => '/home/manabi-creation/www//common/include/school_footer.tpl',
-      1 => 1588237745,
+      1 => 1588811549,
       2 => 'file',
     ),
   ),
@@ -15,6 +15,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
+  'version' => 'Smarty-3.1.18',
+  'unifunc' => 'content_5eaa9e2dd8d1e9_06834615',
   'variables' => 
   array (
     'displaySchool' => 0,
@@ -23,8 +25,6 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'curriculum' => 0,
   ),
   'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.18',
-  'unifunc' => 'content_5eaa9e2dd8d1e9_06834615',
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_5eaa9e2dd8d1e9_06834615')) {function content_5eaa9e2dd8d1e9_06834615($_smarty_tpl) {?><?php if (!is_callable('smarty_function_html_select_ken')) include '/home/manabi-creation/cgi-data/smarty/libs/plugins/function.html_select_ken.php';
 ?><footer>
@@ -34,10 +34,14 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 				<div class="col-xs-6">
 					<div class="tel_unit">
 						<h4>お電話でのお問い合わせ</h4>
-						<span class="tel" data-tel="<?php echo $_smarty_tpl->tpl_vars['displaySchool']->value['tel'];?>
+						<?php if ($_smarty_tpl->tpl_vars['displaySchool']->value['tel']!=null) {?>
+							<span class="tel" data-tel="<?php echo $_smarty_tpl->tpl_vars['displaySchool']->value['tel'];?>
 "><img src="/common/image/head/phone.png" alt="電話番号" /><a href="tel:<?php echo $_smarty_tpl->tpl_vars['displaySchool']->value['tel'];?>
 "><?php echo $_smarty_tpl->tpl_vars['displaySchool']->value['tel'];?>
 </a></span>
+						<?php } else { ?>
+							<span class="tel">準備中</span>
+						<?php }?>
 					</div>
 				</div>
 				<div class="col-xs-6">

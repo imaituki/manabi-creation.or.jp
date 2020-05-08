@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.18, created on 2020-04-30 16:17:52
+<?php /* Smarty version Smarty-3.1.18, created on 2020-05-07 13:10:28
          compiled from "./list.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:7660651125ea163dab89737-74989435%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '92b8fc6854888eba839331496c02107d1567356a' => 
     array (
       0 => './list.tpl',
-      1 => 1588231072,
+      1 => 1588845497,
       2 => 'file',
     ),
   ),
@@ -22,9 +22,10 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'template_meta' => 0,
     'template_javascript' => 0,
     'template_header' => 0,
-    'OptionArea' => 0,
+    'OptionSchoolDispArea' => 0,
     'key' => 0,
     'area' => 0,
+    'OptionArea' => 0,
     'mst_school' => 0,
     'school' => 0,
     'template_footer' => 0,
@@ -78,42 +79,31 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 		<div class="wrapper-t center">
 			<div class="row">
 				<div class="col-sm-3">
-					<!--スマホ時　ID絞込　閉じている時-->
-					<div id="search" class="pc_none">
+					<div id="search">
 						<div class="search_title">
-							<p class="title">NEWS</p>
-							<p class="search_img"><img src="/common/image/contents/search.png" alt="NEWS"></p>
-							<div class="scroll">
-								<a href="###">
+							<p class="title">AREA</p>
+							<p class="search_img"><img src="/common/image/contents/search.png" alt="AREA"></p>
+							<div class="scroll pc_none close-menu">
+								<a href="javascript:void(0);" class="toggle-menu">
 									<i class="fas fa-chevron-down blink"></i>
 									<i class="fas fa-chevron-down blink2"></i>
 									<i class="fas fa-chevron-down blink3"></i>
 									<span>click</span>
 								</a>
 							</div>
-						</div>
-					</div>
-					<!--スマホ時　ID絞込　閉じている時-->
-
-					<div id="search">
-						<div class="search_title">
-							<p class="title">NEWS</p>
-							<p class="search_img"><img src="/common/image/contents/search.png" alt="NEWS"></p>
-							<!--スマホ時　ID絞込　開いている時-->
-							<div class="scroll pc_none">
-								<a href="###">
+							<div class="scroll pc_none open-menu" style="display: none;">
+								<a href="javascript:void(0);" class="toggle-menu">
 									<i class="fas fa-chevron-up blink4"></i>
 									<i class="fas fa-chevron-up blink5"></i>
 									<i class="fas fa-chevron-up blink6"></i>
 									<span>close</span>
 								</a>
 							</div>
-							<!--スマホ時　ID絞込　開いている時-->
 						</div>
-						<ul>
+						<ul class="list-menu sp_none">
 							<?php  $_smarty_tpl->tpl_vars["area"] = new Smarty_Variable; $_smarty_tpl->tpl_vars["area"]->_loop = false;
  $_smarty_tpl->tpl_vars["key"] = new Smarty_Variable;
- $_from = $_smarty_tpl->tpl_vars['OptionArea']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+ $_from = $_smarty_tpl->tpl_vars['OptionSchoolDispArea']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
  $_smarty_tpl->tpl_vars["area"]->index=-1;
 foreach ($_from as $_smarty_tpl->tpl_vars["area"]->key => $_smarty_tpl->tpl_vars["area"]->value) {
 $_smarty_tpl->tpl_vars["area"]->_loop = true;

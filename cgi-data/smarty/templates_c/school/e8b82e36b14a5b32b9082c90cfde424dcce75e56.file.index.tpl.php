@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.18, created on 2020-04-30 16:44:34
+<?php /* Smarty version Smarty-3.1.18, created on 2020-05-07 05:38:08
          compiled from "./index.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:2657093645eaa68d872c4a8-30376204%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'e8b82e36b14a5b32b9082c90cfde424dcce75e56' => 
     array (
       0 => './index.tpl',
-      1 => 1588232670,
+      1 => 1588829887,
       2 => 'file',
     ),
   ),
@@ -193,7 +193,7 @@ $_smarty_tpl->tpl_vars['smarty']->value['section']["loopStart"]['last']       = 
 										<?php endfor; endif; ?>
 									<?php }?>
 								<?php }?>
-								<td>
+								<td class="height-1">
 									<span class="date"><?php echo intval(smarty_modifier_date_format($_smarty_tpl->tpl_vars['date']->value,"%m"));?>
 月<?php echo intval(smarty_modifier_date_format($_smarty_tpl->tpl_vars['date']->value,"%d"));?>
 日</span>
@@ -372,16 +372,20 @@ if (!$_smarty_tpl->tpl_vars["information"]->_loop) {
 <?php echo $_smarty_tpl->tpl_vars['displaySchool']->value['address2'];?>
 </td>
 									</tr>
+									<?php if ($_smarty_tpl->tpl_vars['displaySchool']->value['tel']!=null) {?>
 									<tr>
 										<th><span class="name">電話番号</span></th>
 										<td><?php echo $_smarty_tpl->tpl_vars['displaySchool']->value['tel'];?>
 </td>
 									</tr>
+									<?php }?>
+									<?php if ($_smarty_tpl->tpl_vars['displaySchool']->value['fax']!=null) {?>
 									<tr>
 										<th><span class="name">FAX</span></th>
 										<td><?php echo $_smarty_tpl->tpl_vars['displaySchool']->value['fax'];?>
 </td>
 									</tr>
+									<?php }?>
 								</tbody>
 							</table>
 						</div>

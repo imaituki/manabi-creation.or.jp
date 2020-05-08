@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.18, created on 2020-04-30 16:47:08
+<?php /* Smarty version Smarty-3.1.18, created on 2020-05-07 10:00:53
          compiled from "./index.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:2922676275ea030e23b1d04-17032048%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'e8b82e36b14a5b32b9082c90cfde424dcce75e56' => 
     array (
       0 => './index.tpl',
-      1 => 1588232826,
+      1 => 1588845643,
       2 => 'file',
     ),
   ),
@@ -86,39 +86,28 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 	<section>
 		<div class="wrapper-t center">
 			<div class="col-sm-3">
-				<!--スマホ時　ID絞込　閉じている時-->
-				<div id="search" class="pc_none">
+				<div id="search">
 					<div class="search_title">
 						<p class="title">NEWS</p>
 						<p class="search_img"><img src="/common/image/contents/search.png" alt="NEWS"></p>
-						<div class="scroll">
-							<a href="###">
+						<div class="scroll pc_none close-menu">
+							<a href="javascript:void(0);" class="toggle-menu">
 								<i class="fas fa-chevron-down blink"></i>
 								<i class="fas fa-chevron-down blink2"></i>
 								<i class="fas fa-chevron-down blink3"></i>
 								<span>click</span>
 							</a>
 						</div>
-					</div>
-				</div>
-				<!--スマホ時　ID絞込　閉じている時-->
-
-				<div id="search">
-					<div class="search_title">
-						<p class="title">NEWS</p>
-						<p class="search_img"><img src="/common/image/contents/search.png" alt="NEWS"></p>
-						<!--スマホ時　ID絞込　開いている時-->
-						<div class="scroll pc_none">
-							<a href="###">
+						<div class="scroll pc_none open-menu" style="display: none;">
+							<a href="javascript:void(0);" class="toggle-menu">
 								<i class="fas fa-chevron-up blink4"></i>
 								<i class="fas fa-chevron-up blink5"></i>
 								<i class="fas fa-chevron-up blink6"></i>
 								<span>close</span>
 							</a>
 						</div>
-						<!--スマホ時　ID絞込　開いている時-->
 					</div>
-					<ul>
+					<ul class="list-menu sp_none">
 						<li class="first"><a href="./?sc=<?php echo $_smarty_tpl->tpl_vars['displaySchool']->value['id_school'];?>
 "><i class="fas fa-angle-right"></i>すべて</a></li>
 						<?php  $_smarty_tpl->tpl_vars["category"] = new Smarty_Variable; $_smarty_tpl->tpl_vars["category"]->_loop = false;

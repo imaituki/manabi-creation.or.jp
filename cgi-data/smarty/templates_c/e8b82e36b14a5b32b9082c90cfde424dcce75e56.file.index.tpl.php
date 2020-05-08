@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.18, created on 2020-04-25 14:32:04
+<?php /* Smarty version Smarty-3.1.18, created on 2020-05-01 12:00:54
          compiled from "./index.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:9911712245ea0e0a019fbe9-82658045%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'e8b82e36b14a5b32b9082c90cfde424dcce75e56' => 
     array (
       0 => './index.tpl',
-      1 => 1587792719,
+      1 => 1588334442,
       2 => 'file',
     ),
   ),
@@ -73,7 +73,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 			<li class="first"><a href="/about/">日本学びクリエーションとは？</a></li>
 			<li><a href="/news/">お知らせ・イベント</a></li>
 			<li><a href="/curriculum/">カリキュラム</a></li>
-
+			<li><a href="/school/list.php">学校紹介</a></li>
 			<li><a href="/access/">アクセス</a></li>
 			<li><a href="/contact/">お問い合わせ</a></li>
 

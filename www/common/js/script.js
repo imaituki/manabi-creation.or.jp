@@ -231,6 +231,12 @@ $(function () {
 		$(this).attr('formaction', './send.php');
 	});
 
+	$(document).on( 'click', '.toggle-menu', function() {
+		$('.open-menu').toggle();
+		$('.close-menu').toggle();
+		$('.list-menu').toggleClass("sp_none");
+	});
+	
 });
 
 // 高さ調整

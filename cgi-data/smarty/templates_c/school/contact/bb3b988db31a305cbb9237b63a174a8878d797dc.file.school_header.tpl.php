@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.18, created on 2020-04-30 18:45:17
+<?php /* Smarty version Smarty-3.1.18, created on 2020-05-07 00:33:14
          compiled from "/home/manabi-creation/www//common/include/school_header.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:16388079595eaa9e2dd0da68-82738884%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'bb3b988db31a305cbb9237b63a174a8878d797dc' => 
     array (
       0 => '/home/manabi-creation/www//common/include/school_header.tpl',
-      1 => 1588237398,
+      1 => 1588811493,
       2 => 'file',
     ),
   ),
@@ -15,13 +15,13 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
+  'version' => 'Smarty-3.1.18',
+  'unifunc' => 'content_5eaa9e2dd44cd4_30685273',
   'variables' => 
   array (
     'displaySchool' => 0,
   ),
   'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.18',
-  'unifunc' => 'content_5eaa9e2dd44cd4_30685273',
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_5eaa9e2dd44cd4_30685273')) {function content_5eaa9e2dd44cd4_30685273($_smarty_tpl) {?><header>
 	<div id="head">
@@ -72,14 +72,16 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 					<li class="last"><a href="/school/?sc=<?php echo $_smarty_tpl->tpl_vars['displaySchool']->value['id_school'];?>
 #top_info">アクセス</a></li>
 					<li class="head_contact">
-						<div class="tel_unit">
-							<span class="tel sans" data-tel="<?php echo $_smarty_tpl->tpl_vars['displaySchool']->value['tel'];?>
+						<?php if ($_smarty_tpl->tpl_vars['displaySchool']->value['tel']!=null||$_smarty_tpl->tpl_vars['displaySchool']->value['reception_time']!=null) {?>
+							<div class="tel_unit">
+								<?php if ($_smarty_tpl->tpl_vars['displaySchool']->value['tel']!=null) {?><span class="tel sans" data-tel="<?php echo $_smarty_tpl->tpl_vars['displaySchool']->value['tel'];?>
 "><img src="/common/image/head/phone.png" class="pos_vm" alt="電話番号" /><a href="tel:<?php echo $_smarty_tpl->tpl_vars['displaySchool']->value['tel'];?>
 "><?php echo $_smarty_tpl->tpl_vars['displaySchool']->value['tel'];?>
-</a></span>
-							<span class="time">受付時間 <?php echo $_smarty_tpl->tpl_vars['displaySchool']->value['reception_time'];?>
-</span>
-						</div>
+</a></span><?php }?>
+								<?php if ($_smarty_tpl->tpl_vars['displaySchool']->value['reception_time']!=null) {?><span class="time">受付時間 <?php echo $_smarty_tpl->tpl_vars['displaySchool']->value['reception_time'];?>
+</span><?php }?>
+							</div>
+						<?php }?>
 						<div class="mail_unit">
 							<a href="/school/contact/?sc=<?php echo $_smarty_tpl->tpl_vars['displaySchool']->value['id_school'];?>
 " class="btn_contact ov">

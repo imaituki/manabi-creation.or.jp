@@ -90,7 +90,7 @@
 										{/section}
 									{/if}
 								{/if}
-								<td>
+								<td class="height-1">
 									<span class="date">{$date|date_format:"%m"|intval}月{$date|date_format:"%d"|intval}日</span>
 									{foreach from=$calendar.open item="curriculum" key="cid" name="loopCurriculum"}
 										{if $OptionSchoolCurriculum[$curriculum.id_curriculum|default:""]|default:"" != NULL}
@@ -196,14 +196,18 @@
 										<th><span class="name">所在地</span></th>
 										<td>{html_select_ken pre="1" selected=$displaySchool.prefecture}{$displaySchool.address1}{$displaySchool.address2}</td>
 									</tr>
+									{if $displaySchool.tel != NULL}
 									<tr>
 										<th><span class="name">電話番号</span></th>
 										<td>{$displaySchool.tel}</td>
 									</tr>
+									{/if}
+									{if $displaySchool.fax != NULL}
 									<tr>
 										<th><span class="name">FAX</span></th>
 										<td>{$displaySchool.fax}</td>
 									</tr>
+									{/if}
 								</tbody>
 							</table>
 						</div>

@@ -40,14 +40,12 @@
 							<li class="sub"><a href="/curriculum/#curriculum{$key}">{$curriculum}</a></li>
 							{/foreach}
 						</ul>
-{*
 						<ul class="second">
 							<li class="main"><a href="/school/list.php" class="ov">学校紹介</a></li>
-							{foreach from=$OptionArea item="area" key="key" name="loopArea"}
+							{foreach from=$OptionSchoolDispArea item="area" key="key" name="loopArea"}
 							<li class="sub"><a href="/school/list.php#area{$key}">{$area}</a></li>
 							{/foreach}
 						</ul>
-*}
 						<ul>
 							<li class="main"><a href="/access/" class="ov">アクセス</a></li>
 							<li class="main"><a href="/news/" class="ov">お知らせ・イベント</a></li>

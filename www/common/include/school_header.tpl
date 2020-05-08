@@ -8,11 +8,12 @@
 				</a>
 			</h1>
 			<div class="head_contact _head hidden-xs">
+				{if $displaySchool.tel != NULL || $displaySchool.reception_time != NULL}
 				<div class="tel_unit pos_re">
-					<span class="tel sans" data-tel="{$displaySchool.tel}"><img src="/common/image/head/phone.png" class="pos_vm tel_i" alt="電話番号" /><a href="tel:{$displaySchool.tel}">{$displaySchool.tel}</a></span>
-					<span class="time">受付時間 {$displaySchool.reception_time}</span>
-					<p class=" tel_back"><img src="/common/image/head/tel_back.png" alt="電話番号" /></p>
+					{if $displaySchool.tel != NULL}<span class="tel sans" data-tel="{$displaySchool.tel}"><img src="/common/image/head/phone.png" class="pos_vm tel_i" alt="電話番号" /><a href="tel:{$displaySchool.tel}">{$displaySchool.tel}</a></span>{/if}
+					{if $displaySchool.reception_time != NULL}<span class="time">受付時間 {$displaySchool.reception_time}</span>{/if}
 				</div>
+				{/if}
 				<div class="mail_unit">
 					<a href="/school/contact/?sc={$displaySchool.id_school}" class="btn_contact ov">
 						<div class="disp_td">
@@ -34,10 +35,12 @@
 					<li><a href="/school/teacher/?sc={$displaySchool.id_school}">講師</a></li>
 					<li class="last"><a href="/school/?sc={$displaySchool.id_school}#top_info">アクセス</a></li>
 					<li class="head_contact">
-						<div class="tel_unit">
-							<span class="tel sans" data-tel="{$displaySchool.tel}"><img src="/common/image/head/phone.png" class="pos_vm" alt="電話番号" /><a href="tel:{$displaySchool.tel}">{$displaySchool.tel}</a></span>
-							<span class="time">受付時間 {$displaySchool.reception_time}</span>
-						</div>
+						{if $displaySchool.tel != NULL || $displaySchool.reception_time != NULL}
+							<div class="tel_unit">
+								{if $displaySchool.tel != NULL}<span class="tel sans" data-tel="{$displaySchool.tel}"><img src="/common/image/head/phone.png" class="pos_vm" alt="電話番号" /><a href="tel:{$displaySchool.tel}">{$displaySchool.tel}</a></span>{/if}
+								{if $displaySchool.reception_time != NULL}<span class="time">受付時間 {$displaySchool.reception_time}</span>{/if}
+							</div>
+						{/if}
 						<div class="mail_unit">
 							<a href="/school/contact/?sc={$displaySchool.id_school}" class="btn_contact ov">
 								<div class="disp_td">

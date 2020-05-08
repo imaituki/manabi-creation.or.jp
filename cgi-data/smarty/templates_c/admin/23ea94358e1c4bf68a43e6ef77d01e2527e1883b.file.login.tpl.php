@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.18, created on 2020-04-30 13:59:18
+<?php /* Smarty version Smarty-3.1.18, created on 2020-05-01 10:14:16
          compiled from "./login.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:8065969165eaa5b266467b8-58135200%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '23ea94358e1c4bf68a43e6ef77d01e2527e1883b' => 
     array (
       0 => './login.tpl',
-      1 => 1588222653,
+      1 => 1588295654,
       2 => 'file',
     ),
   ),
@@ -15,6 +15,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
+  'version' => 'Smarty-3.1.18',
+  'unifunc' => 'content_5eaa5b266979b0_42185512',
   'variables' => 
   array (
     '_CONTENTS_NAME' => 0,
@@ -23,8 +25,6 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'message' => 0,
   ),
   'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.18',
-  'unifunc' => 'content_5eaa5b266979b0_42185512',
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_5eaa5b266979b0_42185512')) {function content_5eaa5b266979b0_42185512($_smarty_tpl) {?><!DOCTYPE html>
 <html>
@@ -45,8 +45,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 <body class="gray-bg">
 	<div class="middle-box text-center loginscreen animated fadeInDown">
 		<div>
-			<div>
-				<h1 class="logo-name">IN</h1>
+			<div class="logo">
+				<img src="/admin/common/img/logo02.png" alt="学校用管理画面">
 			</div>
 			<h3>ログイン</h3>
 			<p>アカウントとパスワードでログインしてください</p>
