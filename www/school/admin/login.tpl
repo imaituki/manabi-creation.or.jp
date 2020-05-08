@@ -14,8 +14,8 @@
 <body class="gray-bg">
 	<div class="middle-box text-center loginscreen animated fadeInDown">
 		<div>
-			<div>
-				<h1 class="logo-name">IN</h1>
+			<div class="logo">
+				<img src="/admin/common/img/logo01.png" alt="学校用管理画面">
 			</div>
 			<h3>ログイン</h3>
 			<p>アカウントとパスワードでログインしてください</p>

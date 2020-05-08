@@ -8256,3 +8256,7 @@ body.md-skin {
 .navbar-right { float:right !important; margin-right:15px; }
 
 }
+
+.logo {
+  margin-bottom: 30px;
+}

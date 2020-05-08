@@ -44,53 +44,43 @@
 	<section>
 		<div class="wrapper-t center">
 			<div class="col-sm-3">
-				<!--スマホ時　ID絞込　閉じている時-->
-				<div id="search" class="pc_none">
+				<div id="search">
 					<div class="search_title">
-						<p class="title">NEWS</p>
-						<p class="search_img"><img src="/common/image/contents/search.png" alt="NEWS"></p>
-						<div class="scroll">
-							<a href="###">
+						<p class="title">ROLE</p>
+						<p class="search_img"><img src="/common/image/contents/search.png" alt="ROLE"></p>
+						<div class="scroll pc_none close-menu">
+							<a href="javascript:void(0);" class="toggle-menu">
 								<i class="fas fa-chevron-down blink"></i>
 								<i class="fas fa-chevron-down blink2"></i>
 								<i class="fas fa-chevron-down blink3"></i>
 								<span>click</span>
 							</a>
 						</div>
-					</div>
-				</div>
-				<!--スマホ時　ID絞込　閉じている時-->
-
-				<div id="search">
-					<div class="search_title">
-						<p class="title">NEWS</p>
-						<p class="search_img"><img src="/common/image/contents/search.png" alt="NEWS"></p>
-						<!--スマホ時　ID絞込　開いている時-->
-						<div class="scroll pc_none">
-							<a href="###">
+						<div class="scroll pc_none open-menu" style="display: none;">
+							<a href="javascript:void(0);" class="toggle-menu">
 								<i class="fas fa-chevron-up blink4"></i>
 								<i class="fas fa-chevron-up blink5"></i>
 								<i class="fas fa-chevron-up blink6"></i>
 								<span>close</span>
 							</a>
 						</div>
-						<!--スマホ時　ID絞込　開いている時-->
 					</div>
-					<ul>
-						<li class="first"><a href="###"><i class="fas fa-angle-right"></i>開発総責任者</a></li>
-						<li><a href="###"><i class="fas fa-angle-right"></i>担当講師</a></li>
+					<ul class="list-menu sp_none">
+						{foreach from=$OptionSchoolTeacherRole item="teacher_role" name="loopSchoolTeacherRole"}
+						<li class="first"><a href="#role{$key}"><i class="fas fa-angle-right"></i>{$teacher_role}</a></li>
+						{/foreach}
 					</ul>
 				</div>
 			</div>
 			<div class="col-sm-9" id="teacher">
 			{foreach from=$OptionSchoolTeacherRole item="role" key="key" name="loopSchoolTeacherRole"}
 				{if $mst_teacher[$key] != NULL}
-					<h2 class="hl_2 mb30"><span class="border"><span class="title">{$role}</span></span></h2>
+					<h2 class="hl_2 mb30" id="role{$key}"><span class="border"><span class="title">{$role}</span></span></h2>
 					{foreach from=$mst_teacher[$key] item="teacher" key="key2" name="loopTeacher"}
 						<div class="teacher_unit{if $teacher.comment == NULL} mb50{/if}">
 							<div class="row no-gutters">
 								<div class="col-xs-3 height-1 photo">
-									<img src="{if $teacher.image != NULL}/common/photo/teacher/image/m_{$teacher.image}{else}/common/image/contents/school/teacher/null_sex{$teacher.sex|default:"1"}.jpg{/if}" alt="{$teacher.name}">
+									<img src="{if $teacher.image != NULL}/common/photo/teacher/image/l_{$teacher.image}{else}/common/image/contents/school/teacher/null_sex{$teacher.sex|default:"1"}.jpg{/if}" alt="{$teacher.name}">
 								</div>
 								<div class="col-xs-9">
 									<div class="pos_re name_info height-1 disp_tbl2">

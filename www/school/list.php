@@ -28,15 +28,6 @@ if( is_array( $tmp_school ) ) {
 	}
 }
 
-// 不要エリア削除
-if( is_array( $OptionArea ) ) {
-	foreach( $OptionArea as $key => $val ) {
-		if( empty( $mst_school[$key] ) ) {
-			unset( $OptionArea[$key] );
-		}
-	}
-}
-
 // DB切断
 unset( $objManage );
 unset( $objSchool );

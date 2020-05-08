@@ -47,39 +47,28 @@
 		<div class="wrapper-t center">
 			<div class="row">
 				<div class="col-sm-3">
-					<!--スマホ時　ID絞込　閉じている時-->
-					<div id="search" class="pc_none" onclick="$(this).hide().next().show();">
+					<div id="search">
 						<div class="search_title">
 							<p class="title">NEWS</p>
 							<p class="search_img"><img src="/common/image/contents/search.png" alt="NEWS"></p>
-							<div class="scroll">
-								<a href="###">
+							<div class="scroll pc_none close-menu">
+								<a href="javascript:void(0);" class="toggle-menu">
 									<i class="fas fa-chevron-down blink"></i>
 									<i class="fas fa-chevron-down blink2"></i>
 									<i class="fas fa-chevron-down blink3"></i>
 									<span>click</span>
 								</a>
 							</div>
-						</div>
-					</div>
-					<!--スマホ時　ID絞込　閉じている時-->
-
-					<div id="search" onclick="$(this).hide().prev().show();" syule="display:none;">
-						<div class="search_title">
-							<p class="title">NEWS</p>
-							<p class="search_img"><img src="/common/image/contents/search.png" alt="NEWS"></p>
-							<!--スマホ時　ID絞込　開いている時-->
-							<div class="scroll pc_none">
-								<a href="###">
+							<div class="scroll pc_none open-menu" style="display: none;">
+								<a href="javascript:void(0);" class="toggle-menu">
 									<i class="fas fa-chevron-up blink4"></i>
 									<i class="fas fa-chevron-up blink5"></i>
 									<i class="fas fa-chevron-up blink6"></i>
 									<span>close</span>
 								</a>
 							</div>
-							<!--スマホ時　ID絞込　開いている時-->
 						</div>
-						<ul>
+						<ul class="list-menu sp_none">
 							<li class="first"><a href="./"><i class="fas fa-angle-right"></i>すべて</a></li>
 							{foreach from=$OptionInformationCategory key="key" item="category" name="loopInformationCategory"}
 							<li><a href="./?cat={$key}"><i class="fas fa-angle-right"></i>{$category}</a></li>
