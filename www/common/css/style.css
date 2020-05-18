@@ -297,9 +297,9 @@
 #school_list .school_unit i.fa-arrow-right{position: absolute; right: 5px; bottom: 5px; color: #fff;}
 #school_list .school_box .photo img{    height: 175px; width: 100%; object-fit: cover;}
 
-#school #top_main #main_text .text_in {  max-width: 280px; display: block; position: absolute; top: 50%; left: 0%; transform: translateY(-50%); -webkit-transform: translateY(-50%); -ms-transform: translateY(-50%);  padding-top: 0;}
+#school #top_main #main_text .text_in {  max-width: 380px; display: block; position: absolute; top: 50%; left: 0%; transform: translateY(-50%); -webkit-transform: translateY(-50%); -ms-transform: translateY(-50%);  padding-top: 0;}
 #school #top_main #main_text .text_in img { width: 250px;}
-#school #top_main #main_text h2 { font-size: 2em; text-shadow: none; background: #8EC31F; border-radius: 50px; padding: 3px 15px;}
+#school #top_main #main_text h2 { font-size: 1.75em; text-shadow: none; background: #8EC31F; border-radius: 50px; padding: 3px 15px;}
 #school #top_main .text .center {    margin-left: 5%; margin-right: auto; position: relative;}
 
 #school #top_about {background: url(../image/contents/school/top_about_back.jpg) no-repeat top center / cover; position: relative;  padding-bottom: 130px;}
@@ -317,6 +317,7 @@
 	#school #top_main #main_text .text_in img {display: none;}
 }
 @media (max-width: 575px){
+	#school #top_main #main_text .text_in {  max-width: 280px;}
 	/*#school #top_main #main_text h2 {font-size: 1.75em; }*/
 	#school #top_about { padding: 0 0 100px 0;}
 }
@@ -333,6 +334,17 @@
 
 
 #school #top_schedule table.schedule{table-layout: fixed;}
+
+@media (min-width: 1200px){
+	#school #top_schedule .scroll_arrow{display: none;}
+}
+@media (max-width: 1199px){
+	#school #top_schedule .scroll_arrow { position:relative; display:inline-block; padding: 0px 45px 0px 10px; font-size: 1.25em; font-weight: bold; color:#626262;}
+	#school #top_schedule .scroll_arrow:after{ position:absolute; top:50%; right:.5em; transform: translateY(-50%); content: "≫"; animation:infinite movearrow 1.5s ;}
+	@keyframes movearrow { 0%{margin:0 15px 0 -15px;opacity:.3;}}
+}
+
+
 #school #top_schedule .scroll-table {     overflow-x: scroll;   white-space: nowrap;}
 #school #top_schedule table.schedule{width: 100%; }
 #school #top_schedule table.schedule th,#school #top_schedule table.schedule td{ display: inline-block; width: calc(100% / 7); min-width: 170px;}
@@ -353,6 +365,9 @@
 #school .tbl tr:not(.first) th{ border-top: 1px dashed #E2E2E2;}
 #school .tbl td{vertical-align: middle; border-bottom: 1px dashed #E2E2E2;     padding: 0 25px;}
 #school .tbl tbody{    border-top: 1px solid #E2E2E2; border-bottom: 1px solid #E2E2E2;}
+@media (max-width: 767px){
+	#school #top_schedule table.schedule td {min-height: 150px;}
+}
 
 @media (min-width: 576px){
 	#school #top_schedule .tag p {text-align: center;}

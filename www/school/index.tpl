@@ -69,6 +69,7 @@
 							{/foreach}
 						</div>
 					</div>
+					<div class="scroll_arrow">scroll</div>
 					<div class="scroll-table mb100">
 						<table class="schedule">
 							<tbody>
@@ -174,7 +175,7 @@
 							</div>
 						</div>
 						{foreachelse}
-						<p>現在、お知らせ・イベント情報を準備中です。</p>
+						<p class="pos_ac">現在、お知らせ・イベント情報を準備中です。</p>
 						{/foreach}
 					</div>
 					<div class="button m0auto"><a href="./news/?sc={$displaySchool.id_school}" class="_type1 ov">一覧を見る<i class="fas fa-caret-right"></i></a></div>
